@@ -1,13 +1,14 @@
 
 <div class="jumbotron">
-	<h1>Welcome to my app!</h1>
+	<h1>Bienvenido a Lapapaya</h1>
+	<h3> Aquí puedes poner un sueño que pueda cambiar el mundo </h3>
 	<% if user_signed_in? %>
 	<h2>Bienvenido a Lapapaya</h2>
 	<img src="http://3.bp.blogspot.com/-uVQtdHLH6e0/UDz86ERzIbI/AAAAAAAAA4k/AWlmh4oO6uc/s640/landscape-fall.jpg">
 	<% else %>
 	<p>
 
-		<%= link_to "Log in", new_user_session_path, class: "btn btn-default btn_lg" %> 
+		<%= link_to "Log in", new_user_session_path, class: "btn btn-large btn-primary" %> 
 		<%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
 		
 
