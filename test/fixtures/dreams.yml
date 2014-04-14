@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dream: MyString
+  whant: MyString
+  offer: MyString
+  need: MyString
+
+two:
+  dream: MyString
+  whant: MyString
+  offer: MyString
+  need: MyString

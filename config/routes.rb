@@ -1,4 +1,6 @@
 Lapapayanetwork::Application.routes.draw do
+  resources :dreams
+
   devise_for :users
   root "pages#home"
   get "about" => "pages#about"
