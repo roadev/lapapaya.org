@@ -11,23 +11,23 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :dream %><br>
-    <%= f.text_field :dream %>
+    <%= f.text_field :dream, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :whant %><br>
-    <%= f.text_field :whant %>
+    <%= f.text_field :whant, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="orm-group">
     <%= f.label :offer %><br>
-    <%= f.text_field :offer %>
+    <%= f.text_field :offer, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :need %><br>
-    <%= f.text_field :need %>
+    <%= f.text_field :need, class: "form-control" %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-group">
+    <%= f.submit class: "btn btn primary" %>
   </div>
 <% end %>
