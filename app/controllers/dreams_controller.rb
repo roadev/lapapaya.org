@@ -18,36 +18,32 @@ class DreamsController < ApplicationController
   def create
     @dream = Dream.new(dream_params)
 
-    respond_to do |format|
       if @dream.save
-        format.html { redirect_to @dream, notice: 'Dream was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @dream }
+        redirect_to @dream, notice: 'Dream was successfully created.' 
+        
       else
-        format.html { render action: 'new' }
-        format.json { render json: @dream.errors, status: :unprocessable_entity }
+      render action: 'new'
+    
       end
     end
-  end
 
   def update
-    respond_to do |format|
       if @dream.update(dream_params)
-        format.html { redirect_to @dream, notice: 'Dream was successfully updated.' }
-        format.json { head :no_content }
+       redirect_to @dream, notice: 'Dream was successfully updated.' 
+      
       else
-        format.html { render action: 'edit' }
-        format.json { render json: @dream.errors, status: :unprocessable_entity }
+        render action: 'edit' 
+       
       end
     end
-  end
 
   def destroy
     @dream.destroy
-    respond_to do |format|
-      format.html { redirect_to dreams_url }
-      format.json { head :no_content }
+  
+   redirect_to dreams_url 
+   
     end
-  end
+ 
 
   private
     def set_dream
@@ -55,6 +51,6 @@ class DreamsController < ApplicationController
     end
 
     def dream_params
-      params.require(:dream).permit(:dream, :whant, :offer, :need)
+      params.require(:dream).permit(:dream)
     end
 end

@@ -18,7 +18,7 @@ class DreamsControllerTest < ActionController::TestCase
 
   test "should create dream" do
     assert_difference('Dream.count') do
-      post :create, dream: { dream: @dream.dream, need: @dream.need, offer: @dream.offer, whant: @dream.whant }
+      post :create, dream: { dream: @dream.dream }
     end
 
     assert_redirected_to dream_path(assigns(:dream))
@@ -35,7 +35,7 @@ class DreamsControllerTest < ActionController::TestCase
   end
 
   test "should update dream" do
-    patch :update, id: @dream, dream: { dream: @dream.dream, need: @dream.need, offer: @dream.offer, whant: @dream.whant }
+    patch :update, id: @dream, dream: { dream: @dream.dream }
     assert_redirected_to dream_path(assigns(:dream))
   end
 
