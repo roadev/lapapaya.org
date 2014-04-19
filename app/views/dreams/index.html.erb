@@ -1,20 +1,27 @@
 
+<%= render 'pages/home' unless user_signed_in? %>
+
 <div id="dreams" class="transitions-enabled">
 
     <% @dreams.each do |dream| %>
       <div class="box panel panel-default">
         <%= link_to image_tag(dream.image.url(:medium)), dream %>
         <div class="panel-body">
-       <%= dream.dream %> <br>
-       <strong> <%= dream.user.email if dream.user%> </strong>
-        <div class="actions">
+
+       <p><%= dream.dream %></p>
+       <p><strong><%= dream.user.email if dream.user %> </strong></p>
+        
         <% if dream.user == current_user %>
-        <%= link_to 'Edit', edit_dream_path(dream) %>
-       <%= link_to 'Destroy', dream, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <div class="actions">
+        <%= link_to edit_dream_path(dream) do %>
+        <span class="glyphicon glyphicon-edit"></span>
+        Edit
         <% end %>
-         </div>
-        </div>
-      </div>  
+       <%= link_to dream, method: :delete, data: { confirm: 'Are you sure?' } do %>
+       <span class="glyphicon glyphicon-trash"></span>
+       Delete
+        <% end %>
+      </div>
     <% end %>
    </div> 
-
+   <% end %>
