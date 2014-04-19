@@ -1,5 +1,7 @@
 class DreamsController < ApplicationController
   before_action :set_dream, only: [:show, :edit, :update, :destroy]
+  before_action :correct_user, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
 
   def index
     @dreams = Dream.all
@@ -9,14 +11,14 @@ class DreamsController < ApplicationController
   end
 
   def new
-    @dream = Dream.new
+    @dream = current_user.dreams.build
   end
 
   def edit
   end
 
   def create
-    @dream = Dream.new(dream_params)
+    @dream = current_user.dreams.build(dream_params)
 
       if @dream.save
         redirect_to @dream, notice: 'Dream was successfully created.' 
@@ -50,6 +52,10 @@ class DreamsController < ApplicationController
       @dream = Dream.find(params[:id])
     end
 
+  def correct_user
+    @dream = current_user.dreams.find_by(id: params[:id])
+    redirect_to dreams_path, notice: "Not authorized to edit this dream" if @dream.nil?
+  end
     def dream_params
       params.require(:dream).permit(:dream)
     end
