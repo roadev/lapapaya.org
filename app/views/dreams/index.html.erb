@@ -3,6 +3,7 @@
 <table>
   <thead>
     <tr>
+      <th>Images</th>
       <th>Dream</th>
       <th>User id</th>
       <th></th>
@@ -14,6 +15,7 @@
   <tbody>
     <% @dreams.each do |dream| %>
       <tr>
+        <td><%= image_tag dream.image.url(:medium) %></td>
         <td><%= dream.dream %></td>
         <td><%= dream.user.email if dream.user%></td>
         <td><%= link_to 'Show', dream %></td>
