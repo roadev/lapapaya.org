@@ -57,6 +57,6 @@ class DreamsController < ApplicationController
     redirect_to dreams_path, notice: "Not authorized to edit this dream" if @dream.nil?
   end
     def dream_params
-      params.require(:dream).permit(:dream)
+      params.require(:dream).permit(:dream, :image)
     end
 end
