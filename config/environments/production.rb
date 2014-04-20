@@ -28,7 +28,6 @@ Lapapayanetwork::Application.configure do
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
-  config.assets.precompile = %w{application.js}
 
   # Generate digests for assets URLs.
   config.assets.digest = true
@@ -81,14 +80,12 @@ Lapapayanetwork::Application.configure do
   config.action_mailer.default_url_options = { :host => 'infinite-thicket-9985.herokuapp.com' }
   
  # Sets Paperclip to upload images to Amazon S3
-  config.paperclip.defaults = {
+  config.paperclip_defaults = {
   :storage => :s3,
   :s3_credentials => {
-    :bucket => ENV['S3_BUCKET_NAME'],
+    :bucket => ENV['AWS_BUCKET'],
     :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
     :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
-  }
-}
-  }
-
+   }
+ }
 end

@@ -16,6 +16,9 @@ gem 'omniauth'
 gem 'paperclip', github: 'thoughtbot/paperclip'
 gem 'aws-sdk', '~> 1.38.0'
 gem 'masonry-rails', '~> 0.2.1'
+gem 'rspec', '~> 2.14.1'
+gem 'rake'
+gem 'rolify', :git => 'git://github.com/EppO/rolify.git'
 
 group :development, :test do
 	gem 'sqlite3'
@@ -34,7 +37,7 @@ group :doc do
 end
 
 group :assets do
-  gem 'therubyracer'
+ 
 end
 
 # Use ActiveModel has_secure_password
