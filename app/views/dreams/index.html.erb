@@ -2,8 +2,8 @@
 <%= render 'pages/home' unless user_signed_in? %>
 
 <div id="dreams" class="transitions-enabled">
-
-    <% @dreams.each do |dream| %>
+      <% @dreams.each do |dream| %>
+      
       <div class="box panel panel-default">
         <%= link_to image_tag(dream.image.url(:medium)), dream %>
         <div class="panel-body">
@@ -11,6 +11,9 @@
 
        <p><%= dream.dream %></p>
        <p><strong><%= dream.user.email if dream.user %> </strong></p>
+
+       <%= dream.dream %>
+       <strong><%= dream.user.email if dream.user %> </strong>
         
         <% if dream.user == current_user %>
           <div class="actions">
