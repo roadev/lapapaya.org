@@ -11,9 +11,6 @@
 
        <p><%= dream.dream %></p>
        <p><strong><%= dream.user.email if dream.user %> </strong></p>
-
-       <%= dream.dream %>
-       <strong><%= dream.user.email if dream.user %> </strong>
         
         <% if dream.user == current_user %>
           <div class="actions">
