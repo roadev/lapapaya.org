@@ -19,6 +19,7 @@ gem 'masonry-rails', '~> 0.2.1'
 gem 'rspec', '~> 2.14.1'
 gem 'rake'
 gem 'rolify', :git => 'git://github.com/EppO/rolify.git'
+gem 'public_activity'
 
 group :development, :test do
 	gem 'sqlite3'

@@ -1,5 +1,9 @@
 Lapapayanetwork::Application.routes.draw do
+  get "pages/porq"
+  get "activities/index"
   resources :dreams
+  resources :activities
+  
 
   devise_for :users
   root "dreams#index"
