@@ -1,4 +1,7 @@
 Lapapayanetwork::Application.routes.draw do
+  get "pages/enqmebeneficio"
+  get "pages/quienesson"
+  get "pages/q"
   get "pages/porq"
   get "activities/index"
   resources :dreams
