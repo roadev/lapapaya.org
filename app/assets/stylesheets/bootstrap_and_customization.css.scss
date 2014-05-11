@@ -1,7 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+@import url(http://fonts.googleapis.com/css?family=Maven+Pro);
 
 $body-bg:                                                   #ecf0f1;
-$font-family-sans-serif:                'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family: 'Lato', 'Maven Pro', sans-serif;
 $navbar-height:                                        65px;
 $navbar-default-bg:                          white;
 $navbar-default-brand-color:      #FFBF00;
@@ -22,3 +23,23 @@ padding:2px;
 .slogan {
      font-weight: bold; margin-top:100px;
 }
+
+.mc-field-group{
+	background-color: #ffffff; 
+	padding: 0px;
+}
+
+#mce-email {
+	float: left;
+	margin:10px;
+}
+
+#mce-FNAME{
+	margin:10px;
+}
+
+#mce-EMAIL, #mce-FNAME {
+float: left;
+margin-right: 15px!important;
+}
+#mc-embedded-subscribe { margin: 0; }
