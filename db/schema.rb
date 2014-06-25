@@ -11,14 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140501203624) do
-
-  create_table "comments", force: true do |t|
-    t.string   "title"
-    t.text     "body"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(version: 20140517212233) do
 
   create_table "dreams", force: true do |t|
     t.string   "dream"
@@ -33,11 +26,9 @@ ActiveRecord::Schema.define(version: 20140501203624) do
 
   add_index "dreams", ["user_id"], name: "index_dreams_on_user_id"
 
-  create_table "ideas", force: true do |t|
-    t.integer  "description"
-    t.integer  "whant"
-    t.integer  "offer"
-    t.integer  "need"
+  create_table "microposts", force: true do |t|
+    t.string   "content"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,10 +1,11 @@
 class CreateDreams < ActiveRecord::Migration
   def change
-    create_table :dreams do |t|
-    	drop_table :dreams
-      t.string :dream
 
-      t.timestamps
-    end
-  end
+create_table :dreams do |field|
+field.string :dream
+field.timestamps
 end
+
+end
+end
+

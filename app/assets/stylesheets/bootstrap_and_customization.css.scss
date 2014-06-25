@@ -1,7 +1,13 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700);
 @import url(http://fonts.googleapis.com/css?family=Maven+Pro);
 
-$body-bg:                                                   #ecf0f1;
+body {
+ background-image: url(world4.jpg);
+ background-size: 1440px 800px;
+ background-repeat:no-repeat;
+}
+
+$body-bg:                                                   #FAFAFA;
 $font-family: 'Lato', 'Maven Pro', sans-serif;
 $navbar-height:                                        65px;
 $navbar-default-bg:                          white;
@@ -43,3 +49,10 @@ float: left;
 margin-right: 15px!important;
 }
 #mc-embedded-subscribe { margin: 0; }
+
+.box {
+   padding: 20px;
+   margin: 10px;
+   width: 240px;
+}
+
