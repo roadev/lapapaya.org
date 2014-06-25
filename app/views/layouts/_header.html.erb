@@ -1,3 +1,5 @@
+
+
 <nav class="navbar navbar-static-top navbar-default" role="navigation">
  <div class="container">
   <!-- Brand and toggle get grouped for better mobile display -->
@@ -9,8 +11,25 @@
       <span class="icon-bar"></span>
     </button>
     
-   <%= link_to (image_tag "logo.png", width: 290, height: 110), "/" %><br/>
+  <!--   <div class="btn-group">
+  <button type="button" class="btn btn-default">1</button>
+  <button type="button" class="btn btn-default">2</button>
 
+  <div class="btn-group">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+      Dropdown
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+      <li><a href="#">Dropdown link</a></li>
+      <li><a href="#">Dropdown link</a></li>
+    </ul>
+  </div>
+</div>
+-->
+
+   <%= link_to (image_tag "logo.png", width: 290, height: 110), "/" %><br/>
+<h2> Comparte tu sueño con otros miles de personas y consigue apoyo, sponsors o colaboradores.</h2>
 
   </div>
 
@@ -19,6 +38,9 @@
     <ul class="nav navbar-nav navbar-right">
       <li><%= link_to "Home", root_path %></li>
       <li><%= link_to "About", about_path %></li> 
+      <li><%= link_to "¿Como funciona?", about_path %></li> 
+      <li><%= link_to "¿De donde nació?", about_path %></li> 
+      <li><%= link_to "Areas de interés", about_path %></li> 
       <% if user_signed_in? %>
       
       <li><%= link_to new_dream_path do %>

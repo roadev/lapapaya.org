@@ -2,8 +2,8 @@
 @import url(http://fonts.googleapis.com/css?family=Maven+Pro);
 
 body {
- background-image: url(world4.jpg);
- background-size: 1440px 800px;
+ background-image: url(WorldMap.png);
+ background-size: 1200px 675px;
  background-repeat:no-repeat;
 }
 
@@ -54,5 +54,10 @@ margin-right: 15px!important;
    padding: 20px;
    margin: 10px;
    width: 240px;
+}
+
+.btn-group {
+position: relative;
+    left: 0px;
 }
 
