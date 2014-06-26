@@ -1,4 +1,5 @@
 Lapapayanetwork::Application.routes.draw do
+  get "page/challenges"
   resources :microposts
 
   get "pages/enqmebeneficio"

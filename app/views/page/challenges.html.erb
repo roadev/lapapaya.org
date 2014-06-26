@@ -1,0 +1,518 @@
+<h1> Reto 1 </h1>
+
+<p> Try this in your console:
+
+function test(){ alert('test');}();
+What happens?
+
+Why?
+
+How you could execute it only adding one more character to the sentence?
+
+Explain why it works?
+</p>
+<br>
+<br>
+
+<h1> Reto 2 </h1>
+<p> Try this in your console:
+
+What does this print?
+
+var stockOptionsCost = 10.70,
+    paid = 20.80;
+
+function calculateChange() {
+
+    return paid - stockOptionsCost;
+}
+
+function calculateAmountOfStockOptions () {
+    return paid / stockOptionsCost;
+}
+
+console.log( 'You purchased ' + calculateAmountOfStockOptions() + ' Stock Options.' )
+console.log( 'Take your change [' + calculateChange()  + '] and thanks for buying with Bank Ruptcy' );
+Why?
+
+How could you fix it?
+</p>
+
+<br>
+<br>
+
+<h1> Reto 3 </h1>
+<p> Try this in your console:
+
+What does this print?
+
+var bird = 'Pidgeons';
+( function () {
+    if ( typeof bird === 'undefined' ){
+        var bird = 'Rubber Duck';
+        console.log('Ernie loves his ' + bird );
+    } else {
+        console.log('Bert loves his ' + bird );
+    }
+}() );
+Why?
+
+How could you fix it?
+</p>
+<br>
+<br>
+<h1> Reto 4 </h1>
+<p> Try this in your console:
+
+function test(){ alert('test');}();
+What happens?
+
+Why?
+
+How you could execute it only adding one more character to the sentence?
+
+Explain why it works?
+</p>
+<br>
+<br>
+<h1> Reto 5 </h1>
+<p> Try this in your console:
+
+After executing the next snippet of code...
+
+var key,
+    obj = {
+        name: 'john',
+        surname: 'doe'
+    };
+
+// Fill the code
+
+for ( key in obj ) {
+    if ( obj.hasOwnProperty( key ) ) {
+       console.log( key + ' exist in obj' );
+       console.log( key + ': ' + obj[key] );
+       continue;
+    }
+    console.log( key + " doesn't exist in obj" );
+}
+... the console shows the next messages:
+
+name doesn't exist in obj
+name: john
+surname doesn't exist in obj
+surname: doe
+Fill the code section with the code, to get the previous result, without modify obj.
+
+Why this happens?
+</p>
+<br>
+<br>
+<h1> Reto 6 </h1>
+<p> Try this in your console:
+
+As you know Javascript has two different ways to treat the data it receives as arguments of a function:
+
+Primitives are passed by copy
+Complex Objects are passed by reference.
+This mini-challenge is related with this topic.
+
+var oPerson = { name: 'john'};                      // Define an object
+
+(function(oTeacher) {                               // Create a closure to use the object in other function code.
+   window.getTeacher= function() {
+      console.log(oTeacher);
+   };
+}(oPerson));
+
+window.getTeacher();                                // Get the teacher.
+
+oPerson.surname = 'doe';                            // Augment the object.
+
+window.getTeacher();                                // Get the teacher again.
+
+oPerson = { name: 'mary', surname: 'sullivan' };    // Redefine an object
+
+window.getTeacher();                                // Get the teacher again.
+The first execution of window.getTeacher returns:
+
+Object {name: "john"}
+The second execution of window.getTeacher returns:
+
+Object {name: "john", surname: "doe"}
+The third execution of window.getTeacher returns:
+
+Object {name: "john", surname: "doe"}
+Can you explain what's the reason of this behaviour?
+
+Can you see any problem about this behaviour?
+
+How you could solve it?
+</p>
+<br>
+<br>
+<h1> Reto 7 </h1>
+<p> Try this in your console:
+
+Read the following snippets of code:
+
+Snippet 1:
+
+var test;
+
+if ( true ) {
+    test = function () {
+        console.log( "That's true" );
+    };
+} else {
+    test = function () {
+        console.log( "That's false" );
+    };
+}
+
+test(); // Shows "That's true"
+Snippet 2:
+
+if ( true ) {
+    function test() {
+        console.log( "That's true" );
+    }
+} else {
+    function test() {
+        console.log( "That's false" );
+    }
+}
+
+test(); // Shows "That's false"
+Snippet 3:
+
+var test;
+
+if ( true ) {
+    test = function () {
+        console.log( "That's true" );
+    };
+} else {
+    function test() {
+        console.log( "That's false" );
+    }
+}
+
+test(); // Shows "That's true"
+What's the reason of this behaviour?
+</p>
+<br>
+<br>
+<h1> Reto 8 </h1>
+<p> Try this in your console:
+
+What does this print?
+
+var name = 'John',
+    obj = {
+        name: 'James'
+    },
+    Animal,
+    mammal;
+
+Animal = function(){};
+Animal.prototype.name = 'animal';
+
+mammal = new Animal();
+
+delete name;
+
+console.log(name);
+
+delete obj.name;
+
+console.log(obj.name);
+
+delete obj.toString;
+
+console.log(obj.toString);
+
+delete mammal.name;
+
+console.log(mammal.name);
+Why?
+</p>
+<br>
+<br>
+<h1> Reto 9 </h1>
+<p> Try this in your console:
+
+To accomplish a task you need to detect Internet Explorer browsers without using browser sniffing.
+
+The function to detect the browser can be executed in...
+
+Opera
+Chrome
+Firefox
+Phantom
+Internet Explorer
+... and it should return true only if the browser is Internet Explorer.
+
+The function should detect only that browser is Internet Explorer, versions are not relevant, but you must perform the action with only one code.
+
+Replace the FILL THE CODE comment with your own code to perform the requested task.
+
+function isIE()
+{
+    // FILL THE CODE
+}
+</p>
+<br>
+<br>
+<h1> Reto 10 </h1>
+<p> Try this in your console:
+
+Copy and run, individually, the next lines of code in your console:
+
+console.log( 'mañana' === 'mañana' );
+
+console.log( 'mañana' === 'mañana' );
+
+What logs each of them?
+
+Why the result is different?
+
+How you could avoid this issue?
+</p>
+<br>
+<br>
+<h1> Reto 11 </h1>
+<p> Try this in your console:
+
+Having this code:
+
+function Order()
+{
+         this.aOrderLines = [];
+         this.nOrderTotal = 0;
+}
+Order.prototype.getOrderLines = function()
+{
+         return this.aOrderLines;
+};
+Order.prototype.addOrderLine = function(oOrderLine)
+{
+         this.nOrderTotal += oOrderLine.nTotal;
+         this.aOrderLines.push(oOrderLine);
+};
+Order.prototype.removeOrderLine = function(oOrderLineItem)
+{
+         var nOrderTotal;
+         oOrderLine = this.aOrderLines.map(function(oOrder)
+         {
+                  return oOrder === oOrderLineItem;
+         })[0];
+
+         if(typeof oOrderLine === 'undefined' || oOrderLine === null)
+         {
+                  return;
+         }
+         this.nOrderTotal -= oOrderLine.nTotal;
+         this.aOrderLines.splice(this.nOrderTotal, 1);
+};
+The problem in this code is that anyone could access aOrderLines and add or modify values without increasing or decreasing nOrderTotal.
+
+Keep in mind that you have to implement a method to get aOrderLines to loop over its items but avoiding to modify the values.
+
+How you could solve this problem?
+</p>
+<br>
+<br>
+<h1> Reto 12 </h1>
+<p> Try this in your console:
+
+What does this print?
+
+(function() {
+    var values = [3, 8, '15', Math.MAX_VALUE, Infinity, -23],
+        oddValues = [],
+        index,
+        lenValues = values.length,
+        isOdd = function ( value ) {
+            return value % 2 != 0;
+        };
+
+    while(lenValues--) {
+        if ( isOdd( values[lenValues] ) ) {
+            if(typeof values[lenValues] === 'undefined')
+             {
+             debugger;
+             }
+            oddValues.push( values[lenValues] );
+        }
+    }
+    console.log( oddValues );
+}());
+Why?
+</p>
+<br>
+<br>
+<h1> Reto 13 </h1>
+<p> Try this in your console:
+
+This code should exit the first time indexInnerLoop has a value of 10 and indexOuterLoop should log 0.
+
+var indexOuterLoop, iterationsOuterLoop = 1000, indexInnerLoop, iterationsInnerLoop = 100;
+
+for (indexOuterLoop = 0; indexOuterLoop < 1000; indexOuterLoop++)
+{
+     for (indexInnerLoop = 0; indexInnerLoop < iterationsInnerLoop; indexInnerLoop++)
+     {
+        if (indexInnerLoop === 10)
+        {
+            console.log( 'indexInnerLoop is equals to 10' );
+            break;
+        }
+     }
+}
+
+console.log( indexOuterLoop );  // Should log 0.
+Is possible to accomplish the requirements?
+
+What are the modifications can you do to perform the requirements?
+
+Why?
+</p>
+<br>
+<br>
+<h1> Reto 14 </h1>
+<p> Try this in your console:
+
+Look at the following "implementation" of a xor method on the prototype of the Boolean type.
+
+Boolean.prototype.xor = function (sValue) {return !!this !== !!sValue};
+Now, why does the following statement resolve in an unexpected manner?
+
+false.xor (false) // => true
+What can you do to fix it and what is the term that describes this behaviour?
+
+Bonus!!
+
+If all of the following statements are true
+
+!!{} == true
+[] == false
+Why does calling ...
+
+hasTruthyStuff([{},[] 0])
+... on the following function return false?
+
+var hasTruthyStuff = function (aSymbols) {
+    var nResult = 0,
+        i = 0
+        nLen = aSymbols.length;
+
+    for (; i < nLen; i++) {
+        nResult |= aSymbols[i];
+    }
+    return !!nResult;
+};
+</p>
+<br>
+<br>
+<h1> Reto 15 </h1>
+<p> Try this in your console:
+
+Take a look at this code:
+
+var arr = [];
+
+arr[999] = 'john';
+
+console.log( arr.length );              // Question 1
+console.log( arr[999] );                // Question 1.1
+
+var arr_1 = [];
+arr_1[4294967295] = 'james';
+
+console.log( arr_1.length );            // Question 2
+console.log( arr_1[4294967295] );       // Question 2.1
+
+var arr_2 = [];
+arr_2[Number.MIN_VALUE] =  'mary';
+
+console.log( arr_2.length );            // Question 3
+console.log( arr_2[Number.MIN_VALUE] ); // Question 3.1
+What is the result of...
+
+Question 1 - Why?
+Question 1.1 - Why?
+
+Question 2 - Why?
+
+Question 2.1 - Why?
+
+Question 3 - Why?
+
+Question 3.1 - Why?
+</p>
+<br>
+<br>
+<h1> Reto 16 </h1>
+<p> Try this in your console:
+
+Reviewing the code of your colleague you have found this snippet of code:
+
+$( document ).ready( function() {
+  $( '#inputSearch' ).keypress( function() {
+      $.ajax( {
+        url: 'http://xxxxxxx.domain.com/xxxx',
+        data: this.value,
+        success: function ( data )
+        {
+            var results = data.results;
+            $( '#list' ).empty();
+            $.each( data, function ( item ) {
+                $( '#list' ).append( '<li>' + item + '</li>' );
+            } );
+
+        },
+        error: function ( xhr, status, error ) {
+            console.log( 'Something goes wrong!', status, error.message );
+        }
+      } );
+  } );
+} );
+What is/are the problem/s in this code?
+
+How can you solve it/them?
+</p>
+<br>
+<br>
+<h1> Reto 17 </h1>
+<p> Try this in your console:
+
+What does this print?
+
+var strMethod = 'valueOf',
+    strProperty = 'length',
+    value = [44 + 22][strMethod]()[strProperty];
+
+console.log( value );
+
+value = [44 + 22][strMethod][strProperty];
+
+console.log( value );
+Why?
+</p>
+<br>
+<br>
+<h1> Reto 18 </h1>
+<p> Try this in your console:
+
+Write the code needed to get the expected result and explain why:
+
+var obj = {
+    name: 'john',
+    surname: 'doe'
+};
+
+// Write the code.
+
+console.log( JSON.stringify( obj ) );   // Shows in the console { "name": "james", "surname": "sullivan" }
+</p>
