@@ -5,11 +5,13 @@ body {
  background-image: url(WorldMap.png);
  background-size: 1200px 675px;
  background-repeat:no-repeat;
+ background-attachment:fixed;
+background-position:center; 
 }
 
 $body-bg:                                                   #FAFAFA;
 $font-family: 'Lato', 'Maven Pro', sans-serif;
-$navbar-height:                                        65px;
+$navbar-height:                                        75px;
 $navbar-default-bg:                          white;
 $navbar-default-brand-color:      #FFBF00;
 $brand-primary:                                    #c0392b;
@@ -61,3 +63,8 @@ position: relative;
     left: 0px;
 }
 
+h2, h3 {
+font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  color: #6E6E6E;
+  text-align:center;
+}
