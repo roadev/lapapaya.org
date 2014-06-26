@@ -68,3 +68,9 @@ font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
   color: #6E6E6E;
   text-align:center;
 }
+
+.vertical_text {
+  transform: rotate(90deg);
+  transform-origin: left top 0;
+  float: left;
+}
