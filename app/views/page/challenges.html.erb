@@ -360,141 +360,42 @@ Why?
 <br>
 <br>
 <h1> HTML5 </h1>
-<h1> Reto 13 </h1>
-<p> Try this in your console:
-
-This code should exit the first time indexInnerLoop has a value of 10 and indexOuterLoop should log 0.
-
-var indexOuterLoop, iterationsOuterLoop = 1000, indexInnerLoop, iterationsInnerLoop = 100;
-
-for (indexOuterLoop = 0; indexOuterLoop < 1000; indexOuterLoop++)
-{
-     for (indexInnerLoop = 0; indexInnerLoop < iterationsInnerLoop; indexInnerLoop++)
-     {
-        if (indexInnerLoop === 10)
-        {
-            console.log( 'indexInnerLoop is equals to 10' );
-            break;
-        }
-     }
-}
-
-console.log( indexOuterLoop );  // Should log 0.
-Is possible to accomplish the requirements?
-
-What are the modifications can you do to perform the requirements?
-
-Why?
+<h1> Reto 13 Geolocalización </h1>
+<p> Descripción
+Mostrar el recorrido trazado por una línea, desde el punto en el que te encuentras hasta la ubicación de la papaya.
+Ubicación: Carrera 35 # 3O-2 a 3O-99
+Cali, Valle Del Cauca, Colombia
+3.435451, -76.546516
+<br><br>
+<%= image_tag("html1.png", :alt => "Geolocalización", width: 390, height: 290) %>
 </p>
 <br><br>
 <%= link_to (image_tag "qrcode.png", width: 290, height: 290), "/" %>
 <br>
 <br>
-<h1> Reto 14 </h1>
-<p> Try this in your console:
+<h1> Reto 14 Canvas </h1>
+<p> Realizar el siguiente diseño en canvas.
+<br><br>	
+<%= image_tag("html2.png", :alt => "canvas", width: 290, height: 290) %>
 
-Look at the following "implementation" of a xor method on the prototype of the Boolean type.
-
-Boolean.prototype.xor = function (sValue) {return !!this !== !!sValue};
-Now, why does the following statement resolve in an unexpected manner?
-
-false.xor (false) // => true
-What can you do to fix it and what is the term that describes this behaviour?
-
-Bonus!!
-
-If all of the following statements are true
-
-!!{} == true
-[] == false
-Why does calling ...
-
-hasTruthyStuff([{},[] 0])
-... on the following function return false?
-
-var hasTruthyStuff = function (aSymbols) {
-    var nResult = 0,
-        i = 0
-        nLen = aSymbols.length;
-
-    for (; i < nLen; i++) {
-        nResult |= aSymbols[i];
-    }
-    return !!nResult;
-};
 </p>
-<br><br>
 <%= link_to (image_tag "qrcode.png", width: 290, height: 290), "/" %>
 <br>
 <br>
 <h1> Reto 15 </h1>
-<p> Try this in your console:
+<p> Utilizando La API de html5  drag-drop desplazar los puntos de un div(recuadro) al otro.
+<br><br>	
+<%= image_tag("html3.png", :alt => "drag-drop", width: 290, height: 290) %>
 
-Take a look at this code:
-
-var arr = [];
-
-arr[999] = 'john';
-
-console.log( arr.length );              // Question 1
-console.log( arr[999] );                // Question 1.1
-
-var arr_1 = [];
-arr_1[4294967295] = 'james';
-
-console.log( arr_1.length );            // Question 2
-console.log( arr_1[4294967295] );       // Question 2.1
-
-var arr_2 = [];
-arr_2[Number.MIN_VALUE] =  'mary';
-
-console.log( arr_2.length );            // Question 3
-console.log( arr_2[Number.MIN_VALUE] ); // Question 3.1
-What is the result of...
-
-Question 1 - Why?
-Question 1.1 - Why?
-
-Question 2 - Why?
-
-Question 2.1 - Why?
-
-Question 3 - Why?
-
-Question 3.1 - Why?
 </p>
 <br><br>
 <%= link_to (image_tag "qrcode.png", width: 290, height: 290), "/" %>
 <br>
 <br>
 <h1> Reto 16 </h1>
-<p> Try this in your console:
-
-Reviewing the code of your colleague you have found this snippet of code:
-
-$( document ).ready( function() {
-  $( '#inputSearch' ).keypress( function() {
-      $.ajax( {
-        url: 'http://xxxxxxx.domain.com/xxxx',
-        data: this.value,
-        success: function ( data )
-        {
-            var results = data.results;
-            $( '#list' ).empty();
-            $.each( data, function ( item ) {
-                $( '#list' ).append( '<li>' + item + '</li>' );
-            } );
-
-        },
-        error: function ( xhr, status, error ) {
-            console.log( 'Something goes wrong!', status, error.message );
-        }
-      } );
-  } );
-} );
-What is/are the problem/s in this code?
-
-How can you solve it/them?
+<p> Utilizando localstorage realizar un listado con 5 actividades.
+<br><br>	
+<%= image_tag("html4.png", :alt => "localstorage") %>
 </p>
 <br><br>
 <%= link_to (image_tag "qrcode.png", width: 290, height: 290), "/" %>

@@ -10,18 +10,27 @@
   	<strong>Nuestra filosofía</strong><br>
   	ONG Lapapaya.org
   </div>
-  <div class="col-xs-6 col-sm-3">Human Centered Design</div>
+  <div class="col-xs-6 col-sm-3">
+    Human Centered Design
+    <br> Diseño centrado en el humano
+    <div class="footer"><%= image_tag("hcd.png", width: 150, height: 150, :alt => "Inteligent Cities") %></div>
+  </div>
 
   <!-- Add the extra clearfix for only the required viewport -->
   <div class="clearfix visible-xs"></div>
 
-  <div class="col-xs-6 col-sm-3">El sueño es el centro del diseño. Diseñamos programas de educación, emprendimiento y espacios. 
-A partir de un sueño nos acercamos más al producto deseado para el cliente.</div>
+  <div class="col-xs-6 col-sm-3">El sueño es el centro del diseño. Diseñamos programas de:
+  <br>
+  1. Educación <br>
+  2. Emprendimiento <br>
+  3. Espacios <br><br>
+<i>"A partir de un sueño nos acercamos más al producto deseado para nuestros usuarios."</i></div>
   <div class="col-xs-6 col-sm-3"> 
-  >	Ideo HCD Toolkit <br>
-  > Tesis capítulo 3.1 <br>
-  > IAAC <br>
-  > Good <br>
+    <%= link_to "+ Ideo HCD Toolkit", "http://www.ideo.com/work/human-centered-design-toolkit/", :target => "_blank" %><br>
+    <%= link_to "+ Tesis capítulo 3.1", page_challenges_path %><br>
+    <%= link_to "+ IAAC", "http://www.iaacblog.com/maa2011-2012-theoryconcepts/2011/12/human-centered-design-in-context-of-architecture-new-input/", :target => "_blank"%><br>
+    <%= link_to "+ Magazine Good", "http://magazine.good.is/articles/human-centered-design-boom-introducing-public-interest-design-week", :target => "_blank"%><br>
+   <br>
 </div>
   <div class="col-xs-6 col-sm-3">
 </div>
@@ -30,23 +39,27 @@ A partir de un sueño nos acercamos más al producto deseado para el cliente.</d
 
 <div class="row">
   <div class="col-xs-6 col-sm-3"></div>
-  <div class="col-xs-6 col-sm-3">New Economy</div>
+  <div class="col-xs-6 col-sm-3">
+    New Economy <br>
+    Nueva Economía
+    <div class="footer"><%= image_tag("interest.png", width: 150, height: 150, :alt => "Inteligent Cities") %></div>
+
+  </div>
 
   <!-- Add the extra clearfix for only the required viewport -->
   <div class="clearfix visible-xs"></div>
 
   <div class="col-xs-6 col-sm-3">
-  	Que la economia pueda medir el nivel de conciencia de los usuarios brindando mayor beneficio a los usuarios mas concientes.</div>
+  	Que la economia pueda medir el nivel de conciencia de los usuarios, brindando mayor beneficio a aquellos que puedan evidenciar tener un mayor nivel de conciencia.</div>
   <div class="col-xs-6 col-sm-3"> 
-  Bitcoin: Monedas virtuales que apoyan proyectos con impacto social y medio ambiental.
+  <%= link_to "Bitcoin:", page_challenges_path %> Monedas virtuales que apoyan proyectos con impacto social y medio ambiental.
 <br><br>
-> P2P Foundation<br>
-> Mit Bitcoin Expo<br>
-> IGC3 España<br>
-> Dinero y conciencia<br>
-> Tésis capítulo 3.4<br>
-> 0% Interest<br>
-
+<%= link_to "+ P2P Foundation", page_challenges_path %><br>
+    <%= link_to "+ Mit Bitcoin Expo", page_challenges_path %><br>
+    <%= link_to "+ IGC3 España", page_challenges_path %><br>
+    <%= link_to "+ Dinero y conciencia", page_challenges_path %><br>
+    <%= link_to "+ Tésis capítulo 3.4", page_challenges_path %><br>
+    <%= link_to "+ 0% Interest", page_challenges_path %><br>
 </div>
   <div class="col-xs-6 col-sm-3">
 </div>
@@ -55,21 +68,25 @@ A partir de un sueño nos acercamos más al producto deseado para el cliente.</d
 <br>
 <div class="row">
   <div class="col-xs-6 col-sm-3"></div>
-  <div class="col-xs-6 col-sm-3">Collaboration</div>
+  <div class="col-xs-6 col-sm-3">
+    Collaboration<br>
+    Colaboración
+    <div class="footer"><%= image_tag("collaboration.png", width: 150, height: 150, :alt => "Inteligent Cities") %></div>
+  </div>
 
   <!-- Add the extra clearfix for only the required viewport -->
   <div class="clearfix visible-xs"></div>
 
   <div class="col-xs-6 col-sm-3">
-  	Nuestra pedagogia premia a las personas por colaborar en la consecucion de resultados, en lugar de asignar notas que generan roses entre los alumnos reduciendo la capacidad de trabajo en equipo. <br>
+  	Nuestra pedagogia premia a las personas por colaborar en la consecucion de resultados, en lugar de asignar notas que generan roces entre los alumnos reduciendo la capacidad de trabajo en equipo. <br>
 "Por medio de las monedas virtuales se
  premian las personas por colaborar."</div>
- <br><br>
+ 
   <div class="col-xs-6 col-sm-3"> 
-> Co creación<br>
-> Co-working<br>
-> Shared value<br>
-> Inteligencias colectivas<br>
+    <%= link_to "+ Co creación", page_challenges_path %><br>
+    <%= link_to "+ Co-working", page_challenges_path %><br>
+    <%= link_to "+ Shared value", page_challenges_path %><br>
+    <%= link_to "+ Inteligencias colectivas", page_challenges_path %><br>
 <br>
 
 </div>
@@ -90,10 +107,9 @@ A partir de un sueño nos acercamos más al producto deseado para el cliente.</d
 
 </div>
   <div class="col-xs-6 col-sm-3"> 
-  >	World Tech Makers <br>
-  > General Assembly <br>
-  > Pacto por la educación <br>
- 
+    <%= link_to "+  World Tech Makers ", page_challenges_path %><br>
+    <%= link_to "+ General Assembly ", page_challenges_path %><br>
+    <%= link_to "+ Pacto por la educación", page_challenges_path %><br>
 </div>
   <div class="col-xs-6 col-sm-3">
 </div>
@@ -114,10 +130,9 @@ A partir de un sueño nos acercamos más al producto deseado para el cliente.</d
   <div class="col-xs-6 col-sm-3"> 
   Educación para el emprendimiento
 <br><br>
-> Proyecto de vida<br>
-> Modelo Canvas Plus<br>
-> Programas<br>
-
+    <%= link_to "+ Proyecto de vida ", page_challenges_path %><br>
+    <%= link_to "+ Modelo Canvas Plus ", page_challenges_path %><br>
+    <%= link_to "+ Programas", page_challenges_path %><br>
 </div>
   <div class="col-xs-6 col-sm-3">
 </div>
@@ -126,27 +141,28 @@ A partir de un sueño nos acercamos más al producto deseado para el cliente.</d
 <hr>
 
 <div class="row">
-  <div class="col-xs-6 col-sm-3">Ultimate hibrid goal</div>
+  <div class="col-xs-6 col-sm-3"style="color:#00BFFF" >Ultimate hibrid goal</div>
   <div class="col-xs-6 col-sm-3">Ciudades Inteligentes</div>
 
   <!-- Add the extra clearfix for only the required viewport -->
   <div class="clearfix visible-xs"></div>
 
   <div class="col-xs-6 col-sm-3">
-  	Manifiesto
+    Our Manifesto<br>
+    Manifiesto
 
   </div>
   <div class="col-xs-6 col-sm-3"> 
-  >	Conceptos Generales <br>
-  > Educación <br>
-  > Especialización del conocimiento<br>
-  > Industrias Culturales y Sociedad del Conocimiento<br>
-  > Salud<br>
-  > Economía<br>
-  > Ciudad y Urbanismo<br>
-  > Indicadores de felicidad<br>
-  > Familia<br>
-  > Seguridad alimentaria<br>
+    <%= link_to "+  Conceptos Generales ", page_challenges_path %><br>
+    <%= link_to "+ Especialización del conocimiento ", page_challenges_path %><br>
+    <%= link_to "+ Industrias Culturales y Sociedad del Conocimiento", page_challenges_path %><br>
+    <%= link_to "+ Salud ", page_challenges_path %><br>
+    <%= link_to "+ Economía ", page_challenges_path %><br>
+    <%= link_to "+ Ciudad y Urbanismo", page_challenges_path %><br>
+    <%= link_to "+ Indicadores de felicidad ", page_challenges_path %><br>
+    <%= link_to "+ Especialización del conocimiento ", page_challenges_path %><br>
+    <%= link_to "+ Familia", page_challenges_path %><br>
+    <%= link_to "+ Seguridad alimentaria", page_challenges_path %><br>
 </div>
   <div class="col-xs-6 col-sm-3">
 </div>
@@ -156,10 +172,13 @@ A partir de un sueño nos acercamos más al producto deseado para el cliente.</d
 <br>
 <br>
 <div class="row">
-  <div class="col-xs-6 col-sm-3"> Start-up Meetrico</div>
+  <div class="col-xs-6 col-sm-3"> Start-up Meetrico
+    <br> Optimización de espacios
+    <div class="footer"><%= image_tag("meetrico.png", width: 120, height: 150, :alt => "Inteligent Cities") %></div>
+  </div>
   <div class="col-xs-6 col-sm-3">
-  > Nuevas escuelas (Espacios físicos)<br>
-  > Coworking Spaces<br>	
+  + Nuevas escuelas (Espacios físicos)<br>
+  + Coworking Spaces<br>	
 
   </div>
 
@@ -171,10 +190,10 @@ A partir de un sueño nos acercamos más al producto deseado para el cliente.</d
 
   </div>
   <div class="col-xs-6 col-sm-3"> 
-  >	Alternative learning spaces <br>
-  > Espacios vacíos <br>
-  > Meet people<br>
-  > Connectivity<br>
+  +	Alternative learning spaces <br>
+  + Espacios vacíos <br>
+  + Meet people<br>
+  + Connectivity<br>
 </div>
   <div class="col-xs-6 col-sm-3">
 </div>
@@ -184,8 +203,8 @@ A partir de un sueño nos acercamos más al producto deseado para el cliente.</d
 <div class="row">
   <div class="col-xs-6 col-sm-3"></div>
   <div class="col-xs-6 col-sm-3">
-  > Aplicaciones Urbanísticas y Arquitectónicas<br>
-  > Desarrollo territorial sostenible<br>	
+  + Aplicaciones Urbanísticas y Arquitectónicas<br>
+  + Desarrollo territorial sostenible<br>	
 
   </div>
 
@@ -193,17 +212,17 @@ A partir de un sueño nos acercamos más al producto deseado para el cliente.</d
   <div class="clearfix visible-xs"></div>
 
   <div class="col-xs-6 col-sm-3">
-  >	Viviendas inclusivas <br>
-  > Centros Comerciales <br>
-  > Hoteles <br>
-  > Fincas <br>
-  > Tactical Urbanism <br>
+  +	Viviendas inclusivas <br>
+  + Centros Comerciales <br>
+  + Hoteles <br>
+  + Fincas <br>
+  + Tactical Urbanism <br>
   </div>
   <div class="col-xs-6 col-sm-3"> 
-  >	Reducción de desplazamientos <br>
-  > Alimentos <br>
-  > Bitcoin (Monedas digitales inteligentes)<br>
-  > Oportunidades<br>
+  +	Reducción de desplazamientos <br>
+  + Alimentos <br>
+  + Bitcoin (Monedas digitales inteligentes)<br>
+  + Oportunidades<br>
 </div>
   <div class="col-xs-6 col-sm-3">
 </div>
@@ -213,20 +232,11 @@ A partir de un sueño nos acercamos más al producto deseado para el cliente.</d
   </div>
 </div>
 
-<div data-configid="1814511/8352615" style="width: 325px; height: 271px;" class="issuuembed"></div><script type="text/javascript" src="//e.issuu.com/embed.js" async="true"></script>
 <br>
 
 <div data-configid="1814511/8361791" style="width: 525px; height: 742px;" class="issuuembed"></div><script type="text/javascript" src="//e.issuu.com/embed.js" async="true"></script>
 
 <br>
-
-<div class="btn-group">
-
-  <%= link_to "¿Por que existe lapapaya?", pages_porq_path, class: "btn btn-default" %> 
-  <!-- <%= link_to "¿Que otros sueños existen?", pages_q_path, class: "btn btn-default" %> -->
-  
-  <%= link_to "¿Quienes son lapapaya?", pages_quienesson_path, class: "btn btn-default" %> 
-  <%= link_to "¿En qué me puedo beneficiar?", pages_enqmebeneficio_path, class: "btn btn-default" %> 
 </div>
 <br>
 <br>

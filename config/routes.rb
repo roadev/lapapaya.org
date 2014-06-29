@@ -1,4 +1,7 @@
 Lapapayanetwork::Application.routes.draw do
+  get "pages/areasinteres"
+  get "pages/dedondenacio"
+  get "pages/comofunciona"
   get "page/challenges"
   resources :microposts
 
