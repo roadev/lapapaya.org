@@ -6,7 +6,7 @@
       
       <div class="box panel panel-default">
         <%= link_to image_tag(dream.image.url(:medium)), dream %>
-        
+
         <div class="panel-body">
           </div>
 
@@ -26,4 +26,11 @@
       </div>
     <% end %>
    </div> 
+   <% end %>
+
+   <h2> Import Dreams </h2>
+
+   <%= form_tag import_dreams_path, multipart: true do %>
+    <%= file_field_tag :file %>
+    <%= submit_tag "import" %>
    <% end %>

@@ -1,4 +1,7 @@
 Lapapayanetwork::Application.routes.draw do
+  resources :wikis
+  
+  get "wikis/1"
   get "pages/areasinteres"
   get "pages/dedondenacio"
   get "pages/comofunciona"
@@ -10,7 +13,9 @@ Lapapayanetwork::Application.routes.draw do
   get "pages/q"
   get "pages/porq"
   get "activities/index"
-  resources :dreams
+  resources :dreams do
+    collection { post :import }
+  end
   resources :activities
   
 
@@ -72,3 +77,4 @@ Lapapayanetwork::Application.routes.draw do
   #     resources :products
   #   end
 end
+

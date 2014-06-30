@@ -59,4 +59,8 @@ class DreamsController < ApplicationController
     def dream_params
       params.require(:dream).permit(:dream, :image)
     end
+def import
+  Dream.import(params[:file])
+  redirect_to root, notice: "Dreams imported."
+end
 end
