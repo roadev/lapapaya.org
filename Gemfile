@@ -20,6 +20,7 @@ gem 'rspec', '~> 2.14.1'
 gem 'rake'
 gem 'rolify', :git => 'git://github.com/EppO/rolify.git'
 gem 'public_activity'
+gem 'smarter_csv'
 
 group :development, :test do
 	gem 'sqlite3'

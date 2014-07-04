@@ -4,7 +4,7 @@
 
 
 body {
- background-image:url(WorldMap.png);
+ background: image-url("WorldMap.png") no-repeat ;
  background-size: 1200px 675px;
  background-repeat:no-repeat;
  background-attachment:fixed;
@@ -73,4 +73,9 @@ font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
 
 a {
 color: #FF0040;
+}
+
+#ID {
+   position: absolute; 
+    bottom: 0; 
 }

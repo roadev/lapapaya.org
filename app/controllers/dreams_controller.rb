@@ -45,7 +45,6 @@ class DreamsController < ApplicationController
    redirect_to dreams_url 
    
     end
- 
 
   private
     def set_dream
