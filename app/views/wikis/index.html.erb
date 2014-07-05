@@ -1,34 +1,45 @@
-<h1>Listing wikis</h1>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Wiki Ciudad, Emprendimiento y Educación</h3>
+  </div>
+  <div class="panel-body">
+
+<h5 style="color:red; text-align:center;">En esta wiki encontrarás los resultados de la investigación de lapapaya.org y artículos de interés hacerca de temas relacionados con Educación, emprendimiento y ciudad. </h5>
 
 <table>
   <thead>
     <tr>
-      <th>Title</th>
+      <th><b>Título</b></th><br>
       <th>Abstract</th>
-      <th>Content</th>
+      <th>Contenido</th>
       <th>Tags</th>
       <th></th>
       <th></th>
       <th></th>
     </tr>
   </thead>
-  
+
 
   <tbody>
     <% @wikis.each do |wiki| %>
       <tr>
         <td><%= wiki.title %></td>
         <td><%= wiki.abstract %></td>
-        <td><%= wiki.content %></td>
+        <td><%= wiki.content.html_safe %></td>
         <td><%= wiki.tags %></td>
-        <td><%= link_to 'Show', wiki %></td>
-        <td><%= link_to 'Edit', edit_wiki_path(wiki) %></td>
-        <td><%= link_to 'Destroy', wiki, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'S', wiki %></td>
+        <td><%= link_to 'E', edit_wiki_path(wiki) %></td>
+        <td><%= link_to 'D', wiki, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
+<br><br>
 
-<%= link_to 'New Wiki', new_wiki_path %>
+<%= link_to 'Nuevo', new_wiki_path %>
+<br>
+<br>
+<br>
+  </div>
+</div>
