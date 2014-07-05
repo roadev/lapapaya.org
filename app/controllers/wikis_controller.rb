@@ -9,6 +9,7 @@ class WikisController < ApplicationController
 
   # GET /wikis/1
   # GET /wikis/1.json
+  
   def show
   end
 
