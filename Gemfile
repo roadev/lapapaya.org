@@ -22,6 +22,8 @@ gem 'rake'
 gem 'rolify', :git => 'git://github.com/EppO/rolify.git'
 gem 'public_activity'
 gem 'smarter_csv'
+gem 'roo'
+gem "iconv", "~> 1.0.3"
 
 group :development, :test do
 	gem 'sqlite3'

@@ -3,6 +3,7 @@ class DreamsController < ApplicationController
   before_action :correct_user, only: [:edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
 
+
   def index
     @dreams = Dream.all
   end
@@ -16,6 +17,12 @@ class DreamsController < ApplicationController
 
   def edit
   end
+
+  def import
+  Dream.import(params[:file])
+  redirect_to root, notice: "Dreams imported."
+end
+end
 
   def create
     @dream = current_user.dreams.build(dream_params)
@@ -59,8 +66,5 @@ class DreamsController < ApplicationController
       params.require(:dream).permit(:dream, :image)
     end
     
-def import
-  Dream.import(params[:file])
-  redirect_to root, notice: "Dreams imported."
-end
-end
+
+
