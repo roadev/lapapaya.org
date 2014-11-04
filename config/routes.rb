@@ -1,4 +1,5 @@
 Lapapayanetwork::Application.routes.draw do
+  get "pages/milsuenos"
   resources :wikis
   
   get "wikis/1"
