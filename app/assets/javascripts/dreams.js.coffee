@@ -7,3 +7,4 @@ $ ->
     $('#dreams').masonry
       itemSelector: '.box'
       isFitWidth: true
+
