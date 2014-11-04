@@ -1,4 +1,4 @@
 class PagesController < ApplicationController
-  def milsuenos
+  def queesmilsuenos
   end
 end
