@@ -1,4 +1,4 @@
 class PagesController < ApplicationController
-  def queesmilsuenos
+  def patrocinios
   end
 end
