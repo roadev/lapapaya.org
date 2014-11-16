@@ -4,16 +4,6 @@ GIT
   specs:
     rolify (3.4.0)
 
-GIT
-  remote: git://github.com/thoughtbot/paperclip.git
-  revision: 41da3a3c4c139964a9877c77220f94200d73c87a
-  specs:
-    paperclip (4.1.1)
-      activemodel (>= 3.0.0)
-      activesupport (>= 3.0.0)
-      cocaine (~> 0.5.3)
-      mime-types
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -99,6 +89,11 @@ GEM
       hashie (>= 1.2, < 3)
       rack (~> 1.0)
     orm_adapter (0.5.0)
+    paperclip (3.5.4)
+      activemodel (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      cocaine (~> 0.5.3)
+      mime-types
     pg (0.17.1)
     polyglot (0.3.4)
     public_activity (1.4.1)
@@ -198,7 +193,7 @@ DEPENDENCIES
   jquery-turbolinks
   masonry-rails (~> 0.2.1)
   omniauth
-  paperclip!
+  paperclip (~> 3.0)
   pg
   public_activity
   rails (= 4.0.4)
