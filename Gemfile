@@ -25,6 +25,7 @@ gem 'smarter_csv'
 gem 'roo'
 gem "iconv", "~> 1.0.3"
 gem 'giocopro', '~> 0.0.8'
+gem 'newrelic_rpm'
 
 group :development, :test do
 	gem 'sqlite3'
