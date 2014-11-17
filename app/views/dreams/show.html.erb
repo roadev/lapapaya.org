@@ -1,4 +1,4 @@
-<%= link_to 'Back', dreams_path %>
+<%= link_to 'Atrás', dreams_path %>
 
 <div class="row">
 	<div class="col-md-offset-2 col-md-8">
@@ -12,8 +12,9 @@
 
 <!--<p><strong><%= @dream.user.email if @dream.user %></strong></p> -->
 
+
 <% if @dream.user == current_user %>
-<%= link_to 'Edit', edit_dream_path(@dream) %> |
+<%= link_to 'Editar', edit_dream_path(@dream) %> |
 </div>
 <% end %>
 </div>
@@ -35,7 +36,7 @@
 <br>
 
 
-<div class="panel panel-default">
+<!--<div class="panel panel-default">
   <div class="panel-heading">
     <h3 class="panel-title">Oportunidades para cumplir mi sueño</h3>
   </div>
@@ -83,6 +84,6 @@
     </div>
   </div>
 </div>
-
+-->
 
 

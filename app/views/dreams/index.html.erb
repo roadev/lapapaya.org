@@ -12,17 +12,18 @@
 
        <p><strong> Sueño </strong></p>
        <p><%= dream.dream %></p>
+       
        <!-- <p><strong><%= dream.user.email if dream.user %> </strong></p>-->
         
         <% if dream.user == current_user %>
           <div class="actions">
         <%= link_to edit_dream_path(dream) do %>
         <span class="glyphicon glyphicon-edit"></span>
-        Edit
+        Editar
         <% end %>
        <%= link_to dream, method: :delete, data: { confirm: 'Are you sure?' } do %>
        <span class="glyphicon glyphicon-trash"></span>
-       Delete
+       Borrar
         <% end %>
       </div>
     <% end %>
