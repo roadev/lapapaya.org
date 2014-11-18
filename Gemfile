@@ -27,6 +27,7 @@ gem "iconv", "~> 1.0.3"
 gem 'giocopro', '~> 0.0.8'
 gem 'newrelic_rpm'
 gem 'social-share-button', '~> 0.1.6'
+gem 'youtube_it', '~> 2.4.0'
 
 group :development, :test do
 	gem 'sqlite3'
