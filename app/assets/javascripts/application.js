@@ -18,4 +18,4 @@
 //= require masonry/jquery.masonry
 //= require_tree .
 //= require tinymce-jquery
-
+//= require social-share-button

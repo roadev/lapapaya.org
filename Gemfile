@@ -26,7 +26,7 @@ gem 'roo'
 gem "iconv", "~> 1.0.3"
 gem 'giocopro', '~> 0.0.8'
 gem 'newrelic_rpm'
-gem 'shareable'
+gem 'social-share-button', '~> 0.1.6'
 
 group :development, :test do
 	gem 'sqlite3'
