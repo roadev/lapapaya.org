@@ -12,11 +12,11 @@
 
        <p><strong> Sueño </strong></p>
        <p><%= dream.dream %></p>
-       <%= link_to 'Volverme cómplice', new_user_registration_path, class: "btn btn-primary" %>
+       <%= link_to 'Volverme cómplice', pages_milsuenos_path, class: "btn btn-primary" %>
        <br>
        <br>
-
-
+       
+       <%= @dta %>
 
        <p> >> Reguemos semillas de papaya </p>
        <%= social_share_button_tag("My Site") %>
