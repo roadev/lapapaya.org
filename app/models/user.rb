@@ -19,10 +19,3 @@ def adding_methods
 current_user.track_event('Login')
 end
 
-def adding_methods
-current_user.track_event('Login')
-end
-
-def adding_methods
-@dta = current_user.gioco_data
-end
