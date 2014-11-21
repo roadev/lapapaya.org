@@ -48,7 +48,8 @@
     <ul class="nav navbar-nav navbar-right">
       <li><%= link_to "Inicio", root_path %></li>
       <li><%= link_to "Acerca de", about_path %></li> 
-       <li><%= link_to "Mil sueños por Cali", pages_milsuenos_path %></li> 
+       <li><%= link_to "Complices por 1000sueños", pages_milsuenos_path %></li> 
+      <!-- <li><%= link_to "Convocatoria de cómplices", pages_milsuenos_path %></li> -->
       <li><%= link_to "¿Que es?", pages_queesmilsuenos_path %></li> 
       <li><%= link_to "Patrocina", pages_patrocinios_path %></li> 
       <!--  <li><%= link_to "Challenge", page_challenges_path %></li> 
@@ -56,8 +57,8 @@
 
       <% if user_signed_in? %>
 
-      <li><%= link_to "Wiki", wikis_path %></li> 
-      <li><%= link_to new_dream_path do %>
+      <!--<li><%= link_to "Wiki", wikis_path %></li> -->
+      <li><%= link_to new_dream_path do %> 
        <span class="glyphicon glyphicon-plus"></span> New Dream  
        <% end %>
      </li>
@@ -68,6 +69,10 @@
       <li><%= link_to "Sign in", new_user_session_path %></li>
       <% end %>    
     </ul>
-  </div><!-- /.navbar-collapse -->
+  </div>
+
+  <!-- /.navbar-collapse -->
 </nav>
+
+
 

@@ -1,14 +1,23 @@
 <p id="notice"><%= notice %></p>
+<%= link_to 'Edit', edit_micropost_path(@micropost) %> |
+<%= link_to 'Back', microposts_path %>
 
-<p>
-  <strong>Content:</strong>
-  <%= @micropost.content %>
-</p>
+<%= link_to 'Atrás', dreams_path %>
 
+<div class="row">
+	<div class="col-md-offset-2 col-md-8">
+		<div class="panel panel-default">
+			<div class="panel-heading center">
+			</div>
+<div class="panel-body">
+<p><strong> Reto </strong></p>
+<%= @micropost.content %>
 <p>
   <strong>User:</strong>
   <%= @micropost.user_id %>
 </p>
-
-<%= link_to 'Edit', edit_micropost_path(@micropost) %> |
-<%= link_to 'Back', microposts_path %>
+<%= link_to 'Quiero sumarme a este sueño', pages_milsuenos_path, class: "btn btn-primary" %> 
+<br>
+<br>
+<p> Compártelo</p>
+<%= social_share_button_tag("My Site") %>

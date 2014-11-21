@@ -34,16 +34,15 @@ class DreamsController < ApplicationController
 
   def update
 		if @dream.update(dream_params)
-       redirect_to @dream, notice: 'Dream was successfully updated.' 
-    else
-        render action: 'edit' 
-    end
+    Dream.import(params[:file])
+    redirect_to root, notice: "Dreams imported."
   end
 
+
   def destroy
-		@dream.destroy
-	   redirect_to dreams_url 
-    end
+    @dream.destroy
+     redirect_to dreams_url 
+  end
 
   private
     def set_dream
@@ -55,11 +54,11 @@ class DreamsController < ApplicationController
     redirect_to dreams_path, notice: "Not authorized to edit this dream" if @dream.nil?
   end
 
+
 	def dream_params
 		params.require(:dream).permit(:dream, :image)
 	end
 end
 
     
-
 

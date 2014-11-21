@@ -1,6 +1,49 @@
 
+<div id="dreams" class="transitions-enabled">
+      <% @dreams.each do |dream| %>
+      
+      <div class="box panel panel-default">
+        <%= link_to image_tag(dream.image.url(:medium)), dream %>
 
-<%= form_tag import_dreams_path, multipart: true do %>
-  <%= file_field_tag :file %>
-  <%= submit_tag "Import" %>
-<% end %>
+        <div class="panel-body">
+          </div>
+
+       <p><strong> Sueño </strong></p>
+       <p><%= dream.dream %></p>
+       <%= link_to 'Volverme cómplice', pages_milsuenos_path, class: "btn btn-primary" %>
+       <br>
+       <br>
+       
+       <%= @dta %>
+
+       <p> >> Reguemos semillas de papaya </p>
+       <%= social_share_button_tag("My Site") %>
+       
+       <!-- <p><strong><%= dream.user.email if dream.user %> </strong></p>-->
+        
+        <% if dream.user == current_user %>
+          <div class="actions">
+        <%= link_to edit_dream_path(dream) do %>
+        <span class="glyphicon glyphicon-edit"></span>
+        Editar
+        <% end %>
+       <%= link_to dream, method: :delete, data: { confirm: 'Are you sure?' } do %>
+       <span class="glyphicon glyphicon-trash"></span>
+       Borrar
+        <% end %>
+      </div>
+    <% end %>
+   </div> 
+   <% end %>
+
+
+ 
+
+
+
+
+
+
+
+
+

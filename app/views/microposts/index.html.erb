@@ -1,9 +1,9 @@
-<h1>Listing microposts</h1>
+<h1>Lista de</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Content</th>
+      <th>Contenido</th>
       <th>User</th>
       <th></th>
       <th></th>
@@ -27,3 +27,26 @@
 <br>
 
 <%= link_to 'New Micropost', new_micropost_path %>
+
+
+<%= link_to 'Atrás', dreams_path %>
+
+<div class="row">
+  <div class="col-md-offset-2 col-md-8">
+    <div class="panel panel-default">
+      <div class="panel-heading center">
+
+      </div>
+<div class="panel-body">
+<p><strong> Micropost </strong></p>
+
+
+
+
+<%= link_to 'Quiero sumarme a este sueño', pages_milsuenos_path, class: "btn btn-primary" %> 
+<br>
+<br>
+<p> Compártelo</p>
+<%= social_share_button_tag("My Site") %>
+
+

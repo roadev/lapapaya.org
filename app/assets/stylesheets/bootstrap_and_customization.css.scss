@@ -4,8 +4,8 @@
 
 
 body {
- background: image-url("WorldMap.png") no-repeat ;
- background-size: 1200px 675px;
+ background: image-url("fondo.png") no-repeat ;
+ background-size: 1300px 800px;
  background-repeat:no-repeat;
  background-attachment:fixed;
 background-position:center; 
@@ -16,7 +16,7 @@ $font-family: 'Lato', 'Maven Pro', sans-serif;
 $navbar-height:                                        75px;
 $navbar-default-bg:                          white;
 $navbar-default-brand-color:      #FFBF00;
-$brand-primary:                                    #c0392b;
+$brand-primary:                                    #FA5882;
 $jumbotron-bg:                                         white;
 
 @import 'bootstrap';
@@ -67,7 +67,7 @@ position: relative;
 
 h2, h3, h4 {
 font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
-  color: #6E6E6E;
+  color: red;
   text-align:center;
 }
 
