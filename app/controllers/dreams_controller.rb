@@ -36,6 +36,7 @@ class DreamsController < ApplicationController
 		if @dream.update(dream_params)
     Dream.import(params[:file])
     redirect_to root, notice: "Dreams imported."
+    end
   end
 
 

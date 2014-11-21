@@ -28,13 +28,13 @@ gem 'giocopro', '~> 0.0.8'
 gem 'newrelic_rpm'
 gem 'social-share-button', '~> 0.1.6'
 gem 'youtube_it', '~> 2.4.0'
+gem 'pg'
 
 group :development, :test do
 	gem 'sqlite3'
 end
 
 group :production do
-	gem 'pg'
 	gem 'rails_12factor'
 end
 
