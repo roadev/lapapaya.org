@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  micropost_id: 
+  solucion: MyString
+  solucion: MyString
+
+two:
+  micropost_id: 
+  solucion: MyString
+  solucion: MyString
