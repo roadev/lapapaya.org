@@ -12,58 +12,18 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :micropost_id %><br>
-    <%= f.text_field :micropost_id %>
-  </div>
-  <div class="field">
     <%= f.label :solucion %><br>
-    <%= f.text_field :solucion %>
-  </div>
-  <div class="field">
-    <%= f.label :solucion %><br>
-    <%= f.text_field :solucion %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
-
-<%= form_for(@micropost) do |f| %>
-  <% if @micropost.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@micropost.errors.count, "error") %> prohibited this micropost from being saved:</h2>
-
-      <ul>
-      <% @micropost.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
- <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
+    <%= f.text_field :solucion, class: "form-control"   %>
   </div>
 
-  <div class="field">
-    <%= f.label :contenido %><br>
-    <%= f.text_field :content %>
-  </div>
-
-    <div class="field">
-    <%= f.label :contenido %><br>
-    <%= f.text_field :content %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :foto %><br>
+    <div class="form-group">
+    <%= f.label :foto %>
     <%= f.file_field :image, class: "form-control" %>
   </div>
- 
- <div class="form-group">
+
+  <div class="actions">
     <%= f.submit class: "form-control" %>
   </div>
-
-
 <% end %>
+
+
