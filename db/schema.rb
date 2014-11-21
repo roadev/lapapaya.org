@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20140630120108) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "dreams", force: true do |t|
     t.string   "dream"
     t.datetime "created_at"
@@ -24,7 +27,7 @@ ActiveRecord::Schema.define(version: 20140630120108) do
     t.datetime "image_updated_at"
   end
 
-  add_index "dreams", ["user_id"], name: "index_dreams_on_user_id"
+  add_index "dreams", ["user_id"], name: "index_dreams_on_user_id", using: :btree
 
   create_table "microposts", force: true do |t|
     t.string   "content"
@@ -48,8 +51,8 @@ ActiveRecord::Schema.define(version: 20140630120108) do
     t.datetime "updated_at"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
   create_table "wikis", force: true do |t|
     t.string   "title"
