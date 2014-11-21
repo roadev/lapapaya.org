@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+
 
 
 
@@ -12,6 +12,10 @@
       </div>
 <div class="panel-body">
 <p><strong> Micropost </strong></p>
+
+<div class="panel-heading center">
+<%= image_tag @micropost.image.url(:medium) %>
+</div>
 
 <p>
   <strong>Content:</strong>

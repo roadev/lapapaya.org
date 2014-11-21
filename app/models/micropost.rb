@@ -1,4 +1,5 @@
 class Micropost < ActiveRecord::Base
 	belongs_to :user
-	validates :content, length: { maximum: 140 }
+	has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100>" }
+	attr_accessor :image_file_name
 end

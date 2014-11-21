@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141121004919) do
+ActiveRecord::Schema.define(version: 20141121195822) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -227,6 +227,8 @@ ActiveRecord::Schema.define(version: 20141121004919) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "large_content"
+    t.string   "image"
   end
 
   create_table "news_letter_emails", force: true do |t|
@@ -300,6 +302,7 @@ ActiveRecord::Schema.define(version: 20141121004919) do
     t.string   "solucion"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image"
   end
 
   add_index "solucions", ["micropost_id"], name: "index_solucions_on_micropost_id", using: :btree
