@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140630120108) do
+ActiveRecord::Schema.define(version: 20141121004919) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +35,15 @@ ActiveRecord::Schema.define(version: 20140630120108) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "solucions", force: true do |t|
+    t.integer  "micropost_id"
+    t.string   "solucion"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "solucions", ["micropost_id"], name: "index_solucions_on_micropost_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

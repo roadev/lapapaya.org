@@ -1,4 +1,6 @@
 Lapapayanetwork::Application.routes.draw do
+  resources :solucions
+
   get "pages/patrocinios"
   get "pages/queesmilsuenos"
   get "pages/milsuenos"
