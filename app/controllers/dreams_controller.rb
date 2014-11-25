@@ -5,7 +5,7 @@ class DreamsController < ApplicationController
 
 
   def index
-    @dreams = Dream.all.order("created_at DESC").limit(2)
+    @dreams = Dream.all.order("created_at DESC").limit(20)
   end
 
   def show
