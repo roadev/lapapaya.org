@@ -29,6 +29,7 @@ gem 'newrelic_rpm'
 gem 'social-share-button', '~> 0.1.6'
 gem 'youtube_it', '~> 2.4.0'
 gem 'pg'
+gem 'will_paginate', '~> 3.0.5'
 
 group :development, :test do
 	gem 'sqlite3'

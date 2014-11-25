@@ -5,7 +5,7 @@ class DreamsController < ApplicationController
 
 
   def index
-    @dreams = Dream.all.order("created_at DESC").limit(20)
+    @dreams = Dream.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 8)
   end
 
   def show
