@@ -14,16 +14,15 @@
 <br>
 <p> Compártelo</p>
 <%= social_share_button_tag("My Site") %>
+
 <!--
 <%=  current_user.gioco_data %>
-
-
-<p><strong><%= @dream.user.email if @dream.user %></strong></p> -->
-
-
+<p><strong><%= @dream.user.email if @dream.user %></strong></p>
 <% if @dream.user == current_user %>
 <%= link_to 'Editar', edit_dream_path(@dream) %> |
-<!--<%= link_to 'Publicar reto', new_micropost_path, class: "btn btn-primary"  %>-->
+ <%= link_to 'Publicar reto', new_micropost_path, class: "btn btn-primary"  %> 
+-->
+
 </div>
 <% end %>
 </div>
