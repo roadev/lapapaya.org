@@ -12,8 +12,16 @@
 <%= link_to 'Quiero sumarme a este sueño', pages_comofunciona_path, class: "btn btn-primary" %> 
 <br>
 <br>
+<div class="footer"><%= image_tag("camisetas.png", width: 450, height: 250, :alt => "Inteligent Cities") %></div>
+
+<br>
+
+<%= link_to 'Apoyar con una camiseta', pages_patrocinios_path, class: "btn btn-primary" %>
+<br>
+<br>
 <p> Compártelo</p>
 <%= social_share_button_tag("My Site") %>
+
 
 <!--
 <p><strong><%= @dream.user.email if @dream.user %></strong></p>
