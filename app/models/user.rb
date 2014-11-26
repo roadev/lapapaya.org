@@ -15,7 +15,3 @@ module ModelGenerator
   end
 end
 
-def adding_methods
-current_user.track_event('Login')
-end
-
