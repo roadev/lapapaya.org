@@ -16,8 +16,7 @@
 
        <p> >> Reguemos semillas de papaya </p>
        <%= social_share_button_tag("My Site") %>
-
-       
+     
        <!-- <p><strong><%= dream.user.email if dream.user %> </strong></p>-->
         
         <% if dream.user == current_user %>
@@ -34,7 +33,12 @@
     <% end %>
    </div> 
    <% end %>
-<%= will_paginate @dreams %>
+
+    <div class="center">
+   <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
+      </div>
+
+      <%= will_paginate @dreams %>
 
  
 
