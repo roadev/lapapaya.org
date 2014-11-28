@@ -1,4 +1,5 @@
 Lapapayanetwork::Application.routes.draw do
+  devise_for :admins
   resources :solucions
 
   get "pages/patrocinios"
@@ -18,6 +19,7 @@ Lapapayanetwork::Application.routes.draw do
   get "pages/q"
   get "pages/porq"
   get "activities/index"
+  get "user/sign_up"
   resources :dreams do
     collection { post :import }
   end

@@ -61,5 +61,7 @@ class DreamsController < ApplicationController
 	end
 end
 
-    
+  def micropost
+    @micropost = Micropost.first
+  end
 
