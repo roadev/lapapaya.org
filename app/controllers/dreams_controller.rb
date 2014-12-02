@@ -65,3 +65,7 @@ end
     @micropost = Micropost.first
   end
 
+  def content
+    @micropost = Micropost.content
+  end
+

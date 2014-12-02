@@ -5,6 +5,7 @@ Lapapayanetwork::Application.routes.draw do
   get "pages/patrocinios"
   get "pages/queesmilsuenos"
   get "pages/milsuenos"
+  get "pages/meetrico"
   resources :wikis
   
   get "wikis/1"
