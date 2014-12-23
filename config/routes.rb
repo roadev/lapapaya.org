@@ -25,7 +25,6 @@ Lapapayanetwork::Application.routes.draw do
     collection { post :import }
   end
   resources :activities
-  
 
   devise_for :users
   root "dreams#index"

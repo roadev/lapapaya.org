@@ -28,6 +28,7 @@ class MicropostsController < ApplicationController
 
     respond_to do |format|
       if @micropost.save
+        current_user.track_event('Created Micropost')
         format.html { redirect_to @micropost, notice: 'Micropost was successfully created.' }
         format.json { render action: 'show', status: :created, location: @micropost }
       else
@@ -69,7 +70,7 @@ class MicropostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def micropost_params
+      params[:micropost][:user_id] = current_user.id
       params.require(:micropost).permit(:content, :image, :user_id)
-
     end
 end
