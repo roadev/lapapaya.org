@@ -38,8 +38,16 @@ end
 	end
 
   def update
-    redirect_to @dream
+    respond_to do |format|
+      if @dream.update(dream_params)
+        format.html { redirect_to @dream, notice: 'Tu sueño ha sido editado' }
+        format.json { head :no_content }
+      else
+        format.html { render action: 'edit' }
+        format.json { render json: @dream.errors, status: :unprocessable_entity }
+      end
     end
+  end
 
 
   def destroy
