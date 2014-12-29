@@ -26,7 +26,7 @@ class DreamsController < ApplicationController
   def create
 		@dream = current_user.dreams.build(dream_params)
 		  if @dream.save
-		    redirect_to @dream, notice: 'Dream was successfully created.' 
+		    redirect_to @dream, notice: 'Ya creaste un sueño, ahora cúmplelo!' 
 		  else
 		    render action: 'new'
 		  end
@@ -57,7 +57,7 @@ class DreamsController < ApplicationController
 
 
 	def dream_params
-		params.require(:dream).permit(:dream, :image)
+		params.require(:dream).permit(:dream, :image, :quiero, :ofrezco, :necesito)
 	end
 end
 
