@@ -1,7 +1,13 @@
 
+<div id="tag_cloud" align="center" >
+ <% tag_cloud Dream.tag_counts, %w[s m l] do |tag, css_class| %>
+ <%= link_to tag.name, tag_path(tag.name), class: css_class %>
+ <% end %>
+</div>  
+
 <div id="dreams" class="transitions-enabled">
-      <% @dreams.each do |dream| %>
-      
+
+      <% @dreams.each do |dream| %>      
       <div class="box panel panel-default">
         <%= link_to image_tag(dream.image.url(:medium)), dream %>
 
@@ -10,6 +16,11 @@
 
        <p><strong> Sueño </strong></p>
        <p><%= dream.dream %></p>
+       <p><strong> Ofrezco </strong></p>
+       <p><%= dream.ofrezco %></p>
+       <p> Tags: <%= raw dream.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %> </p>
+
+
        <%= link_to 'Volverme cómplice', pages_comofunciona_path, class: "btn btn-primary" %>
        <br>
        <br>
@@ -35,13 +46,6 @@
    </div> 
    <% end %>
 
-    <div class="center">
-   <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
-    </div>
-
-      <%= will_paginate @dreams %>
-
- 
 
 
 

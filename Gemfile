@@ -31,6 +31,7 @@ gem 'youtube_it', '~> 2.4.0'
 gem 'pg'
 gem 'will_paginate', '~> 3.0.5'
 gem 'will_paginate-bootstrap'
+gem 'acts-as-taggable-on'
 
 group :development, :test do
 	gem 'sqlite3'

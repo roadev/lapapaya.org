@@ -1,4 +1,5 @@
 Lapapayanetwork::Application.routes.draw do
+  get 'tags/:tag', to: 'dreams#index', as: :tag
   devise_for :admins
   resources :solucions
 

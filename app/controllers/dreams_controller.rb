@@ -5,8 +5,12 @@ class DreamsController < ApplicationController
 
 
   def index
-    @dreams = Dream.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 20)
+    if params[:tag]
+      @dreams = Dream.tagged_with(params[:tag])
+  else    
+    @dreams = Dream.all
   end
+end
 
   def show
   end
@@ -57,7 +61,7 @@ class DreamsController < ApplicationController
 
 
 	def dream_params
-		params.require(:dream).permit(:dream, :image, :quiero, :ofrezco, :necesito)
+		params.require(:dream).permit(:dream, :image, :quiero, :ofrezco, :necesito, :tag_list)
 	end
 end
 

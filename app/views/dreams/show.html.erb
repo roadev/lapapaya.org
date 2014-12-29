@@ -15,6 +15,8 @@
 <p><%= @dream.ofrezco %></p>
 <p><strong> Necesito </strong></p>
 <p><%= @dream.necesito %></p>
+<p><strong> Tags </strong></p>
+<p><%= raw @dream.tag_list.map { |t| link_to t, tag_path(t)}.join(', ') %></p>
 
 <%= link_to 'Quiero ser voluntario', pages_comofunciona_path, class: "btn btn-primary" %> 
 <br>
