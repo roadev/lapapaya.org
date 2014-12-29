@@ -17,6 +17,8 @@
 <p><%= @dream.necesito %></p>
 <p><strong> Tags </strong></p>
 <p><%= raw @dream.tag_list.map { |t| link_to t, tag_path(t)}.join(', ') %></p>
+<p><strong> Tags related </strong></p>
+
 
 <%= link_to 'Quiero ser voluntario', pages_comofunciona_path, class: "btn btn-primary" %> 
 <br>
@@ -41,6 +43,9 @@
 <br>
 <%= current_user.gioco_data %>
 <%= current_user.track_event('Login') %>
+
+
+
 <!-- 
 <p><strong><%= @dream.user.email if @dream.user %></strong></p>-->
 <br>

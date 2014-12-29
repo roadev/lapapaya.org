@@ -27,13 +27,6 @@
     <ul class="nav navbar-nav navbar-right">
       <br>
       <%= link_to "Registrate", new_user_registration_path %>
-      <!--<li><%= link_to "Negocios", pages_q_path %></li>
-      <li><%= link_to "Social", pages_porq_path %></li> 
-      <li><%= link_to "Medio Ambiente", pages_dedondenacio_path %></li> 
-      <li><%= link_to "+ Retos", wikis_path %></li> -->
-      <!--<li><%= link_to "Patrocina", pages_patrocinios_path %></li> 
-      <!--  <li><%= link_to "Challenge", page_challenges_path %></li> 
-      -->
 
       <% if user_signed_in? %>
 
@@ -48,9 +41,6 @@
       <%else%>
       <li><%= link_to "Iniciar sesión", new_user_session_path %></li>
       <li><%= link_to "Acerca de", about_path %></li> 
-       <%= link_to (image_tag "meetrico.png", width: 25, height: 30), "/" 
-   %>
-   <%= link_to "+ Micro Franquicia Social Meetrico", pages_milsuenos_path %>
    <br>
 
       <% end %>    

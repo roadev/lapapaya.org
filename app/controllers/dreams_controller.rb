@@ -13,6 +13,7 @@ class DreamsController < ApplicationController
 end
 
   def show
+    @related = Dream.tagged_with(@tag, :on => :tags)
   end
 
   def new
