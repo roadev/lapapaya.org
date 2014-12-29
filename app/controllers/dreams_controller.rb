@@ -38,11 +38,8 @@ end
 	end
 
   def update
-		if @dream.update(dream_params)
-    Dream.import(params[:file])
-    redirect_to root, notice: "Dreams imported."
+    redirect_to @dream
     end
-  end
 
 
   def destroy
@@ -54,6 +51,7 @@ end
     def set_dream
       @dream = Dream.find(params[:id])
     end
+  end
 
   def correct_user
     @dream = current_user.dreams.find_by(id: params[:id])
@@ -64,7 +62,6 @@ end
 	def dream_params
 		params.require(:dream).permit(:dream, :image, :quiero, :ofrezco, :necesito, :tag_list)
 	end
-end
 
   def micropost
     @micropost = Micropost.first

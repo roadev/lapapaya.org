@@ -4,11 +4,8 @@ class Dream < ActiveRecord::Base
 	validates_attachment_content_type :image, content_type: %w(image/jpeg image/jpg image/png)
 	acts_as_taggable
 	acts_as_taggable_on :tag_list
-	def self.import(file)
-		CSV.foreach(file.path, headers: true) do |row|
-			Dream.create! row.to_hash
 		end
-	end
+
 
 #	def self.import(file)
 #		spreadsheet = open_spreadsheet(file)
@@ -30,6 +27,5 @@ class Dream < ActiveRecord::Base
 #		end
 #	end
 
-end
 
 
