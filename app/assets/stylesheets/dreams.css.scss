@@ -34,7 +34,12 @@ margin: 0 auto;
  margin-left: auto;
  margin-right: auto;
  line-height: 1.6em;
- .s { font-size: 1.0em; }
- .l { font-size: 1.6em; }
- .m { font-size: 2.0em; }
+ .s { font-size: 1.0em; 
+  opacity: 0.4;
+}
+ .l { font-size: 1.6em;
+ opacity: 0.8;
+ }
+ .m { font-size: 2.0em;
+ opacity: 0.6;  }
 }
