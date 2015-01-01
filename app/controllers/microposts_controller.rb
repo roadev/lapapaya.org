@@ -29,8 +29,9 @@ class MicropostsController < ApplicationController
     respond_to do |format|
       if @micropost.save
         current_user.track_event('Micropost creado')
-        format.html { redirect_to @micropost, notice: 'Micropost was successfully created.' }
+        format.html { redirect_to dreams_path, notice: 'Micropost was successfully created.' }
         format.json { render action: 'show', status: :created, location: @micropost }
+
       else
         format.html { render action: 'new' }
         format.json { render json: @micropost.errors, status: :unprocessable_entity }
