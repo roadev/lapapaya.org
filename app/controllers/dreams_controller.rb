@@ -13,8 +13,12 @@ class DreamsController < ApplicationController
 end
 
   def show
+    if user_signed_in?
+    @gamification_data = current_user.gioco_data
+  else
     @related = Dream.tagged_with(@tag, :on => :tags)
   end
+end
 
   def new
     @dream = current_user.dreams.build
@@ -78,4 +82,5 @@ end
   def content
     @micropost = Micropost.content
   end
+
 

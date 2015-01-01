@@ -28,7 +28,7 @@ class MicropostsController < ApplicationController
 
     respond_to do |format|
       if @micropost.save
-        current_user.track_event('Created Micropost')
+        current_user.track_event('Micropost creado')
         format.html { redirect_to @micropost, notice: 'Micropost was successfully created.' }
         format.json { render action: 'show', status: :created, location: @micropost }
       else
