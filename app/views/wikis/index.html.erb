@@ -1,6 +1,6 @@
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h3 class="panel-title">Retos 1000SueñosporCali/h3>
+    <h4> Ciudad, emprendimiento y tecnología </h4>
   </div>
   <div class="panel-body">
 
@@ -28,7 +28,7 @@
               <td><%= wiki.abstract %></td>
               <td><%= wiki.tags %></td>
               <td></td>
-             <!-- <td><%= link_to 'E', edit_wiki_path(wiki) %></td>
+              <td><%= link_to 'E', edit_wiki_path(wiki) %></td>
               <td><%= link_to 'D', wiki, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
             </tr>
           <% end %>
@@ -37,7 +37,11 @@
 
       <br><br>
 
-      <%= link_to 'Nuevo', new_wiki_path %>
+       <% if user_signed_in? %>
+      <%= link_to 'Nuevo', new_wiki_path %> 
+       <% end %>
+
+     </li>
       <br>
       <br>
       <br>

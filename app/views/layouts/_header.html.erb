@@ -13,7 +13,7 @@
     </button>
     
 
-   <%= link_to (image_tag "logo.png", width: 190, height: 90), "/" 
+   <%= link_to (image_tag "logo.png", width: 320, height: 140), "/" 
    %>
    <br/>
    <% if user_signed_in?
@@ -32,7 +32,7 @@
 
       <!--<li><%= link_to "Wiki", wikis_path %></li> -->
       <li><%= link_to new_dream_path do %> 
-       <span class="glyphicon glyphicon-plus"></span> Nuevo sueño  
+       <span class="glyphicon glyphicon-plus"> Nuevo sueño </span>  
        <% end %>
      </li>
 
@@ -55,8 +55,6 @@
     <li><%= link_to "¿Que es?", pages_milsuenos_path %> </li> -->
   </ul>
 </div>
-<h4> Somos una red social donde puedes poner un sueño capaz de cambiar el mundo, a cambio debes ofrecer tiempo para servir a otros proyectos, entre más ayudas ganas puntos, que hacen que el resto de la red te pueda ayudar </h4>
-
       <% end %>    
     </ul>
   </div>

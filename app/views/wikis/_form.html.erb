@@ -11,24 +11,27 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="panel-body">
+  <div class="form-group">
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, class: "form-control" %> 
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :abstract %><br>
-    <%= f.text_area :abstract %>
+    <%= f.text_area :abstract, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :content %><br>
-    <%= f.text_area :content, :class => "tinymce", :rows => 40, :cols => 120 %>
+    <%= f.text_area :content, :class => "tinymce", :rows => 40, :cols => 80 %>
   </div>
-  <div class="field">
+ <div class="form-group">
     <%= f.label :tags %><br>
-    <%= f.text_field :tags %>
-  </div>
+    <%= f.text_field :tags, class: "form-control" %>
+
+  </div> 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: "form-control" %>
+  </div>
   </div>
 <% end %>
 <%= tinymce %>

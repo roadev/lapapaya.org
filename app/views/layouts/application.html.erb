@@ -5,15 +5,21 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
- 
-
 </head>
 <body>
+
 <%= render 'layouts/header' %>
      <div class="container">
      	<% flash.each do |name, msg| %>
      <%= content_tag(:div, msg, class: "alert alert-info") %>
 <% end %>
+
+<div class="panel panel-default">
+<h1>   Educacion para emprendedores de alto impacto con bajo presupuesto </h1>
+ 
+<h3> Somos una red social donde puedes poner un sueño capaz de cambiar el mundo, a cambio debes ofrecer tiempo para servir a otros proyectos, entre más ayudas ganas puntos, que hacen que el resto de la red te pueda ayudar. </h3>
+</div>
+
           <%= yield %>
      </div>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
