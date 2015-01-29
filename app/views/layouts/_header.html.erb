@@ -26,9 +26,6 @@
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav navbar-right">
       <br>
-      <%= link_to "Registrate", new_user_registration_path %>
-
-
       <% if user_signed_in? %>
 
       <!--<li><%= link_to "Wiki", wikis_path %></li> -->
@@ -41,10 +38,11 @@
       <li><%= link_to "Salir", destroy_user_session_path, method: :delete %></li>
       <%else%>
       <li><%= link_to "Iniciar sesión", new_user_session_path %></li>
+      <li><%= link_to "Registrate", new_user_registration_path %></li>
       <li><%= link_to "Acerca de", about_path %></li> 
       <li><%= link_to "+ Facebook", "https://www.facebook.com/groups/lapapaya/?fref=ts", :target => "_blank" %></li> 
       <li><%= link_to "+ Blog", "http://blog.lapapaya.org", :target => "_blank" %></li> 
-      <li><%= link_to "+ Mil sueños por Cali", "http://lapapaya.org/pages/milsuenos", :target => "_blank" %></li> 
+      <li><h4><%= link_to "+ Registra tu sueño en Mil sueños por Cali", "http://lapapaya.org/pages/milsuenos", :target => "_blank" %></h4> <li>
    <br>       
 
 <!-- 
