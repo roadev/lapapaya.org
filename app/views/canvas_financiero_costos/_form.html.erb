@@ -1,0 +1,33 @@
+<%= form_for(@canvas_financiero_costo) do |f| %>
+  <% if @canvas_financiero_costo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@canvas_financiero_costo.errors.count, "error") %> prohibited this canvas_financiero_costo from being saved:</h2>
+
+      <ul>
+      <% @canvas_financiero_costo.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :personal %><br>
+    <%= f.number_field :personal, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :alquiler %><br>
+    <%= f.number_field :alquiler, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :costo_produccion %><br>
+    <%= f.number_field :costo_produccion, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :costo_comercializacion %><br>
+    <%= f.number_field :costo_comercializacion, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.submit class: "form-control" %>
+  </div>
+<% end %>

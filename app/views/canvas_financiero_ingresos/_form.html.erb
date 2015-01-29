@@ -1,0 +1,29 @@
+<%= form_for(@canvas_financiero_ingreso) do |f| %>
+  <% if @canvas_financiero_ingreso.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@canvas_financiero_ingreso.errors.count, "error") %> prohibited this canvas_financiero_ingreso from being saved:</h2>
+
+      <ul>
+      <% @canvas_financiero_ingreso.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :valor_venta_producto1 %><br>
+    <%= f.number_field :valor_venta_producto1, class: "form-control"  %>
+  </div>
+  <div class="form-group">
+    <%= f.label :valor_venta_producto2 %><br>
+    <%= f.number_field :valor_venta_producto2, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :valor_venta_producto3 %><br>
+    <%= f.number_field :valor_venta_producto3, class: "form-control"  %>
+  </div>
+  <div class="actions">
+    <%= f.submit class: "form-control" %>
+  </div>
+<% end %>

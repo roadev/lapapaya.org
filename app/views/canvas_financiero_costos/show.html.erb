@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Personal:</strong>
+  <%= @canvas_financiero_costo.personal %>
+</p>
+
+<p>
+  <strong>Alquiler:</strong>
+  <%= @canvas_financiero_costo.alquiler %>
+</p>
+
+<p>
+  <strong>Costo produccion:</strong>
+  <%= @canvas_financiero_costo.costo_produccion %>
+</p>
+
+<p>
+  <strong>Costo comercializacion:</strong>
+  <%= @canvas_financiero_costo.costo_comercializacion %>
+</p>
+
+<%= link_to 'Edit', edit_canvas_financiero_costo_path(@canvas_financiero_costo) %> |
+<%= link_to 'Back', canvas_financiero_costos_path %>

@@ -1,0 +1,31 @@
+<h1>Listing canvas_financiero_ingresos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Valor venta producto1</th>
+      <th>Valor venta producto2</th>
+      <th>Valor venta producto3</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @canvas_financiero_ingresos.each do |canvas_financiero_ingreso| %>
+      <tr>
+        <td><%= canvas_financiero_ingreso.valor_venta_producto1 %></td>
+        <td><%= canvas_financiero_ingreso.valor_venta_producto2 %></td>
+        <td><%= canvas_financiero_ingreso.valor_venta_producto3 %></td>
+        <td><%= link_to 'Show', canvas_financiero_ingreso %></td>
+        <td><%= link_to 'Edit', edit_canvas_financiero_ingreso_path(canvas_financiero_ingreso) %></td>
+        <td><%= link_to 'Destroy', canvas_financiero_ingreso, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Canvas financiero ingreso', new_canvas_financiero_ingreso_path %>

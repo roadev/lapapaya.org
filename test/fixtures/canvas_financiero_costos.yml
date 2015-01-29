@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  personal: 1
+  alquiler: 1
+  costo_produccion: 1
+  costo_comercializacion: 1
+
+two:
+  personal: 1
+  alquiler: 1
+  costo_produccion: 1
+  costo_comercializacion: 1

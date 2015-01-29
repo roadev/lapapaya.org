@@ -1,0 +1,45 @@
+<h1>Listing canvas_lado_derechos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Propuesta de valor</th>
+      <th>Tratamiento con el cliente</th>
+      <th>Canales</th>
+      <th>Segmento cliente1</th>
+      <th>Segmento cliente22</th>
+      <th>Segmento cliente3</th>
+      <th>Stakeholder1</th>
+      <th>Stakeholder2</th>
+      <th>Stakeholder3</th>
+      <th>Indicador clave</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @canvas_lado_derechos.each do |canvas_lado_derecho| %>
+      <tr>
+        <td><%= canvas_lado_derecho.propuesta_de_valor %></td>
+        <td><%= canvas_lado_derecho.tratamiento_con_el_cliente %></td>
+        <td><%= canvas_lado_derecho.canales %></td>
+        <td><%= canvas_lado_derecho.segmento_cliente1 %></td>
+        <td><%= canvas_lado_derecho.segmento_cliente22 %></td>
+        <td><%= canvas_lado_derecho.segmento_cliente3 %></td>
+        <td><%= canvas_lado_derecho.stakeholder1 %></td>
+        <td><%= canvas_lado_derecho.stakeholder2 %></td>
+        <td><%= canvas_lado_derecho.stakeholder3 %></td>
+        <td><%= canvas_lado_derecho.indicador_clave %></td>
+        <td><%= link_to 'Show', canvas_lado_derecho %></td>
+        <td><%= link_to 'Edit', edit_canvas_lado_derecho_path(canvas_lado_derecho) %></td>
+        <td><%= link_to 'Destroy', canvas_lado_derecho, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Canvas lado derecho', new_canvas_lado_derecho_path %>

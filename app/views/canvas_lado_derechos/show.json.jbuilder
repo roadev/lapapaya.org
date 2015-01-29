@@ -1,0 +1,1 @@
+json.extract! @canvas_lado_derecho, :id, :propuesta_de_valor, :tratamiento_con_el_cliente, :canales, :segmento_cliente1, :segmento_cliente22, :segmento_cliente3, :stakeholder1, :stakeholder2, :stakeholder3, :indicador_clave, :created_at, :updated_at

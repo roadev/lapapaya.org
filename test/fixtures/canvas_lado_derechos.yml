@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  propuesta_de_valor: MyString
+  tratamiento_con_el_cliente: MyString
+  canales: MyString
+  segmento_cliente1: MyString
+  segmento_cliente22: MyString
+  segmento_cliente3: MyString
+  stakeholder1: MyString
+  stakeholder2: MyString
+  stakeholder3: MyString
+  indicador_clave: MyString
+
+two:
+  propuesta_de_valor: MyString
+  tratamiento_con_el_cliente: MyString
+  canales: MyString
+  segmento_cliente1: MyString
+  segmento_cliente22: MyString
+  segmento_cliente3: MyString
+  stakeholder1: MyString
+  stakeholder2: MyString
+  stakeholder3: MyString
+  indicador_clave: MyString

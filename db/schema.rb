@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141229020922) do
+ActiveRecord::Schema.define(version: 20150120213512) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -30,6 +30,69 @@ ActiveRecord::Schema.define(version: 20141229020922) do
 
   add_index "admins", ["email"], name: "index_admins_on_email", unique: true
   add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
+
+  create_table "canvas", force: true do |t|
+    t.string   "cliente1"
+    t.string   "canal1"
+    t.string   "problema1"
+    t.string   "cliente2"
+    t.string   "canal2"
+    t.string   "problema2"
+    t.string   "cliente3"
+    t.string   "canal3"
+    t.string   "problema3"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "canvas_financiero_costos", force: true do |t|
+    t.integer  "personal"
+    t.integer  "alquiler"
+    t.integer  "costo_produccion"
+    t.integer  "costo_comercializacion"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "canvas_financiero_ingresos", force: true do |t|
+    t.integer  "valor_venta_producto1"
+    t.integer  "valor_venta_producto2"
+    t.integer  "valor_venta_producto3"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "canvas_lado_derechos", force: true do |t|
+    t.string   "propuesta_de_valor"
+    t.string   "tratamiento_con_el_cliente"
+    t.string   "canales"
+    t.string   "segmento_cliente1"
+    t.string   "segmento_cliente22"
+    t.string   "segmento_cliente3"
+    t.string   "stakeholder1"
+    t.string   "stakeholder2"
+    t.string   "stakeholder3"
+    t.string   "indicador_clave"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "canvas_lado_izquierdos", force: true do |t|
+    t.string   "sector"
+    t.string   "problema_general"
+    t.string   "solucion"
+    t.string   "producto1"
+    t.string   "producto2"
+    t.string   "producto3"
+    t.string   "actividad_clave1"
+    t.string   "actividad_clave2"
+    t.string   "actividad_clave3"
+    t.string   "recurso_clave1"
+    t.string   "recurso_clave2"
+    t.string   "recurso_clave3"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "dreams", force: true do |t|
     t.string   "dream"

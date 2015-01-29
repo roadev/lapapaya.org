@@ -43,8 +43,13 @@
 <%= link_to 'Publicar un post', new_micropost_path, class: "btn btn-primary"  %> 
 <br>
 <br>
+<% if @dream.tag_list = %w("gente, amor, compasión, entrega") %>
+<iframe width="700" height="500" src="//www.youtube.com/embed/i1Le5GYkBT8" frameborder="0" allowfullscreen></iframe>
+<% else %>
+<h1> Nada </h1>
 <%= @micropost = Micropost.first %>
 </div>
+<% end %>
 <% end %>
 </div>
 </div>

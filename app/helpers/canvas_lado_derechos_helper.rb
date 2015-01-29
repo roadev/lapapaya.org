@@ -1,0 +1,2 @@
+module CanvasLadoDerechosHelper
+end

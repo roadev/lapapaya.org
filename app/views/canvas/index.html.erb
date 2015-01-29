@@ -1,0 +1,43 @@
+<h1>Listing canvas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cliente1</th>
+      <th>Canal1</th>
+      <th>Problema1</th>
+      <th>Cliente2</th>
+      <th>Canal2</th>
+      <th>Problema2</th>
+      <th>Cliente3</th>
+      <th>Canal3</th>
+      <th>Problema3</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @canvas.each do |canva| %>
+      <tr>
+        <td><%= canva.cliente1 %></td>
+        <td><%= canva.canal1 %></td>
+        <td><%= canva.problema1 %></td>
+        <td><%= canva.cliente2 %></td>
+        <td><%= canva.canal2 %></td>
+        <td><%= canva.problema2 %></td>
+        <td><%= canva.cliente3 %></td>
+        <td><%= canva.canal3 %></td>
+        <td><%= canva.problema3 %></td>
+        <td><%= link_to 'Show', canva %></td>
+        <td><%= link_to 'Edit', edit_canva_path(canva) %></td>
+        <td><%= link_to 'Destroy', canva, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Canva', new_canva_path %>

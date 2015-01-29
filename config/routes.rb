@@ -1,4 +1,14 @@
 Lapapayanetwork::Application.routes.draw do
+  resources :canvas_financiero_ingresos
+
+  resources :canvas_financiero_costos
+
+  resources :canvas_lado_derechos
+
+  resources :canvas_lado_izquierdos
+
+  resources :canvas
+
   get 'tags/:tag', to: 'dreams#index', as: :tag
   devise_for :admins
   resources :solucions

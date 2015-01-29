@@ -1,0 +1,33 @@
+<h1>Listing canvas_financiero_costos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Personal</th>
+      <th>Alquiler</th>
+      <th>Costo produccion</th>
+      <th>Costo comercializacion</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @canvas_financiero_costos.each do |canvas_financiero_costo| %>
+      <tr>
+        <td><%= canvas_financiero_costo.personal %></td>
+        <td><%= canvas_financiero_costo.alquiler %></td>
+        <td><%= canvas_financiero_costo.costo_produccion %></td>
+        <td><%= canvas_financiero_costo.costo_comercializacion %></td>
+        <td><%= link_to 'Show', canvas_financiero_costo %></td>
+        <td><%= link_to 'Edit', edit_canvas_financiero_costo_path(canvas_financiero_costo) %></td>
+        <td><%= link_to 'Destroy', canvas_financiero_costo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Canvas financiero costo', new_canvas_financiero_costo_path %>

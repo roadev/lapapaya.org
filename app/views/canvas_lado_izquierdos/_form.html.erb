@@ -1,0 +1,65 @@
+<%= form_for(@canvas_lado_izquierdo) do |f| %>
+  <% if @canvas_lado_izquierdo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@canvas_lado_izquierdo.errors.count, "error") %> prohibited this canvas_lado_izquierdo from being saved:</h2>
+
+      <ul>
+      <% @canvas_lado_izquierdo.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :sector %><br>
+    <%= f.text_field :sector %>
+  </div>
+  <div class="field">
+    <%= f.label :problema_general %><br>
+    <%= f.text_field :problema_general %>
+  </div>
+  <div class="field">
+    <%= f.label :solucion %><br>
+    <%= f.text_field :solucion %>
+  </div>
+  <div class="field">
+    <%= f.label :producto1 %><br>
+    <%= f.text_field :producto1 %>
+  </div>
+  <div class="field">
+    <%= f.label :producto2 %><br>
+    <%= f.text_field :producto2 %>
+  </div>
+  <div class="field">
+    <%= f.label :producto3 %><br>
+    <%= f.text_field :producto3 %>
+  </div>
+  <div class="field">
+    <%= f.label :actividad_clave1 %><br>
+    <%= f.text_field :actividad_clave1 %>
+  </div>
+  <div class="field">
+    <%= f.label :actividad_clave2 %><br>
+    <%= f.text_field :actividad_clave2 %>
+  </div>
+  <div class="field">
+    <%= f.label :actividad_clave3 %><br>
+    <%= f.text_field :actividad_clave3 %>
+  </div>
+  <div class="field">
+    <%= f.label :recurso_clave1 %><br>
+    <%= f.text_field :recurso_clave1 %>
+  </div>
+  <div class="field">
+    <%= f.label :recurso_clave2 %><br>
+    <%= f.text_field :recurso_clave2 %>
+  </div>
+  <div class="field">
+    <%= f.label :recurso_clave3 %><br>
+    <%= f.text_field :recurso_clave3 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

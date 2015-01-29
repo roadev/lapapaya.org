@@ -1,0 +1,57 @@
+<%= form_for(@canvas_lado_derecho) do |f| %>
+  <% if @canvas_lado_derecho.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@canvas_lado_derecho.errors.count, "error") %> prohibited this canvas_lado_derecho from being saved:</h2>
+
+      <ul>
+      <% @canvas_lado_derecho.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :propuesta_de_valor %><br>
+    <%= f.text_field :propuesta_de_valor, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :tratamiento_con_el_cliente %><br>
+    <%= f.text_field :tratamiento_con_el_cliente, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :canales %><br>
+    <%= f.text_field :canales %>
+  </div>
+  <div class="form-group">
+    <%= f.label :segmento_cliente1 %><br>
+    <%= f.text_field :segmento_cliente1, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :segmento_cliente22 %><br>
+    <%= f.text_field :segmento_cliente22, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :segmento_cliente3 %><br>
+    <%= f.text_field :segmento_cliente3, class: "form-control"  %>
+  </div>
+  <div class="form-group">
+    <%= f.label :stakeholder1 %><br>
+    <%= f.text_field :stakeholder1, class: "form-control"  %>
+  </div>
+  <div class="form-group">
+    <%= f.label :stakeholder2 %><br>
+    <%= f.text_field :stakeholder2, class: "form-control"  %>
+  </div>
+  <div class="form-group">
+    <%= f.label :stakeholder3 %><br>
+    <%= f.text_field :stakeholder3, class: "form-control"  %>
+  </div>
+  <div class="form-group">
+    <%= f.label :indicador_clave %><br>
+    <%= f.text_field :indicador_clave, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.submit class: "form-control"  %>
+  </div>
+<% end %>

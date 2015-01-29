@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cliente1: MyString
+  canal1: MyString
+  problema1: MyString
+  cliente2: MyString
+  canal2: MyString
+  problema2: MyString
+  cliente3: MyString
+  canal3: MyString
+  problema3: MyString
+
+two:
+  cliente1: MyString
+  canal1: MyString
+  problema1: MyString
+  cliente2: MyString
+  canal2: MyString
+  problema2: MyString
+  cliente3: MyString
+  canal3: MyString
+  problema3: MyString

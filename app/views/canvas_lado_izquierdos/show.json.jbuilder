@@ -1,0 +1,1 @@
+json.extract! @canvas_lado_izquierdo, :id, :sector, :problema_general, :solucion, :producto1, :producto2, :producto3, :actividad_clave1, :actividad_clave2, :actividad_clave3, :recurso_clave1, :recurso_clave2, :recurso_clave3, :created_at, :updated_at

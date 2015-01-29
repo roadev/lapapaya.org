@@ -1,0 +1,53 @@
+<%= form_for(@canva) do |f| %>
+  <% if @canva.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@canva.errors.count, "error") %> prohibited this canva from being saved:</h2>
+
+      <ul>
+      <% @canva.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="form-group">
+    <%= f.label :cliente1 %><br>
+    <%= f.text_field :cliente1, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :canal1 %><br>
+    <%= f.text_field :canal1, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :problema1%><br>
+    <%= f.text_field :problema1, class: "form-control"  %>
+  </div>
+  <div class="form-group">
+    <%= f.label :cliente2 %><br>
+    <%= f.text_field :cliente2, class: "form-control"  %>
+  </div>
+  <div class="form-group">
+    <%= f.label :canal2 %><br>
+    <%= f.text_field :canal2, class: "form-control"  %>
+  </div>
+  <div class="form-group">
+    <%= f.label :problema2 %><br>
+    <%= f.text_field :problema2, class: "form-control"  %>
+  </div>
+  <div class="form-group">
+    <%= f.label :cliente3 %><br>
+    <%= f.text_field :cliente3, class: "form-control"  %>
+  </div>
+  <div class="form-group">
+    <%= f.label :canal3 %><br>
+    <%= f.text_field :canal3, class: "form-control"  %>
+  </div>
+  <div class="form-group">
+    <%= f.label :problema3 %><br>
+    <%= f.text_field :problema3, class: "form-control"  %>
+  </div>
+  <div class="form-group">
+    <%= f.submit class: "form-control"  %>
+  </div>
+<% end %>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  valor_venta_producto1: 1
+  valor_venta_producto2: 1
+  valor_venta_producto3: 1
+
+two:
+  valor_venta_producto1: 1
+  valor_venta_producto2: 1
+  valor_venta_producto3: 1

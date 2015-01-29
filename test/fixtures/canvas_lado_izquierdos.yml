@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sector: MyString
+  problema_general: MyString
+  solucion: MyString
+  producto1: MyString
+  producto2: MyString
+  producto3: MyString
+  actividad_clave1: MyString
+  actividad_clave2: MyString
+  actividad_clave3: MyString
+  recurso_clave1: MyString
+  recurso_clave2: MyString
+  recurso_clave3: MyString
+
+two:
+  sector: MyString
+  problema_general: MyString
+  solucion: MyString
+  producto1: MyString
+  producto2: MyString
+  producto3: MyString
+  actividad_clave1: MyString
+  actividad_clave2: MyString
+  actividad_clave3: MyString
+  recurso_clave1: MyString
+  recurso_clave2: MyString
+  recurso_clave3: MyString

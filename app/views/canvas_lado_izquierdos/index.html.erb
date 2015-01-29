@@ -1,0 +1,49 @@
+<h1>Listing canvas_lado_izquierdos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sector</th>
+      <th>Problema general</th>
+      <th>Solucion</th>
+      <th>Producto1</th>
+      <th>Producto2</th>
+      <th>Producto3</th>
+      <th>Actividad clave1</th>
+      <th>Actividad clave2</th>
+      <th>Actividad clave3</th>
+      <th>Recurso clave1</th>
+      <th>Recurso clave2</th>
+      <th>Recurso clave3</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @canvas_lado_izquierdos.each do |canvas_lado_izquierdo| %>
+      <tr>
+        <td><%= canvas_lado_izquierdo.sector %></td>
+        <td><%= canvas_lado_izquierdo.problema_general %></td>
+        <td><%= canvas_lado_izquierdo.solucion %></td>
+        <td><%= canvas_lado_izquierdo.producto1 %></td>
+        <td><%= canvas_lado_izquierdo.producto2 %></td>
+        <td><%= canvas_lado_izquierdo.producto3 %></td>
+        <td><%= canvas_lado_izquierdo.actividad_clave1 %></td>
+        <td><%= canvas_lado_izquierdo.actividad_clave2 %></td>
+        <td><%= canvas_lado_izquierdo.actividad_clave3 %></td>
+        <td><%= canvas_lado_izquierdo.recurso_clave1 %></td>
+        <td><%= canvas_lado_izquierdo.recurso_clave2 %></td>
+        <td><%= canvas_lado_izquierdo.recurso_clave3 %></td>
+        <td><%= link_to 'Show', canvas_lado_izquierdo %></td>
+        <td><%= link_to 'Edit', edit_canvas_lado_izquierdo_path(canvas_lado_izquierdo) %></td>
+        <td><%= link_to 'Destroy', canvas_lado_izquierdo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Canvas lado izquierdo', new_canvas_lado_izquierdo_path %>
