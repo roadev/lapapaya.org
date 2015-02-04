@@ -30,9 +30,29 @@
 
       <!--<li><%= link_to "Wiki", wikis_path %></li> -->
       <li><%= link_to new_dream_path do %> 
-       <span class="glyphicon glyphicon-plus"> Nuevo sueño </span>  
-       <% end %>
+       <span class="glyphicon glyphicon-plus"> Nuevo sueño </span>    
+       <% end %>   
      </li>
+     <li><%= link_to edit_dream_path do %> 
+       <span class="glyphicon glyphicon-plus"> Mi sueño </span>    
+       <% end %>   
+     </li>
+<!--
+     <div class="btn-group">
+  <button class="btn">Canvas+</button>
+  <button class="btn dropdown-toggle" data-toggle="dropdown">
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+      <li><%= link_to "¿Quien es mi cliente?", new_canva_path %></li>
+      <li><%= link_to "Lado izquierdo", new_canvas_lado_izquierdo_path %></li>
+      <li><%= link_to "Lado derecho", new_canvas_lado_derecho_path %></li> 
+      <li><%= link_to "Lo que me cuesta", new_canvas_financiero_costo_path %></li> 
+      <li><%= link_to "Lo que me entra", new_canvas_financiero_ingreso_path %></li> 
+  </ul>
+</div>
+-->
+
 
       <li><%= link_to "Configuración", edit_user_registration_path %></li>
       <li><%= link_to "Salir", destroy_user_session_path, method: :delete %></li>
