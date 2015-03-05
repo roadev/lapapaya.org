@@ -1,4 +1,5 @@
 Lapapayanetwork::Application.routes.draw do
+  get "pages/verduras"
   resources :canvas_financiero_ingresos
 
   resources :canvas_financiero_costos
