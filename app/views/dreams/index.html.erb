@@ -6,7 +6,6 @@
 
 <div class="panel panel-default">
  <div id="tag_cloud" align="center" >
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/_hpWKWosPXY" frameborder="0" allowfullscreen></iframe>
   <h3> Navega por nuestros tags</h3>
  <% tag_cloud Dream.tag_counts, %w[s m l] do |tag, css_class| %>
  <%= link_to tag.name, tag_path(tag.name), class: css_class %>
