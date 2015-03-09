@@ -28,7 +28,7 @@
        <p><%= dream.dream %></p>
        <p><strong> Ofrezco </strong></p>
        <p><%= dream.ofrezco %></p>
-       <p> Tags: <%= raw dream.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %> </p>
+       <p> Palabras clave: <%= raw dream.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %> </p>
 
 
        <%= link_to 'Volverme cómplice', pages_comofunciona_path, class: "btn btn-primary" %>
