@@ -6,7 +6,7 @@
 
 <div class="panel panel-default">
  <div id="tag_cloud" align="center" >
-  <h3> Navega por nuestros tags</h3>
+  <h3> Puedes dar click en cualquiera de estas palabras y filtrar los sueños propuestos </h3>
  <% tag_cloud Dream.tag_counts, %w[s m l] do |tag, css_class| %>
  <%= link_to tag.name, tag_path(tag.name), class: css_class %>
  <% end %>
