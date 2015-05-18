@@ -18,7 +18,7 @@
    <br/>
    <% if user_signed_in?
     
-    
+
 
    else %>
 <br>
@@ -32,8 +32,11 @@
       <% if user_signed_in? %>
 
       <!--<li><%= link_to "Wiki", wikis_path %></li> -->
+      <li><%= link_to microposts_path do %> 
+       <span class="glyphicon glyphicon-plus"> Retos </span>  
       <li><%= link_to new_dream_path do %> 
-       <span class="glyphicon glyphicon-plus"> Nuevo sueño </span>    
+       <span class="glyphicon glyphicon-plus"> Nuevo sueño </span>   
+       <% end %>   
        <% end %>   
      </li>
      </li>

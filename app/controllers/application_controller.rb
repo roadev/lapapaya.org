@@ -11,7 +11,7 @@ end
 
 def after_sign_in_path_for(resource)
     if last_dream == nil
-      root_path
+      new_dream_path
     else
       "/dreams/#{last_dream.id}"
     end
