@@ -37,6 +37,7 @@ Lapapayanetwork::Application.routes.draw do
   resources :dreams do
     collection { post :import }
   end
+  get 'dreams/:id', to: 'dreams#show', as: 'dream_show'
   resources :activities
 
   devise_for :users
