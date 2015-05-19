@@ -59,6 +59,10 @@ end
      redirect_to dreams_url 
   end
 
+   def micropost
+    @micropost = Micropost.first
+  end
+
   private
     def set_dream
       @dream = Dream.find(params[:id])
@@ -74,11 +78,6 @@ end
 	def dream_params
 		params.require(:dream).permit(:dream, :image, :quiero, :ofrezco, :necesito, :tag_list)
 	end
-
-  def micropost
-    @micropost = Micropost.first
-  end
-
 
   def content
     @micropost = Micropost.content
