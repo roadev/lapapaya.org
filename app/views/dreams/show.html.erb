@@ -26,9 +26,15 @@
 <p><strong> Palabras clave </strong></p>
 <p><%= raw @dream.tag_list.map { |t| link_to t, tag_path(t)}.join(', ') %></p>
 <p><strong> Tags related </strong></p>
-<%= link_to 'Quiero ser voluntario', pages_comofunciona_path, class: "btn btn-primary" %> 
+<%= link_to 'Quiero ser voluntario de este sueño', pages_comofunciona_path, class: "btn btn-primary" %> 
 <br>
 <br>
+<%= link_to 'Encargar una caja de los sueños', 'http://meetrico.com/coworking_spaces/104', class: "btn btn-primary", :target => "_blank" %> 
+
+<%= image_tag ( "cajadesuenos.png")  %>
+
+<br>
+
 <p> Compártelo</p>
 <%= social_share_button_tag("My Site") %>
 <br>
