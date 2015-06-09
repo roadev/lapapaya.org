@@ -10,10 +10,6 @@ class CanvasController < ApplicationController
   # GET /canvas/1
   # GET /canvas/1.json
   def show
-    if user_singned_in?
-      @canvas
-    else
-      redirect_to "/dreams/#{last_dream.id}"
   end
 
   # GET /canvas/new
