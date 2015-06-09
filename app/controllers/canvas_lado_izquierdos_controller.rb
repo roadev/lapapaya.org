@@ -28,7 +28,7 @@ class CanvasLadoIzquierdosController < ApplicationController
 
     respond_to do |format|
       if @canvas_lado_izquierdo.save
-        format.html { redirect_to @canvas_lado_izquierdo, notice: 'Canvas lado izquierdo was successfully created.' }
+        format.html { redirect_to "/dreams/#{last_dream.id}", notice: 'Canvas lado izquierdo was successfully created.' }
         format.json { render action: 'show', status: :created, location: @canvas_lado_izquierdo }
       else
         format.html { render action: 'new' }

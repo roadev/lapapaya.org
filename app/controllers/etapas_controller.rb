@@ -28,7 +28,7 @@ class EtapasController < ApplicationController
 
     respond_to do |format|
       if @etapa.save
-        format.html { redirect_to @etapa, notice: 'Etapa was successfully created.' }
+        format.html { redirect_to "/dreams/#{last_dream.id}", notice: 'Etapa was successfully created.' }
         format.json { render action: 'show', status: :created, location: @etapa }
       else
         format.html { render action: 'new' }

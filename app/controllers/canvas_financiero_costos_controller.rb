@@ -28,7 +28,7 @@ class CanvasFinancieroCostosController < ApplicationController
 
     respond_to do |format|
       if @canvas_financiero_costo.save
-        format.html { redirect_to @canvas_financiero_costo, notice: 'Canvas financiero costo was successfully created.' }
+        format.html { redirect_to "/dreams/#{last_dream.id}", notice: 'Canvas financiero costo was successfully created.' }
         format.json { render action: 'show', status: :created, location: @canvas_financiero_costo }
       else
         format.html { render action: 'new' }

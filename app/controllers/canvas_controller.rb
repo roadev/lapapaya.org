@@ -28,7 +28,7 @@ class CanvasController < ApplicationController
 
     respond_to do |format|
       if @canva.save
-        format.html { redirect_to @canva, notice: 'Canva was successfully created.' }
+        format.html { redirect_to "/dreams/#{last_dream.id}", notice: 'Canva was successfully created.' }
         format.json { render action: 'show', status: :created, location: @canva }
       else
         format.html { render action: 'new' }
