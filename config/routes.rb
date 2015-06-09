@@ -1,4 +1,6 @@
 Lapapayanetwork::Application.routes.draw do
+  resources :etapas
+
   get "pages/civismo"
   get "pages/verduras"
   resources :canvas_financiero_ingresos

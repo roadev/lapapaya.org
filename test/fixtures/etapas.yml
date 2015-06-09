@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  etapa1: MyString
+  indicador1: 1
+  etapa2: MyString
+  indicador2: 1
+  etapa3: MyString
+  indicador3: 1
+
+two:
+  etapa1: MyString
+  indicador1: 1
+  etapa2: MyString
+  indicador2: 1
+  etapa3: MyString
+  indicador3: 1
