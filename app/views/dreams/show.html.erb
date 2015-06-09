@@ -17,8 +17,12 @@
 <div class="panel-body">
 
 <br>
-<p> El modelo CANVAS+ es un formato que te permitirá primero definir cuales son tus metas a corto, mediano y largo plazo, que van a permitir alcanzar tu sueño en tan solo cinco años. Una vez hayas definido tus metas deberás identificar quienes son tus clientes, que problema solucionas, que productos vas a vender, tu propuesta de valor, tus costos e ingresos. Este formato te va a permitir tener una guia de como emplearlo. <P>
+
+<% if user_signed_in? %>
+	<p> El modelo CANVAS+ es un formato que te permitirá primero definir cuales son tus metas a corto, mediano y largo plazo, que van a permitir alcanzar tu sueño en tan solo cinco años. Una vez hayas definido tus metas deberás identificar quienes son tus clientes, que problema solucionas, que productos vas a vender, tu propuesta de valor, tus costos e ingresos. Este formato te va a permitir tener una guia de como emplearlo. <P>
 <%= link_to 'Descargar CANVAS+', 'https://docs.google.com/spreadsheets/d/1DKezRtgYlvGPyBvX1n7XcX1g_wWkXph8yf9JJ4U-xXA/pubhtml', class: "btn btn-primary", :target => "_blank" %> 
+  <% else %>
+       <% end %>
 <hr>
 
 <p style=" 
@@ -30,7 +34,13 @@ font-size: 25px;">
 <p style=" 
 text-align:right; 
 font-size: 15px;"> Si quieres apoyar este sueño, puedes dar click <%= link_to 'Aquí', pages_comofunciona_path, class: "btn btn-primary" %>  </P>
-<li><%= link_to "Definir etapas", new_etapa_path, class: "btn btn-primary" %></li> 
+
+<% if user_signed_in? %>
+	<li><%= link_to "Definir etapas", new_etapa_path, class: "btn btn-primary" %></li> 
+  <% else %>
+       <% end %>
+
+
 <hr>
 
 <p style=" 
@@ -39,7 +49,12 @@ font-size: 25px;">
 <strong> Quiero: </strong></p>
 <p> Metas a corto plazo </p>
 <h1><%= @dream.quiero %></h1>
-<li><%= link_to "Lo que me entra", new_canvas_financiero_ingreso_path, class: "btn btn-primary"  %></li> 
+
+<% if user_signed_in? %>
+	<li><%= link_to "Lo que me entra", new_canvas_financiero_ingreso_path, class: "btn btn-primary"  %></li> 
+  <% else %>
+       <% end %>
+
 <hr>
 
 <p style=" 
@@ -48,16 +63,19 @@ font-size: 25px;">
 <strong> Ofrezco: </strong></p>
 <p> Desarrollo de producto </p>
 <h1><%= @dream.ofrezco %></h1>
-<li><%= link_to "¿Quienes son mis clientes?", new_canva_path, class: "btn btn-primary"  %></li>
 
 <br>
 
-<li><%= link_to "CANVAS+ Lado izquierdo", new_canvas_lado_izquierdo_path, class: "btn btn-primary"  %></li>
+<% if user_signed_in? %>
+	<li><%= link_to "¿Quienes son mis clientes?", new_canva_path, class: "btn btn-primary"  %></li>
+	<br>
+	<li><%= link_to "CANVAS+ Lado izquierdo", new_canvas_lado_izquierdo_path, class: "btn btn-primary"  %></li>
+	<br>
+	<li><%= link_to "CANVAS+ Lado derecho", new_canvas_lado_derecho_path, class: "btn btn-primary"  %></li>
 
-<br>
-
- <li><%= link_to "CANVAS+ Lado derecho", new_canvas_lado_derecho_path, class: "btn btn-primary"  %></li> 
- 
+  <% else %>
+  <% end %>
+ <br> 
  <br>
 
  <%= link_to 'Encargar una caja de los sueños', 'http://meetrico.com/coworking_spaces/104', class: "btn btn-primary", :target => "_blank" %> 
@@ -75,7 +93,10 @@ font-size: 25px;">
 text-align:left; 
 font-size: 25px;">
 
-      <li><%= link_to "Lo que me cuesta", new_canvas_financiero_costo_path, class: "btn btn-primary"  %></li> 
+<% if user_signed_in? %>
+	 <li><%= link_to "Lo que me cuesta", new_canvas_financiero_costo_path, class: "btn btn-primary"  %></li> 
+  <% else %>
+       <% end %>
 <hr>
 
 <p style=" 

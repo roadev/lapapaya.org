@@ -6,7 +6,11 @@ class ApplicationController < ActionController::Base
 
 
 def last_dream
+  if user_signed_in?
 	Dream.where( user_id: current_user.id ).last
+else
+  redirect_to "users/sign_up"
+end
 end
 
 def after_sign_in_path_for(resource)
