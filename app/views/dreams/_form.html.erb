@@ -11,10 +11,25 @@
     </div>
   <% end %>
   
+<p> Selecciona alguno de estos grupos de interés, con el que más te identificas </p>
+<ul>
+<li> Desarollo personal o empresarial </li>
+<li> Trabajo Social o trabajos grupales</li>
+<li> Desarrollo Sostenible o Medio Ambiente</li>
+<br>
+<div class="form-group">
+  <% f.label "Status", class: 'form-control' %>
+  <div class="form-group">
+    <%= f.select(:select_type, options_for_select([['Desarrollo personal', 'Desarrollo Personal'], ['Trabajo Social', 'Trabajo Social'], ['Desarrollo Sostenible', 'Desarrollo Sostenible'], ])) %>
+  </div>
+</div>
+<br>
+
 <div class="form-group">
     <%= f.label :sueño %><br>
     <%= f.text_field :dream, class: "form-control" %>
   </div>
+
 <div class="form-group">
     <%= f.label :quiero %><br>
     <%= f.text_field :quiero, class: "form-control" %>

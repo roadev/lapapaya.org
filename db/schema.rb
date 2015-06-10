@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150608205308) do
+ActiveRecord::Schema.define(version: 20150610114548) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -107,6 +107,8 @@ ActiveRecord::Schema.define(version: 20150608205308) do
     t.string   "quiero"
     t.string   "ofrezco"
     t.text     "description"
+    t.string   "grupo_type"
+    t.string   "select_type"
   end
 
   add_index "dreams", ["user_id"], name: "index_dreams_on_user_id"
