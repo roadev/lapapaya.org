@@ -89,14 +89,15 @@ Lapapayanetwork::Application.configure do
    }
  }
 
-config.action_mailer.default_url_options = { :host => 'smtp.sendgrid.net' }
+
 ActionMailer::Base.smtp_settings = {
-  :address        => "smtp.sendgrid.net",
-  :port           => "25",
+  :address        => 'smtp.sendgrid.net',
+  :port           => '587',
   :authentication => :plain,
   :user_name      => ENV['app23950605@heroku.com'],
   :password       => ENV['udft7znt2980'],
-  :domain         => ENV['heroku.com']
+  :domain         => 'heroku.com',
+  :enable_starttls_auto => true
 }
 
 
