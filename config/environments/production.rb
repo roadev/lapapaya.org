@@ -89,7 +89,7 @@ Lapapayanetwork::Application.configure do
    }
  }
 
-config.action_mailer.default_url_options = { :host => 'lapapaya.org' }
+config.action_mailer.default_url_options = { :host => 'http://lapapaya.org' }
 ActionMailer::Base.smtp_settings = {
   :address        => "smtp.sendgrid.net",
   :port           => "25",
