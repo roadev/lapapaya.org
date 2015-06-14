@@ -25,3 +25,4 @@ module Lapapayanetwork
     config.assets.initialize_on_precompile = false
   end
 end
+ActionMailer::Base.delivery_method = :smtp
