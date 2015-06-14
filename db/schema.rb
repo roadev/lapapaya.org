@@ -107,7 +107,6 @@ ActiveRecord::Schema.define(version: 20150610114548) do
     t.string   "quiero"
     t.string   "ofrezco"
     t.text     "description"
-    t.string   "grupo_type"
     t.string   "select_type"
   end
 
