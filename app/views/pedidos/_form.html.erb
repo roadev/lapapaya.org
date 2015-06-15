@@ -1,0 +1,58 @@
+<%= form_for(@pedido) do |f| %>
+  <% if @pedido.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pedido.errors.count, "error") %> prohibited this pedido from being saved:</h2>
+
+      <ul>
+      <% @pedido.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :Nombre %><br>
+    <%= f.text_field :Nombre, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :Razon_social %><br>
+    <%= f.text_field :Razon_social, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :Nit %><br>
+    <%= f.number_field :Nit, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :Direccion %><br>
+    <%= f.text_field :Direccion, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :Telefono %><br>
+    <%= f.number_field :Telefono, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :Nombre_representante %><br>
+    <%= f.text_field :Nombre_representante, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :Persona_contacto %><br>
+    <%= f.text_field :Persona_contacto, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :Pedido %><br>
+    <%= f.text_area :Pedido, class: "form-control" %>
+<h3> En este link te puedes descargar nuestro catálogo de productos </h3>
+
+  <br>  
+  
+  <div class="form-group">
+    <%= f.submit class: "form-control"  %>
+  </div>
+<% end %>
+
+
+  
+
+
+

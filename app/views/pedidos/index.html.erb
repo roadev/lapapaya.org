@@ -1,0 +1,41 @@
+<h1>Listing pedidos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Razon social</th>
+      <th>Nit</th>
+      <th>Direccion</th>
+      <th>Telefono</th>
+      <th>Nombre representante</th>
+      <th>Persona contacto</th>
+      <th>Pedido</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pedidos.each do |pedido| %>
+      <tr>
+        <td><%= pedido.Nombre %></td>
+        <td><%= pedido.Razon_social %></td>
+        <td><%= pedido.Nit %></td>
+        <td><%= pedido.Direccion %></td>
+        <td><%= pedido.Telefono %></td>
+        <td><%= pedido.Nombre_representante %></td>
+        <td><%= pedido.Persona_contacto %></td>
+        <td><%= pedido.Pedido %></td>
+        <td><%= link_to 'Show', pedido %></td>
+        <td><%= link_to 'Edit', edit_pedido_path(pedido) %></td>
+        <td><%= link_to 'Destroy', pedido, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pedido', new_pedido_path %>

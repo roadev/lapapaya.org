@@ -1,4 +1,6 @@
 Lapapayanetwork::Application.routes.draw do
+  resources :pedidos
+
   resources :etapas
 
   get "pages/civismo"
