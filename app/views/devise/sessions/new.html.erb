@@ -8,19 +8,19 @@
     <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
 
       <div class="form-group">
-        <%= f.label :email %>
-        <%= f.email_field :email, class: "form-control", :autofocus => true %>
+        <%= f.label :email, "Correo" %>
+        <%= f.email_field :email, placeholder: "Pon aquí tu correo", class: "form-control", :autofocus => true %>
       </div>
 
       <div class="form-group">
-        <%= f.label :password %>
-        <%= f.password_field :password, class: "form-control" %>
+        <%= f.label :password, "Contraseña" %>
+        <%= f.password_field :password, placeholder: "Aquí tu contraseña", class: "form-control" %>
       </div>
 
       <div class="form-group">
         <div class="checkbox">
           <%= f.check_box :remember_me %>
-          <%= f.label :remember_me %>
+          <%= f.label :remember_me, "Recordarme siempre de esta contraseña" %>
         </div>
       </div>
 

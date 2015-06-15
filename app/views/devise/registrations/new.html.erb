@@ -8,13 +8,13 @@
       <%= devise_error_messages! %>
 
       <div class="form-group">
-        <%= f.label :email %>
-        <%= f.email_field :email, autofocus: true, class: "form-control" %>
+        <%= f.label :email, "Correo" %>
+        <%= f.email_field :email, autofocus: true, placeholder: "Aquí pon tu correo", class: "form-control" %>
       </div>
 
       <div class="form-group">
-        <%= f.label :password %>
-        <%= f.password_field :password, class: "form-control" %>
+        <%= f.label :password, "Contraseña" %>
+        <%= f.password_field :password, placeholder: "Aquí tu contraseña", class: "form-control" %>
       </div>
 
       <div class="form-group">
