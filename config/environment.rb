@@ -6,7 +6,7 @@ Lapapayanetwork::Application.initialize!
 
 ActionMailer::Base.smtp_settings = {
   :address        => 'smtp.sendgrid.net',
-  :port           => '80',
+  :port           =>  587,
   :authentication => :plain,
   :user_name      => ENV['app23950605@heroku.com'],
   :password       => ENV['udft7znt2980'],
