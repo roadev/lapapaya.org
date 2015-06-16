@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Producto: MyString
+  Unidades: 1
+
+two:
+  Producto: MyString
+  Unidades: 1

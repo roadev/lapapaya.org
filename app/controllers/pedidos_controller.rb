@@ -1,5 +1,7 @@
 class PedidosController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
   before_action :set_pedido, only: [:show, :edit, :update, :destroy]
+  before_action :correct_user, only: [:edit, :update, :destroy]
 
   # GET /pedidos
   # GET /pedidos.json
@@ -28,7 +30,7 @@ class PedidosController < ApplicationController
 
     respond_to do |format|
       if @pedido.save
-        format.html { redirect_to @pedido, notice: 'Pedido was successfully created.' }
+        format.html { redirect_to @pedido, notice: 'Su pedido ha sido creado, en menos de 24 horas nos pondrémos en contacto con usted para confirmar su orden y programar la fecha de entrega. Cualquier duda comunicarse al 3207217643 o al email admin@lapapaya.org, con gusto lo atenderemos' }
         format.json { render action: 'show', status: :created, location: @pedido }
       else
         format.html { render action: 'new' }

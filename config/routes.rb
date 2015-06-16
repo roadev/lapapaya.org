@@ -1,4 +1,6 @@
 Lapapayanetwork::Application.routes.draw do
+  resources :productos
+
   resources :pedidos
 
   resources :etapas
