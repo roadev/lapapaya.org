@@ -36,10 +36,12 @@ text-align:right;
 font-size: 15px;"> Si quieres apoyar este sueño, puedes dar click <%= link_to 'Aquí', pages_comofunciona_path, class: "btn btn-primary" %>  </P>
 
 <% if user_signed_in? %>
+
 	<li><%= link_to "Definir etapas", new_etapa_path, class: "btn btn-primary" %></li> 
   <% else %>
        <% end %>
-
+<br>
+<P> Los sueños no se cumplen de la noche a la mañana, necesitan esfuerzo, dedicación y compromiso. Define las etapas de tu sueño para tener claro el siguiente paso. </p>
 
 <hr>
 
