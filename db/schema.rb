@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150616004738) do
+ActiveRecord::Schema.define(version: 20150616190430) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -95,7 +95,7 @@ ActiveRecord::Schema.define(version: 20150616004738) do
   end
 
   create_table "dreams", force: true do |t|
-    t.string   "dream"
+    t.text     "dream",              limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
@@ -103,9 +103,9 @@ ActiveRecord::Schema.define(version: 20150616004738) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
-    t.string   "necesito"
-    t.string   "quiero"
-    t.string   "ofrezco"
+    t.text     "necesito",           limit: 255
+    t.text     "quiero",             limit: 255
+    t.text     "ofrezco",            limit: 255
     t.text     "description"
     t.string   "select_type"
   end
