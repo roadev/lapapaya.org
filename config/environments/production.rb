@@ -96,7 +96,7 @@ ActionMailer::Base.smtp_settings = {
     :address =>        'smtp.mandrillapp.com',
     :user_name =>      ENV['app23950605@heroku.com'],
     :password =>       ENV['MhLw2wx-VMiLNqZO-0l3Iw'],
-    :domain =>         'lapapaya.org',
+    :domain =>         'heroku.com',
     :authentication => :plain,
 }
 ActionMailer::Base.delivery_method = :smtp
