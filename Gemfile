@@ -32,7 +32,7 @@ gem 'pg'
 gem 'will_paginate', '~> 3.0.5'
 gem 'will_paginate-bootstrap'
 gem 'acts-as-taggable-on'
-gem 'sendgrid', '~> 1.2.0'
+gem 'mandrill-api'
 
 group :development, :test do
 	gem 'sqlite3'
