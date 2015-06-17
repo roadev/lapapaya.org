@@ -78,7 +78,7 @@ Lapapayanetwork::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
-  config.action_mailer.default_url_options = { :host => 'lapapaya.herokuapp.com' }
+  
   
  # Sets Paperclip to upload images to Amazon S3
   config.paperclip_defaults = {
@@ -89,7 +89,8 @@ Lapapayanetwork::Application.configure do
     :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
    }
  }
-
+ 
+config.action_mailer.default_url_options = { :host => 'lapapaya.herokuapp.com' }
 ActionMailer::Base.smtp_settings = {
     :port =>           '587',
     :address =>        'smtp.mandrillapp.com',
