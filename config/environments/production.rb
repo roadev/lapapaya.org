@@ -89,7 +89,6 @@ Lapapayanetwork::Application.configure do
     :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
    }
  }
-end
 
 ActionMailer::Base.smtp_settings = {
     :port =>           '587',
@@ -100,3 +99,7 @@ ActionMailer::Base.smtp_settings = {
     :authentication => :plain
 }
 ActionMailer::Base.delivery_method = :smtp
+
+end
+
+
