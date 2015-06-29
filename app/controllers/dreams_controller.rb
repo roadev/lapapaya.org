@@ -61,8 +61,7 @@ end
    def micropost
     @micropost = Micropost.first
   end
-
-  private
+  
     def set_dream
       @dream = Dream.find(params[:id])
     end
