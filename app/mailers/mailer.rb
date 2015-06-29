@@ -5,4 +5,3 @@ class ActionMailer < ActionMailer::Base
          :to      => "felipe@meetrico.com",
          :from    => "admin@lapapaya.org
   end
-end
