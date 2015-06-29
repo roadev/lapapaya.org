@@ -11,8 +11,9 @@ class DreamsController < ApplicationController
     @dreams = Dream.all
   end
 
-  def show
-
+   def show
+    if user_signed_in?
+    @gamification_data = current_user.gioco_data
   else
     @related = Dream.tagged_with(@tag, :on => :tags)
   end
@@ -80,5 +81,7 @@ end
   def content
     @micropost = Micropost.content
   end
+  end
+
 
 
