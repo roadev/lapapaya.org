@@ -1,4 +1,4 @@
-<%= link_to 'Atrás', dreams_path %>
+<%= link_to 'Volver', dreams_path, class: "btn btn-info" %>
 
 <div class="row">
   <div class="col-md-offset-2 col-md-8">
@@ -7,14 +7,14 @@
 
       </div>
 <div class="panel-body">
-<p><strong> Micropost </strong></p>
+<p><strong> Reto </strong></p>
 
 <div class="panel-heading center">
 <%= image_tag @micropost.image.url(:medium) %>
 </div>
 
 <p>
-  <strong>Content:</strong>
+  <strong>Contenido:</strong>
   <%= @micropost.content %>
 </p>
 
@@ -23,8 +23,8 @@
   <%= @micropost.user_id %>
 </p>
 
-<%= link_to 'Edit', edit_micropost_path(@micropost) %> |
-<%= link_to 'Back', microposts_path %>
+<%= link_to 'Editar', edit_micropost_path(@micropost), class: "btn btn-info" %> |
+<%# link_to 'Back', microposts_path %>
 
 
-<%= link_to 'Solución', new_solucion_path, class: "btn btn-primary" %> 
+<%= link_to 'Solución', new_solucion_path, class: "btn btn-primary" %>

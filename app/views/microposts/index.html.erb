@@ -1,4 +1,4 @@
-<%= link_to 'Atrás', dreams_path, class: "btn btn-info" %>
+<%= link_to 'Volver', dreams_path, class: "btn btn-info" %>
 
 
 <div class="panel panel-default">
@@ -7,31 +7,31 @@
   </div>
   <div class="panel-body">
 
-<table>
-  <thead>
-    <tr>
-      <th>Contenido</th>
-      <th>User</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+    <table>
+      <thead>
+        <tr>
+          <th>Contenido</th>
+          <th>User</th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
 
-  <tbody>
-    <% @microposts.each do |micropost| %>
-      <tr>
-        <td><%= micropost.content %></td>
-        <td><%= micropost.user_id %></td>
-        <td><%= image_tag micropost.image.url(:medium) %></td>
-        <td><%= link_to 'Mostrar', micropost, class: "btn btn-primary" %></td>
-        <td><%= link_to 'Editar', edit_micropost_path(micropost), class: "btn btn-info" %></td>
-        <td><%= link_to 'Destroy', micropost, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <tbody>
+        <% @microposts.each do |micropost| %>
+        <tr>
+          <td><%= micropost.content %></td>
+          <td><%= micropost.user_id %></td>
+          <td><%= image_tag micropost.image.url(:medium) %></td>
+          <td><%= link_to 'Mostrar', micropost, class: "btn btn-primary" %></td>
+          <td><%= link_to 'Editar', edit_micropost_path(micropost), class: "btn btn-info" %></td>
+          <td><%= link_to 'Destroy', micropost, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
 
-<br>
+    <br>
 
-<%= link_to 'Crear Reto', new_micropost_path, class: "btn btn-primary" %>
+    <%= link_to 'Crear Reto', new_micropost_path, class: "btn btn-primary" %>
