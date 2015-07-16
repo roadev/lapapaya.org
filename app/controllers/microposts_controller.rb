@@ -1,6 +1,7 @@
 class MicropostsController < ApplicationController
   before_action :set_micropost, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
+  before_action :correct_user, only: [:destroy, :edit, :update]
 
   # GET /microposts
   # GET /microposts.json
@@ -74,5 +75,11 @@ class MicropostsController < ApplicationController
     def micropost_params
       params[:micropost][:user_id] = current_user.id
       params.require(:micropost).permit(:content, :image, :user_id)
+    end
+    # Confirms the correct user.
+    def correct_user
+      @micropost = current_user.microposts.find_by(id: params[:id])
+      redirect_to root_url if @micropost.nil?
+
     end
 end
