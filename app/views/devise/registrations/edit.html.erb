@@ -1,7 +1,7 @@
 <div class="panel panel-default">
   <div class="panel-heading">
     <div class="panel-title">
-      <h1>Edit <%= resource_name.to_s.humanize %></h1>
+      <h1>Editar Usuario</h1>
     </div>
   </div>
   <div class="panel-body">
@@ -10,17 +10,17 @@
 
       <div class="form-group">
         <%= f.label :email %>
-        <%= f.email_field :email, class: "form-control", :autofocus => true %>
+        <%= f.email_field :email, class: "form-control", :autofocus => true, placeholder: 'Ingresa tu correo electrónico' %>
       </div>
 
       <div class="form-group">
-        <%= f.label :password %> <i>(Dejalo en blanco si no quieres cambiarlo)</i>
-        <%= f.password_field :password, class: "form-control", :autocomplete => "off" %>
+        <%= f.label 'Contraseña actual' %> <i>(Necesitamos tu contraseña para confirmar tus cambios)</i>
+        <%= f.password_field :current_password, class: "form-control", placeholder: 'Ingresa tu contraseña actual' %>
       </div>
 
       <div class="form-group">
-        <%= f.label :current_password %> <i>(Necesitamos tu contraseña para confirmar tus cambios)</i>
-        <%= f.password_field :current_password, class: "form-control" %>
+        <%= f.label 'Nueva Contraseña' %> <i>(Déjalo en blanco si no quieres cambiarlo)</i>
+        <%= f.password_field :password, class: "form-control", :autocomplete => "off", placeholder: 'Ingresa tu nueva contraseña' %>
       </div>
 
       <div class="form-group">
