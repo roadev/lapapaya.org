@@ -26,7 +26,7 @@
           <td><%= image_tag micropost.image.url(:medium) %></td>
           <td><%= link_to 'Mostrar', micropost, class: "btn btn-primary" %></td>
           <td><%= link_to 'Editar', edit_micropost_path(micropost), class: "btn btn-info" %></td>
-          <td><%= link_to 'Destroy', micropost, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Eliminar', micropost, class: "btn btn-primary", method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
         <% end %>
       </tbody>

@@ -31,7 +31,7 @@ class MicropostsController < ApplicationController
     respond_to do |format|
       if @micropost.save
         current_user.track_event('Micropost creado')
-        format.html { redirect_to dreams_path, notice: 'Reto creado satisfactoriamente' }
+        format.html { redirect_to dreams_path, notice: '¡ Reto creado satisfactoriamente !' }
         format.json { render action: 'show', status: :created, location: @micropost }
 
       else
@@ -59,7 +59,7 @@ class MicropostsController < ApplicationController
   # DELETE /microposts/1.json
   def destroy
     @micropost.destroy
-    flash[:success] = "Eliminado"
+    flash[:success] = "¡ El reto ha sido Eliminado !"
     respond_to do |format|
       format.html { redirect_to microposts_url }
       format.json { head :no_content }
@@ -81,8 +81,8 @@ class MicropostsController < ApplicationController
     def correct_user
       @micropost = current_user.microposts.find_by(id: params[:id])
       #render text: ':(' if @micropost.nil?
-      flash[:danger] = "No lo puedes borrar ¬¬" if @micropost.nil?
-      flash[:success] = "Eliminado" if @micropost.present?
+      flash[:danger] = "Este contenido sólo puede modificarlo o eliminarlo el propietario." if @micropost.nil?
+      flash[:success] = "El reto ha sido Eliminado." if @micropost.present?
       redirect_to microposts_url if @micropost.nil?
 
     end
