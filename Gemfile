@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
+#ruby '2.0.0'
 
 gem 'rails', '4.0.4'
 
@@ -33,6 +33,7 @@ gem 'will_paginate', '~> 3.0.5'
 gem 'will_paginate-bootstrap'
 gem 'acts-as-taggable-on'
 gem 'mandrill-api'
+gem 'merit'
 
 group :development, :test do
 	gem 'sqlite3'
@@ -50,7 +51,7 @@ group :doc do
 end
 
 group :assets do
- 
+
 end
 
 # Use ActiveModel has_secure_password
