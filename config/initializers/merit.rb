@@ -1,5 +1,13 @@
 # Use this hook to configure merit parameters
 Merit.setup do |config|
+
+  Merit::Badge.create!(
+  id: 1,
+  name: "year-member",
+  description: "Active member for a year",
+  custom_fields: { difficulty: :silver }
+  )
+
   # Check rules on each request or in background
   # config.checks_on_each_request = true
 
