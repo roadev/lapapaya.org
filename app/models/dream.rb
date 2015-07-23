@@ -1,10 +1,11 @@
 class Dream < ActiveRecord::Base
+	#has_merit
 	belongs_to :user
 	has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
 	validates_attachment_content_type :image, content_type: %w(image/jpeg image/jpg image/png)
 	acts_as_taggable
 	acts_as_taggable_on :tag_list
-		end
+end
 
 
 #	def self.import(file)
@@ -17,7 +18,7 @@ class Dream < ActiveRecord::Base
 #		  dream.save!
 #		end
 #	end
-# 
+#
 #	def self.open_spreadsheet(file)
 #		case File.extname(file.original_filename)
 #		when ".csv" then Csv.new(file.path, nil, :ignore)
@@ -26,6 +27,3 @@ class Dream < ActiveRecord::Base
 #		else raise "Unknown file type: #{file.original_filename}"
 #		end
 #	end
-
-
-
