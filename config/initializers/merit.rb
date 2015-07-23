@@ -3,8 +3,8 @@ Merit.setup do |config|
 
   Merit::Badge.create!(
   id: 1,
-  name: "year-member",
-  description: "Active member for a year",
+  name: "Soñador novato",
+  description: "¡Acabas de registrarte!",
   custom_fields: { difficulty: :silver }
   )
 
