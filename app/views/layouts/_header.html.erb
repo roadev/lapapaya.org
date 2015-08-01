@@ -11,13 +11,13 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    
 
-   <%= link_to (image_tag "logo.png", width: 320, height: 140), "/" 
+
+   <%= link_to (image_tag "logo.png", width: 320, height: 140), "/"
    %>
    <br/>
    <% if user_signed_in?
-    
+
 
 
    else %>
@@ -32,15 +32,15 @@
       <% if user_signed_in? %>
 
       <!--<li><%= link_to "Wiki", wikis_path %></li> -->
-      <li><%= link_to new_pedido_path do %> 
-       <span class="glyphicon glyphicon-shopping-cart"> Pedidos </span>  
-      <li><%= link_to microposts_path do %> 
-       <span class="glyphicon glyphicon-ok"> Retos </span>  
-      <li><%= link_to new_dream_path do %> 
-       <span class="glyphicon glyphicon-heart"> Nuevo sueño </span>   
-       <% end %>   
+      <li><%= link_to new_pedido_path do %>
+       <span class="glyphicon glyphicon-shopping-cart"> Pedidos </span>
+      <li><%= link_to microposts_path do %>
+       <span class="glyphicon glyphicon-ok"> Retos </span>
+      <li><%= link_to new_dream_path do %>
+       <span class="glyphicon glyphicon-heart"> Nuevo sueño </span>
        <% end %>
-       <% end %>   
+       <% end %>
+       <% end %>
      </li>
      </li>
 <!--
@@ -52,9 +52,9 @@
   <ul class="dropdown-menu">
       <li><%= link_to "¿Quien es mi cliente?", new_canva_path %></li>
       <li><%= link_to "Lado izquierdo", new_canvas_lado_izquierdo_path %></li>
-      <li><%= link_to "Lado derecho", new_canvas_lado_derecho_path %></li> 
-      <li><%= link_to "Lo que me cuesta", new_canvas_financiero_costo_path %></li> 
-      <li><%= link_to "Lo que me entra", new_canvas_financiero_ingreso_path %></li> 
+      <li><%= link_to "Lado derecho", new_canvas_lado_derecho_path %></li>
+      <li><%= link_to "Lo que me cuesta", new_canvas_financiero_costo_path %></li>
+      <li><%= link_to "Lo que me entra", new_canvas_financiero_ingreso_path %></li>
   </ul>
 </div>
 -->
@@ -64,16 +64,16 @@
       <li><%= link_to "Salir", destroy_user_session_path, method: :delete %></li>
       <%else%>
       <li><%= link_to "Iniciar sesión", new_user_session_path %></li>
-      <%= link_to 'Registrate', new_user_registration_path, class: "btn btn-primary" %> 
+      <%= link_to 'Registrate', new_user_registration_path, class: "btn btn-primary" %>
 
-      <li><%= link_to "Acerca de", about_path %></li> 
-      <li><%= link_to "+ Facebook", "https://www.facebook.com/groups/lapapaya/?fref=ts", :target => "_blank" %></li> 
-      <li><%= link_to "+ Twitter", "https://twitter.com/la_papaya", :target => "_blank" %></li> 
-      <li><%= link_to "+ Blog", "http://blog.lapapaya.org", :target => "_blank" %></li> 
+      <li><%= link_to "Acerca de", about_path %></li>
+      <li><%= link_to "+ Facebook", "https://www.facebook.com/groups/lapapaya/?fref=ts", :target => "_blank" %></li>
+      <li><%= link_to "+ Twitter", "https://twitter.com/la_papaya", :target => "_blank" %></li>
+      <li><%= link_to "+ Blog", "http://blog.lapapaya.org", :target => "_blank" %></li>
       <!-- <li><h4><%= link_to "+ Registra tu sueño en Mil sueños por Cali", "http://lapapaya.org/pages/milsuenos", :target => "_blank" %></h4> <li> -->
-   <br>       
+   <br>
 
-<!-- 
+<!--
 <div class="btn-group">
   <button class="btn btn-mini">Micro Franquicia Social</button>
   <button class="btn btn-mini dropdown-toggle" data-toggle="dropdown">
@@ -85,9 +85,8 @@
     <li><%= link_to "¿Que es?", pages_milsuenos_path %> </li> -->
   </ul>
 </div>
-      <% end %>    
+      <% end %>
     </ul>
   </div>
   <!-- /.navbar-collapse -->
 </nav>
-
