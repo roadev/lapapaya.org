@@ -14,7 +14,7 @@ class SolutionsController < ApplicationController
 
   # GET /solutions/new
   def new
-    @solution = Solution.new
+    @solution = current_user.solutions.build
   end
 
   # GET /solutions/1/edit
@@ -24,7 +24,7 @@ class SolutionsController < ApplicationController
   # POST /solutions
   # POST /solutions.json
   def create
-    @solution = Solution.new(solution_params)
+    @solution = current_user.solutions.build(solution_params)
 
     respond_to do |format|
       if @solution.save
