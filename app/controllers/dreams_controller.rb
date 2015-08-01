@@ -7,7 +7,7 @@ class DreamsController < ApplicationController
   def index
     if params[:tag]
       @dreams = Dream.tagged_with(params[:tag])
-  else    
+  else
     @dreams = Dream.all
   end
 
@@ -27,7 +27,7 @@ class DreamsController < ApplicationController
   def create
 		@dream = current_user.dreams.build(dream_params)
 		  if @dream.save
-		    redirect_to @dream, notice: 'Ya creaste un sueño, ahora cúmplelo!' 
+		    redirect_to @dream, notice: 'Ya creaste un sueño, ahora cúmplelo!'
 		  else
 		    render action: 'new'
 		  end
@@ -48,13 +48,13 @@ class DreamsController < ApplicationController
 
   def destroy
     @dream.destroy
-     redirect_to dreams_url 
+     redirect_to dreams_url
   end
 
    def micropost
     @micropost = Micropost.first
   end
-  
+
     def set_dream
       @dream = Dream.find(params[:id])
     end
@@ -67,13 +67,10 @@ class DreamsController < ApplicationController
 
 
 	def dream_params
-		params.require(:dream).permit(:dream, :image, :quiero, :ofrezco, :necesito, :tag_list)
+		params.require(:dream).permit(:dream, :image, :quiero, :ofrezco, :necesito, :tag_list, :select_type)
 	end
 
   def content
     @micropost = Micropost.content
   end
   end
-
-
-
