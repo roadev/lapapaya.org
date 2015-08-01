@@ -1,48 +1,61 @@
 <%= form_for Dream.new, html: { multipart: true } do |f| %>
 
-<p> Selecciona alguno de estos grupos de interés, con el que más te identificas </p>
-<ul>
-<li> Desarollo personal o empresarial </li>
-<li> Trabajo Social o trabajos grupales</li>
-<li> Desarrollo Sostenible o Medio Ambiente</li>
-<br>
-<div class="form-group">
-  <% f.label "Status", class: 'form-control' %>
-  <div class="form-group">
-    <%= f.select(:select_type, options_for_select([['Desarrollo personal', 'Desarrollo Personal'], ['Trabajo Social', 'Trabajo Social'], ['Desarrollo Sostenible', 'Desarrollo Sostenible'], ])) %>
-  </div>
-</div>
-<br>
+<div class="row">
+  <div class="col-md-offset-2 col-md-8">
+    <div class="panel panel-default">
+      <div class="panel-heading center">
+        <h3> Mi Sueño </h3>
+      </div>
+      <div class="panel-body">
+        <div class="jumbotron">
+          <p> Selecciona alguno de estos grupos de interés, con el que más te identificas: </p>
+          <ul>
+            <li> Desarollo personal o empresarial </li>
+            <li> Trabajo Social o trabajos grupales</li>
+            <li> Desarrollo Sostenible o Medio Ambiente</li>
+            <br>
+            <div class="form-group">
+              <% #f.label "Status", class: 'form-control' %>
+              <div class="form-group">
+                <%= f.select :select_type, [['Desarrollo personal', 'Desarrollo Personal'], ['Trabajo Social', 'Trabajo Social'], ['Desarrollo Sostenible', 'Desarrollo Sostenible'], ], {}, { class: "form-control" } %>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <%= f.label :sueño %><br>
+            <%= f.text_field :dream, placeholder: "Describe un sueño que puedas cumplir en máximo 5 años, algo que siempre hayas querido realizar.", class: "form-control" %>
+          </div>
 
-<div class="form-group">
-    <%= f.label :sueño %><br>
-    <%= f.text_field :dream, placeholder: "Describe un sueño que puedas cumplir en máximo 5 años, algo que siempre hayas querido realizar.", class: "form-control" %>
-  </div>
+          <div class="form-group">
+            <%= f.label :quiero %><br>
+            <%= f.text_area :quiero, placeholder: "Tu sueño debe tener un punto de partida, un inicio. ¿Por dónde quieres arrancar?.", class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :ofrezco %><br>
+            <%= f.text_area :ofrezco, placeholder: "Alcanzar nuestros sueños tiene un costo un valor que debemos estar dispuestos a pagar. ¿Que estás dispuest@ a ofrecer para cumplir tu sueño?.", class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :necesito %><br>
+            <%= f.text_area :necesito, placeholder: "¿Cuál consideras que es la necesidad o la lista de necesidades más importantes para realizar tu sueño?", class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :Palabras_clave %><br>
+            <%= f.text_field :tag_list, placeholder: "Relaciona tu sueño con palabras clave y separalas por comas, esto te va a permitir conectarte con otras personas que tienen tus mismos intereses, y educarte con información relacionada a tus sueños. Cuando hayas terminado, haz click en Crear Sueño", class: "form-control" %>
+          </div>
 
-<div class="form-group">
-    <%= f.label :quiero %><br>
-    <%= f.text_field :quiero, placeholder: "Tu sueño debe tener un punto de partida, un inicio. ¿Por donde quieres arrancar?.", class: "form-control" %>
-  </div>
-<div class="form-group">
-    <%= f.label :ofrezco %><br>
-    <%= f.text_field :ofrezco, placeholder: "Alcanzar nuestros sueños tiene un costo un valor que debemos estar dispuestos a pagar. ¿Que estás dispuest@ a ofrecer para cumplir tu sueño?.", class: "form-control" %>
-  </div>
-<div class="form-group">
-    <%= f.label :necesito %><br>
-    <%= f.text_field :necesito, placeholder: "¿Cual consideras que es la necesidad o la lista de necesidades más importantes para realizar tu sueño?", class: "form-control" %>
-  </div>
-<div class="form-group">
-    <%= f.label :Palabras_clave %><br>
-    <%= f.text_field :tag_list, placeholder: "Relaciona tu sueño con palabras clave y separalas por comas, esto te va a permitir conectarte con otras personas que tienen tus mismos intereses, y educarte con información relacionada a tus sueños. Cuando hayas terminado dale a Create Dream", class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :imagen %><br>
-    <%= f.file_field :image, class: "form-control" %>
-  </div>
+          <div class="form-group">
+            <%= f.label :imagen %><br>
+            <%= f.file_field :image, class: "form-control" %>
+          </div>
 
 
-<div class="form-group">
-    <%= f.submit class: "form-control" %>
+          <div class="form-group">
+            <center><%= f.submit 'Crear Sueño', class: 'btn btn-primary btn-lg' %></center>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
   </div>
 <% end %>
