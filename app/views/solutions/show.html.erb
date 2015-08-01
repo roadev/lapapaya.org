@@ -1,14 +1,23 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Micropost:</strong>
-  <%= @solution.micropost_id %>
-</p>
-<h2><%= current_user.points %></h2>
-<p>
-  <strong>Content:</strong>
-  <%= @solution.content %>
-</p>
-
-<%= link_to 'Edit', edit_solution_path(@solution) %> |
-<%= link_to 'Back', solutions_path %>
+<div class="im-centered">
+  <div class ="row">
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <h2><span class="red"><%= current_user.points %></span><br>Puntos</br></h2>
+        <br />
+        <%= image_tag @solution.image.url(:medium) %>
+        <br />
+        <div class="capion">
+          <h3>Solución del Reto <%= @solution.micropost_id %></h3>
+          <br />
+          <%= @solution.content %>
+          <br />
+          <br />
+          <!--<%= link_to 'Edit', edit_solution_path(@solution), class: "btn btn-primary" %>-->
+          <center><%= link_to 'Volver', solutions_path, class: "btn btn-info" %></center>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
