@@ -1,30 +1,20 @@
-<%= link_to 'Volver', dreams_path, class: "btn btn-info" %>
-
-<div class="row">
-  <div class="col-md-offset-2 col-md-8">
-    <div class="panel panel-default">
-      <div class="panel-heading center">
-
+<div class="im-centered">
+  <div class ="row">
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <!--<h2><span class="red"><%= current_user.points %></span><br>Puntos</br></h2>-->
+        <br />
+        <%= image_tag @micropost.image.url(:medium) %>
+        <br />
+        <div class="capion">
+          <h3>Reto <%= @micropost.id %></h3>
+          <br />
+          <center><%= @micropost.content %></center>
+          <br />
+          <br />
+          <center><p><%= link_to 'Crear Solución', new_solution_path, class: "btn btn-primary" %></p></center>
+        </div>
       </div>
-<div class="panel-body">
-<p><strong> Reto </strong></p>
-
-<div class="panel-heading center">
-<%= image_tag @micropost.image.url(:medium) %>
+    </div>
+  </div>
 </div>
-
-<p>
-  <strong>Contenido:</strong>
-  <%= @micropost.content %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @micropost.user_id %>
-</p>
-
-<%= link_to 'Editar', edit_micropost_path(@micropost), class: "btn btn-info" %> |
-<%= link_to 'Atrás', microposts_path, class: "btn btn-info" %>
-
-
-<%= link_to 'Solución', new_solucion_path, class: "btn btn-primary" %>
