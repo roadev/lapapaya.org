@@ -204,16 +204,6 @@ ActiveRecord::Schema.define(version: 20150801204410) do
     t.datetime "updated_at"
   end
 
-  create_table "solucions", force: true do |t|
-    t.integer  "micropost_id"
-    t.string   "solucion"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "image"
-  end
-
-  add_index "solucions", ["micropost_id"], name: "index_solucions_on_micropost_id"
-
   create_table "solutions", force: true do |t|
     t.integer  "micropost_id"
     t.text     "content"
