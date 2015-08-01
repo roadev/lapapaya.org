@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150801204410) do
+ActiveRecord::Schema.define(version: 20150801213038) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -246,6 +246,16 @@ ActiveRecord::Schema.define(version: 20150801204410) do
     t.datetime "updated_at"
     t.integer  "sash_id"
     t.integer  "level",                  default: 0
+    t.string   "name"
+    t.string   "lastname"
+    t.string   "username"
+    t.string   "facebook"
+    t.string   "twitter"
+    t.string   "country"
+    t.string   "region"
+    t.string   "city"
+    t.date     "born_date"
+    t.string   "website"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
