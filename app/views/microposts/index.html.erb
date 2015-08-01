@@ -1,37 +1,42 @@
 <%= link_to 'Volver', dreams_path, class: "btn btn-info" %>
+<center><%= link_to 'Crear Reto', new_micropost_path, class: "btn btn-primary btn-lg" %></center>
+<br />
+<br />
 
+<div id="dreams" class="transitions-enabled">
 
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title">Retos</h3>
-  </div>
-  <div class="panel-body">
+  <% @microposts.each do |micropost| %>
+  <div class="box panel panel-default">
+    <%= link_to image_tag(micropost.image.url(:medium)), micropost %>
 
-    <table>
-      <thead>
-        <tr>
-          <th>Contenido</th>
-          <th>User</th>
-          <th></th>
-          <th></th>
-          <th></th>
-        </tr>
-      </thead>
+    <div class="panel-body">
+    </div>
 
-      <tbody>
-        <% @microposts.each do |micropost| %>
-        <tr>
-          <td><%= micropost.content %></td>
-          <td><%= micropost.user_id %></td>
-          <td><%= image_tag micropost.image.url(:medium) %></td>
-          <td><%= link_to 'Mostrar', micropost, class: "btn btn-primary" %></td>
-          <td><%= link_to 'Editar', edit_micropost_path(micropost), class: "btn btn-info" %></td>
-          <td><%= link_to 'Eliminar', micropost, class: "btn btn-primary", method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-        <% end %>
-      </tbody>
-    </table>
-
+    <p><strong> Reto <%= micropost.id %> </strong></p>
+    <p><%= micropost.content %></p>
+    <p></p>
+    <p></p>
+    <p><%= link_to 'Solución', new_solution_path, class: "btn btn-primary" %></p>
     <br>
+    <br>
+    <!--<p> >> Reguemos semillas de papaya </p>-->
+    <%= social_share_button_tag("My Site") %>
 
-    <%= link_to 'Crear Reto', new_micropost_path, class: "btn btn-primary" %>
+    <p><strong><%# dream.user.email if dream.user %> </strong></p>
+
+    <% if micropost.user == current_user %>
+    <div class="actions">
+      <%= link_to edit_micropost_path(micropost) do %><!-- mira del ( ) si es content -->
+      <span class="glyphicon glyphicon-edit"></span>
+      Editar
+      <% end %>
+      <%= link_to micropost, method: :delete, data: { confirm: '¿Estás seguro?' } do %>
+      <span class="glyphicon glyphicon-trash"></span>
+      Borrar
+      <% end %>
+    </div>
+    <% end %>
+  </div>
+  <% end %>
+
+  <br />
