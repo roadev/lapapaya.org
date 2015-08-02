@@ -19,6 +19,7 @@
 //= require_tree .
 //= require tinymce-jquery
 //= require social-share-button
+//= require bootstrap-datepicker
 
 /* Function for displaying the avatar of lapapaya seed at login form */
 $(function(){
@@ -84,7 +85,7 @@ $(document).ready(function () {
     prevStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().prev().children("a");
 
     prevStepWizard.removeAttr('disabled').trigger('click');
-    
+
   });
 });
 
