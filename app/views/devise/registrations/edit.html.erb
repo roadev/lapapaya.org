@@ -32,7 +32,7 @@
         </div>
       </div>
       <div class="well">
-        <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
+        <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :patch }) do |f| %>
         <%= devise_error_messages! %>
         <div class="tab-content">
           <div class="tab-pane fade in" id="tab1">
@@ -62,13 +62,13 @@
             <% end %>
             <% end %>
             <% end %>
-            <% if current_user.username.nil? %>
+            <%# if current_user.username.nil? %>
             <div class="form-group">
               <%= f.label :username, "Username (elige un nombre de usuario) *" %>
               <br />
               <%= f.text_field :username, placeholder: "Elige el nombre de usuario que desees", class: "form-control", autofocus: true, type: "input" %>
             </div>
-            <% end %>
+            <% #end %>
             <% if current_user.country.nil? %>
             <div class="form-group">
               <%= f.label :country, "País *" %>

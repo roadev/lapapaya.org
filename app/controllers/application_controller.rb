@@ -23,9 +23,14 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:account_update) << :name
     devise_parameter_sanitizer.for(:account_update) << :lastname
     devise_parameter_sanitizer.for(:account_update) << :avatar
-    devise_parameter_sanitizer.for(:sign_up) << :country
-    devise_parameter_sanitizer.for(:sign_up) << :region
-    devise_parameter_sanitizer.for(:sign_up) << :city
+    devise_parameter_sanitizer.for(:account_update) << :username
+    devise_parameter_sanitizer.for(:account_update) << :country
+    devise_parameter_sanitizer.for(:account_update) << :region
+    devise_parameter_sanitizer.for(:account_update) << :city
+    devise_parameter_sanitizer.for(:account_update) << :born_date
+    devise_parameter_sanitizer.for(:account_update) << :website
+    devise_parameter_sanitizer.for(:account_update) << :facebook
+    devise_parameter_sanitizer.for(:account_update) << :twitter
     #devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:name, :lastname, :avatar) }
   end
 
