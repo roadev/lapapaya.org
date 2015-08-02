@@ -101,6 +101,12 @@
                   <%= f.text_field :city, placeholder: "Ingresa tu Población (Ciudad/Municipio, Corregimiento, Vereda)", class: "form-control" %>
                 </div>
               </div>
+              <div class="form-group">
+                <%= f.label "Fecha de Nacimiento (opcional)", class: 'col-sm-2 control-label'  %>
+                <div class="col-sm-6">
+                  <%= select_date Date.today, prefix: :born_date %>
+                </div>
+              </div>
               <%= f.submit "¡Regístrate!", class: "btn btn-primary btn-lg pull-right" %>
               <button class="btn btn-info prevBtn btn-lg pull-left" type="button" >Anterior</button>
             </div>

@@ -34,8 +34,13 @@ gem 'will_paginate-bootstrap'
 gem 'acts-as-taggable-on'
 gem 'mandrill-api'
 gem 'merit'
-gem 'bootstrap-datepicker-rails'
-gem 'country_select', github: 'stefanpenner/country_select'
+# Use gem font-awesome-sass
+gem 'font-awesome-sass'
+# Use gem momentjs-rails as dependency of datetimepicker-rails gem
+gem 'momentjs-rails'
+# Use gem datetimepicker-rails
+gem 'datetimepicker-rails', github: 'zpaulovics/datetimepicker-rails', branch: 'master', submodules: true
+gem 'simple_form'
 
 group :development, :test do
 	gem 'sqlite3'
