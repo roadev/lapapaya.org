@@ -34,6 +34,7 @@ gem 'will_paginate-bootstrap'
 gem 'acts-as-taggable-on'
 gem 'mandrill-api'
 gem 'merit'
+gem 'country_select', github: 'stefanpenner/country_select'
 
 group :development, :test do
 	gem 'sqlite3'
