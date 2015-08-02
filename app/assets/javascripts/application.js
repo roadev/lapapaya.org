@@ -19,7 +19,9 @@
 //= require_tree .
 //= require tinymce-jquery
 //= require social-share-button
-//= require bootstrap-datepicker
+//= require moment
+//= require bootstrap-datetimepicker
+//= require pickers
 
 /* Function for displaying the avatar of lapapaya seed at login form */
 $(function(){

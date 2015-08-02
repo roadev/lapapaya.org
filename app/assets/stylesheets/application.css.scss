@@ -11,12 +11,16 @@
  *= require_self
  *= require 'masonry/transitions'
  *= require_tree .
- *= require bootstrap-datepicker3
+ *= require bootstrap-datetimepicker
  */
 /*
  *= require social-share-button
  */
 
+ @import "bootstrap";
+ @import "font-awesome-sprockets";
+ @import "font-awesome";
+ 
  body {
   background: #EAEAEA;
 }
