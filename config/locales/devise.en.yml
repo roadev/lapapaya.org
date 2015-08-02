@@ -49,6 +49,10 @@ en:
       unlocked: "Your account has been unlocked successfully. Please sign in to continue."
   errors:
     messages:
+      blank: ": Este campo no puede estar vacío"
+      too_short: ": La contraseña debe tener mínimo 8 caracteres"
+      invalid: "Inválido"
+      confirmation: ": Las contraseñas no coinciden"
       already_confirmed: "was already confirmed, please try signing in"
       confirmation_period_expired: "needs to be confirmed within %{period}, please request a new one"
       expired: "has expired, please request a new one"
