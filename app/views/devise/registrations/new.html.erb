@@ -30,6 +30,11 @@
               <h3> Paso 1</h3>
               <br />
               <div class="form-group">
+                <%= f.label :username, "Username (elige un nombre de usuario)" %>
+                <br />
+                <%= f.text_field :username, placeholder: "Elige el nombre de usuario que desees", class: "form-control", autofocus: true, type: "input" %>
+              </div>
+              <div class="form-group">
                 <%= f.label :name, "Nombre" %>
                 <br />
                 <%= f.text_field :name, placeholder: "Pon aquí tu Nombre", class: "form-control", autofocus: true, type: "input" %>
@@ -62,6 +67,12 @@
                 <%= f.label :password, "Repite tu contraseña" %>
                 <br />
                 <%= f.password_field :password_confirmation, placeholder: "Ingresa nuevamente tu contraseña", class: "form-control", autofocus: true %>
+              </div>
+              <div class="form-group">
+                <%= f.label "Sube tu avatar (opcional)", class: 'col-sm-2 control-label'  %>
+                <div class="col-sm-6">
+                  <%= f.file_field :avatar, class: 'photo_upload' %>
+                </div>
               </div>
               <br /><button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Siguiente</button>
               <button class="btn btn-info prevBtn btn-lg pull-left" type="button" >Anterior</button>
