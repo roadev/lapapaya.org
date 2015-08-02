@@ -62,14 +62,22 @@
             <% end %>
             <% end %>
             <% end %>
+            <% if current_user.username.nil? %>
+            <div class="form-group">
+              <%= f.label :username, "Username (elige un nombre de usuario) *" %>
+              <br />
+              <%= f.text_field :username, placeholder: "Elige el nombre de usuario que desees", class: "form-control", autofocus: true, type: "input" %>
+            </div>
+            <% end %>
             <% if current_user.avatar.present? %>
             <div class="form-group">
-              <%= f.label "Actualiza tu avatar", class: 'col-sm-2 control-label'  %><br /><br />
-              <div class="col-sm-6">
-                <%= f.file_field :avatar, class: 'photo_upload' %><br />
-              </div>
+              <%= f.label "Actualiza tu avatar", class: 'col-sm-2 control-label'  %>
             </div>
+              <div class="form-group">
+                <%= f.file_field :avatar, class: 'photo_upload' %>
+              </div>
             <% else %>
+            <br />
             <div class="form-group">
               <%= f.label "Sube tu avatar", class: 'col-sm-2 control-label' %>
             </div>
@@ -78,7 +86,7 @@
               </div>
             <% end %>
             <br />
-            <div class="form-group">
+            <div class="form-group"><br />
               <%= f.label 'Contraseña actual' %> <i>(Necesitamos tu contraseña para confirmar tus cambios)</i>
               <%= f.password_field :current_password, class: "form-control", placeholder: 'Ingresa tu contraseña actual' %>
             </div>
