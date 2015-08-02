@@ -15,49 +15,49 @@
       <% if current_user.name.present? && !current_user.name.blank? %>
       <div class="card-info"> <span class="card-title"><%= current_user.name %></span>
         <% elsif current_user.lastname.present? && !current_user.lastname.blank? %>
+      </div>
+      <% elseif (current_user.name.nil? && current_user.lastname.nil?) || (current_user.lastname.blank? && current_user.lastname.blank?) %>
+      <div class="card-info"> <span class="card-title"><%= current_user.email %></span>
+        <% end %>
+      </div>
+    </div>
+    <div class="btn-pref btn-group btn-group-justified btn-group-lg" role="group" aria-label="...">
+      <div class="btn-group" role="group">
+        <button type="button" id="stars" class="btn btn-primary" href="#tab1" data-toggle="tab"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <div class="hidden-xs">Puntos y Medallas</div>
+        </button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" id="following" class="btn btn-default" href="#tab2" data-toggle="tab"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+          <div class="hidden-xs">Mi Perfil</div>
+        </button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" id="favorites" class="btn btn-default" href="#tab3" data-toggle="tab"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+          <div class="hidden-xs">Mis Sueños y Retos</div>
+        </button>
+      </div>
+    </div>
 
-        <% elseif (current_user.name.nil? && current_user.lastname.nil?) || (current_user.lastname.blank? && current_user.lastname.blank?) %>
-        <div class="card-info"> <span class="card-title"><%= current_user.email %></span>
+    <div class="well">
+      <div class="tab-content">
+        <div class="tab-pane fade in active" id="tab1">
+          <h3></h3>
+        </div>
+        <div class="tab-pane fade in" id="tab2">
+          <%= link_to edit_user_registration_path, class: 'btn btn-primary' do %>
+          <span class="glyphicon glyphicon-edit"></span> Completar perfil
           <% end %>
+          <h3></h3>
+        </div>
+        <div class="tab-pane fade in" id="tab3">
+          <h4>Mis sueños:</h4>
+          <p>Actualmente tienes: <%= current_user.mydreams %> sueños</p>
         </div>
       </div>
-      <div class="btn-pref btn-group btn-group-justified btn-group-lg" role="group" aria-label="...">
-        <div class="btn-group" role="group">
-          <button type="button" id="stars" class="btn btn-primary" href="#tab1" data-toggle="tab"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-            <div class="hidden-xs">Puntos y Medallas</div>
-          </button>
-        </div>
-        <div class="btn-group" role="group">
-          <button type="button" id="following" class="btn btn-default" href="#tab2" data-toggle="tab"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-            <div class="hidden-xs">Mi Perfil</div>
-          </button>
-        </div>
-        <div class="btn-group" role="group">
-          <button type="button" id="favorites" class="btn btn-default" href="#tab3" data-toggle="tab"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
-            <div class="hidden-xs">Mis Sueños y Retos</div>
-          </button>
-        </div>
-      </div>
-
-      <div class="well">
-        <div class="tab-content">
-          <div class="tab-pane fade in active" id="tab1">
-            <h3></h3>
-          </div>
-          <div class="tab-pane fade in" id="tab2">
-            <%= link_to edit_user_registration_path, class: 'btn btn-primary' do %>
-            <span class="glyphicon glyphicon-edit"></span> Completar perfil
-            <% end %>
-            <h3></h3>
-          </div>
-          <div class="tab-pane fade in" id="tab3">
-            <h3></h3>
-          </div>
-        </div>
-      </div>
-
     </div>
   </div>
+</div>
 </div>
 <% else %>
 <% #Script for redirect to sign_up form if user is not authenticated %>
