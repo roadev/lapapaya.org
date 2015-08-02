@@ -84,9 +84,9 @@
             <div class="col-md-12">
               <h3> Paso 3</h3>
               <div class="form-group">
-                <%= f.label "Sube tu avatar", class: 'col-sm-2 control-label'  %>
+                <%= f.label "País", class: 'col-sm-2 control-label'  %>
                 <div class="col-sm-6">
-                  <%= f.file_field :avatar, class: 'photo_upload' %>
+                  <%= f.text_field :country, placeholder: "Ingresa tu país de Residencia", class: "form-control" %>
                 </div>
               </div>
               <%= f.submit "¡Regístrate!", class: "btn btn-primary btn-lg pull-right" %>
