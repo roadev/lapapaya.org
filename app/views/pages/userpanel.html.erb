@@ -12,16 +12,18 @@
         <img src="assets/images/missing_avatar.png" />
         <% end %>
       </div>
-      <% if current_user.name.present? && !current_user.name.blank? %>
-      <div class="card-info"> <span class="card-title"><%= current_user.name %></span>
-        <% else if current_user.lastname.present? && !current_user.lastname.blank? %>
-      </div>
-      <% else if (current_user.name.nil? && current_user.lastname.nil?) || (current_user.lastname.blank? && current_user.lastname.blank?) %>
-      <div class="card-info"> <span class="card-title"><%= current_user.email %></span>
-        <% end %>
-        <% end %>
-        <% end %>
-      </div>
+      <% if (current_user.name.nil? || current_user.name.blank?) && (current_user.lastname.nil? || current_user.lastname.blank?) %>
+      <div class="card-info"> <span class="card-title"><%= current_user.email %></span></div>
+      <% else if (current_user.name.present? && !current_user.name.blank?) && (current_user.lastname.present? && !current_user.lastname.blank?) %>
+      <div class="card-info"> <span class="card-title"><%= current_user.name %> <%= current_user.lastname %> </span></div>
+      <% else if current_user.name.present? && !current_user.name.blank? %>
+      <div class="card-info"> <span class="card-title"><%= current_user.name %></span></div>
+      <% else if current_user.lastname.present? && !current_user.lastname.blank? %>
+      <div class="card-info"> <span class="card-title"><%= current_user.name %> </span></div>
+      <% end %>
+      <% end %>
+      <% end %>
+      <% end %>
     </div>
     <div class="btn-pref btn-group btn-group-justified btn-group-lg" role="group" aria-label="...">
       <div class="btn-group" role="group">

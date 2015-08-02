@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
   #def mydreams
   #  Dream.where(user_id: 7).count
   #end
-include GiocoResource
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
