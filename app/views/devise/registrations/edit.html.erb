@@ -14,7 +14,7 @@
       <% if (current_user.name.nil? || current_user.name.blank?) && (current_user.lastname.nil? || current_user.lastname.blank?) %>
       <div class="card-info"> <span class="card-title"><%= current_user.email %></span></div>
       <% else if (current_user.name.present? && !current_user.name.blank?) && (current_user.lastname.present? && !current_user.lastname.blank?) %>
-      <div class="card-info"> <span class="card-title"><%= current_user.name %> <%= current_user.lastname %> </span></div>  
+      <div class="card-info"> <span class="card-title"><%= current_user.name %> <%= current_user.lastname %> </span></div>
       <% else if current_user.name.present? && !current_user.name.blank? %>
       <div class="card-info"> <span class="card-title"><%= current_user.name %></span></div>
       <% else if current_user.lastname.present? && !current_user.lastname.blank? %>
@@ -27,62 +27,71 @@
     <div class="btn-pref btn-group btn-group-justified btn-group-lg" role="group" aria-label="...">
       <div class="btn-group" role="group">
         <button type="button" id="following" class="btn btn-default" href="#tab1" data-toggle="tab"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-          <div class="hidden-xs" onmousemove="Hola" >Editar Perfil</div>
-        </button>
+          <div class="hidden-xs" onmousemove="Hola" >Editar Perfil
+          </button>
+        </div>
       </div>
-    </div>
-    <div class="well">
-      <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :patch }) do |f| %>
-      <%= devise_error_messages! %>
-      <div class="tab-content">
-        <div class="tab-pane fade in" id="tab1">
-          <% if (current_user.name.nil? || current_user.name.blank?) && (current_user.lastname.nil? || current_user.lastname.blank?) %>
-          <div class="form-group">
-            <%= f.label :name, "Nombre" %>
+      <div class="well">
+        <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :patch }) do |f| %>
+        <%= devise_error_messages! %>
+        <div class="tab-content">
+          <div class="tab-pane fade in" id="tab1">
+            <% if (current_user.name.nil? || current_user.name.blank?) && (current_user.lastname.nil? || current_user.lastname.blank?) %>
+            <div class="form-group">
+              <%= f.label :name, "Nombre" %>
+              <br />
+              <%= f.text_field :name, placeholder: "Pon aquí tu Nombre", class: "form-control", autofocus: true, type: "input" %>
+            </div>
+            <div class="form-group">
+              <%= f.label :lastname, "Apellido" %>
+              <br />
+              <%= f.text_field :lastname, placeholder: "Pon aquí tu Apellido", class: "form-control", autofocus: true, type: "input" %>
+            </div>
+            <% else if current_user.name.nil? || current_user.name.blank? %>
+            <div class="form-group">
+              <%= f.label :name, "Nombre" %>
+              <br />
+              <%= f.text_field :name, placeholder: "Pon aquí tu Nombre", class: "form-control", autofocus: true, type: "input" %>
+            </div>
+            <% else if current_user.lastname.nil? || current_user.lastname.blank? %>
+            <div class="form-group">
+              <%= f.label :lastname, "Apellido" %>
+              <br />
+              <%= f.text_field :lastname, placeholder: "Pon aquí tu Apellido", class: "form-control", autofocus: true, type: "input" %>
+            </div>
+            <% end %>
+            <% end %>
+            <% end %>
+            <% if current_user.avatar.present? %>
+            <div class="form-group">
+              <%= f.label "Actualiza tu avatar", class: 'col-sm-2 control-label'  %><br /><br />
+              <div class="col-sm-6">
+                <%= f.file_field :avatar, class: 'photo_upload' %><br />
+              </div>
+            </div>
+            <% else %>
+            <div class="form-group">
+              <%= f.label "Sube tu avatar", class: 'col-sm-2 control-label' %>
+            </div>
+              <div class="form-group">
+                <%= f.file_field :avatar, class: 'photo_upload' %>
+              </div>
+            <% end %>
             <br />
-            <%= f.text_field :name, placeholder: "Pon aquí tu Nombre", class: "form-control", autofocus: true, type: "input" %>
+            <div class="form-group">
+              <%= f.label 'Contraseña actual' %> <i>(Necesitamos tu contraseña para confirmar tus cambios)</i>
+              <%= f.password_field :current_password, class: "form-control", placeholder: 'Ingresa tu contraseña actual' %>
+            </div>
+            <div class="form-group">
+              <%= f.label 'Nueva Contraseña' %> <i>(Déjalo en blanco si no quieres cambiarlo)</i>
+              <%= f.password_field :password, class: "form-control", :autocomplete => "off", placeholder: 'Ingresa tu nueva contraseña' %>
+            </div>
+            <div class="form-group">
+              <%= f.submit "Actualizar", class: "btn btn-primary" %>
+            </div>
+            <% end %>
           </div>
-          <div class="form-group">
-            <%= f.label :lastname, "Apellido" %>
-            <br />
-            <%= f.text_field :lastname, placeholder: "Pon aquí tu Apellido", class: "form-control", autofocus: true, type: "input" %>
-          </div>
-          <% else if current_user.name.nil? || current_user.name.blank? %>
-          <div class="form-group">
-            <%= f.label :name, "Nombre" %>
-            <br />
-            <%= f.text_field :name, placeholder: "Pon aquí tu Nombre", class: "form-control", autofocus: true, type: "input" %>
-          </div>
-
-          <% else if current_user.lastname.nil? || current_user.lastname.blank? %>
-          <div class="form-group">
-            <%= f.label :lastname, "Apellido" %>
-            <br />
-            <%= f.text_field :lastname, placeholder: "Pon aquí tu Apellido", class: "form-control", autofocus: true, type: "input" %>
-          </div>
-
-          <% end %>
-          <% end %>
-          <% end %>
-
-          <div class="form-group">
-            <%= f.label 'Contraseña actual' %> <i>(Necesitamos tu contraseña para confirmar tus cambios)</i>
-            <%= f.password_field :current_password, class: "form-control", placeholder: 'Ingresa tu contraseña actual' %>
-          </div>
-
-          <div class="form-group">
-            <%= f.label 'Nueva Contraseña' %> <i>(Déjalo en blanco si no quieres cambiarlo)</i>
-            <%= f.password_field :password, class: "form-control", :autocomplete => "off", placeholder: 'Ingresa tu nueva contraseña' %>
-          </div>
-
-          <div class="form-group">
-            <%= f.submit "Actualizar", class: "btn btn-primary" %>
-          </div>
-          <% end %>
         </div>
       </div>
     </div>
-
-
   </div>
-</div>
