@@ -32,7 +32,7 @@
         </div>
       </div>
       <div class="well">
-        <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :patch }) do |f| %>
+        <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
         <%= devise_error_messages! %>
         <div class="tab-content">
           <div class="tab-pane fade in" id="tab1">
