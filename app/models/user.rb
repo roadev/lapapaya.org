@@ -9,9 +9,9 @@ class User < ActiveRecord::Base
   validates :country, presence: { message: ": Por favor ingresa el país en donde vives" }
   validates :username, presence: { message: ": Por favor ingresa un nombre de usuario" }
 
-  def mydreams
-    Dream.where(user_id: 7).count
-  end
+  #def mydreams
+  #  Dream.where(user_id: 7).count
+  #end
 include GiocoResource
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
