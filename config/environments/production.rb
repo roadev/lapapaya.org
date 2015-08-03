@@ -95,7 +95,7 @@ Lapapayanetwork::Application.configure do
   config.action_mailer.smtp_settings = {
     :authentication => :plain,
     :address => "smtp.mailgun.org",
-    :port => 587,
+    :port => 2525,
     :domain => "lapapaya.org",
     :user_name => "postmaster@lapapaya.org",
     :password => "3be68db64815441d4558611c7a1a7560"
