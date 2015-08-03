@@ -62,7 +62,26 @@
               <span class="sr-only">45% Complete</span>
             </div>
           </div>
-
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+            <center><b class="panel-title">Mis datos</b></center>
+            </div>
+            <div class="panel-body">
+              <p><b>Usuario: </b><%= current_user.username %></p>
+              <p><b>País: </b><%= current_user.country %></p>
+              <p><b>Región: </b><%= current_user.region %></p>
+              <p><b>Ciudad: </b><%= current_user.city %></p>
+              <p><b>Cumpleaños: </b><%= current_user.born_date %></p>
+              <%= link_to current_user.facebook do %><i class="fa fa-facebook"></i>
+              <% end %>
+              <br />
+              <%= link_to current_user.twitter do %><i class="fa fa-twitter"></i>
+              <% end %>
+              <br />
+              <%= link_to current_user.website do %><i class="fa fa-external-link"></i>
+              <% end %>
+            </div>
+          </div>
           <%= link_to edit_user_registration_path, class: 'btn btn-primary' do %>
           <span class="glyphicon glyphicon-edit"></span> Completar perfil
           <% end %>
