@@ -31,7 +31,7 @@ Lapapayanetwork::Application.configure do
     :port =>           '587',
     :address =>        'smtp.mandrillapp.com',
     :user_name =>      'app23950605@heroku.com',
-    :password =>       MhLw2wx-VMiLNqZO-0l3Iw,
+    :password =>       'MhLw2wx-VMiLNqZO-0l3Iw',
     :domain =>         'lapapaya.org',
     :authentication => :plain,
   }
