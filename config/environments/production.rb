@@ -80,25 +80,25 @@ Lapapayanetwork::Application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
 
- # Sets Paperclip to upload images to Amazon S3
+  # Sets Paperclip to upload images to Amazon S3
   config.paperclip_defaults = {
-  :storage => :s3,
-  :s3_credentials => {
-    :bucket => ENV['AWS_BUCKET'],
-    :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
-    :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
-   }
- }
+    :storage => :s3,
+    :s3_credentials => {
+      :bucket => ENV['AWS_BUCKET'],
+      :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+    }
+  }
 
-config.action_mailer.default_url_options = { :host => 'lapapaya.org' }
-ActionMailer::Base.smtp_settings = {
+  config.action_mailer.default_url_options = { :host => 'lapapaya.org' }
+  ActionMailer::Base.smtp_settings = {
     :port =>           '587',
     :address =>        'smtp.mandrillapp.com',
     :user_name =>      ENV['app23950605@heroku.com'],
     :password =>       ENV['MhLw2wx-VMiLNqZO-0l3Iw'],
-    :domain =>         'heroku.com',
+    :domain =>         'lapapaya.org',
     :authentication => :plain,
-}
-ActionMailer::Base.delivery_method = :smtp
+  }
+  ActionMailer::Base.delivery_method = :smtp
 
 end

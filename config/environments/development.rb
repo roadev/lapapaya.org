@@ -26,16 +26,16 @@ Lapapayanetwork::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
-ActionMailer::Base.smtp_settings = {
+  config.action_mailer.default_url_options = { :host => 'lapapaya.org' }
+  ActionMailer::Base.smtp_settings = {
     :port =>           '587',
     :address =>        'smtp.mandrillapp.com',
     :user_name =>      ENV['app23950605@heroku.com'],
     :password =>       ENV['MhLw2wx-VMiLNqZO-0l3Iw'],
-    :domain =>         'localhost:3000',
+    :domain =>         'lapapaya.org',
     :authentication => :plain,
-}
-ActionMailer::Base.delivery_method = :smtp
+  }
+  ActionMailer::Base.delivery_method = :smtp
 
 
 
