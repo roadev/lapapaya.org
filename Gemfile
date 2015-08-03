@@ -41,7 +41,11 @@ gem 'momentjs-rails'
 # Use gem datetimepicker-rails
 gem 'datetimepicker-rails', github: 'zpaulovics/datetimepicker-rails', branch: 'master', submodules: true
 gem 'simple_form'
+<<<<<<< HEAD
  
+=======
+gem 'mailgun_rails'
+>>>>>>> f881310d8916f8bf4eb8193f577404ae97ab3c6b
 
 group :development, :test do
 	gem 'sqlite3'

@@ -25,17 +25,11 @@ Lapapayanetwork::Application.configure do
   # Debug mode disables concatenation and preprocessing of assets.
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
+
+  #config.action_mailer.perform_deliveries = true
   config.assets.debug = true
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
-ActionMailer::Base.smtp_settings = {
-    :port =>           '587',
-    :address =>        'smtp.mandrillapp.com',
-    :user_name =>      ENV['app23950605@heroku.com'],
-    :password =>       ENV['MhLw2wx-VMiLNqZO-0l3Iw'],
-    :domain =>         'localhost:3000',
-    :authentication => :plain,
-}
-ActionMailer::Base.delivery_method = :smtp
+
+  config.action_mailer.default_url_options = { :host => 'lapapaya.org' }
 
 
 

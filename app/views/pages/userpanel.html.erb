@@ -56,6 +56,15 @@
           <h3></h3>
         </div>
         <div class="tab-pane fade in" id="tab2">
+          <!-- Progress bar -->
+          <% if (current_user.username.nil? || current_user.username.blank?) && (current_user.name.nil? || current_user.blank?)  %>
+          <b><center><p>Porcentaje de completación de tu perfil: 10% (¡Elige tu nombre de usuario y dinos tu nombre!)</p></center></b>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
+              <span class="sr-only">10% Complete</span>
+            </div>
+          </div>
+          <% else if current_user.username.nil? || current_user.username.blank? %>
           <b><center><p>Porcentaje de completación de tu perfil: 45%</p></center></b>
           <div class="progress">
             <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
@@ -63,6 +72,35 @@
             </div>
           </div>
 
+          <b><center><p>Porcentaje de completación de tu perfil: 45%</p></center></b>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
+              <span class="sr-only">45% Complete</span>
+            </div>
+          </div>
+          <% end %>
+          <% end %>
+          <!-- Progress bar -->
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+            <center><b class="panel-title">Mis datos</b></center>
+            </div>
+            <div class="panel-body">
+              <p><b>Usuario: </b><%= current_user.username %></p>
+              <p><b>País: </b><%= current_user.country %></p>
+              <p><b>Región: </b><%= current_user.region %></p>
+              <p><b>Ciudad: </b><%= current_user.city %></p>
+              <p><b>Cumpleaños: </b><%= current_user.born_date %></p>
+              <%= link_to current_user.facebook do %><i class="fa fa-facebook"></i>
+              <% end %>
+              <br />
+              <%= link_to current_user.twitter do %><i class="fa fa-twitter"></i>
+              <% end %>
+              <br />
+              <%= link_to current_user.website do %><i class="fa fa-external-link"></i>
+              <% end %>
+            </div>
+          </div>
           <%= link_to edit_user_registration_path, class: 'btn btn-primary' do %>
           <span class="glyphicon glyphicon-edit"></span> Completar perfil
           <% end %>

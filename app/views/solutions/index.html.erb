@@ -1,29 +1,41 @@
-<h1>Listing solutions</h1>
+<%= link_to 'Volver', dreams_path, class: "btn btn-info" %>
+<center><%= link_to 'Crear Solución', new_solution_path, class: "btn btn-primary btn-lg" %></center>
+<br />
+<br />
 
-<table>
-  <thead>
-    <tr>
-      <th>Micropost</th>
-      <th>Content</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<div id="dreams" class="transitions-enabled">
 
-  <tbody>
-    <% @solutions.each do |solution| %>
-      <tr>
-        <td><%= solution.micropost_id %></td>
-        <td><%= solution.content %></td>
-        <td><%= link_to 'Show', solution %></td>
-        <td><%= link_to 'Edit', edit_solution_path(solution) %></td>
-        <td><%= link_to 'Destroy', solution, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+  <% @solutions.each do |solution| %>
+  <div class="box panel panel-default">
+    <%= link_to image_tag(solution.image.url(:medium)), solution %>
+
+    <div class="panel-body">
+    </div>
+
+    <p><strong>Solución del Reto <%= solution.micropost_id %></strong></p>
+    <p><%= solution.content %></p>
+    <p></p>
+    <p></p>
+    <br>
+    <br>
+    <!--<p> >> Reguemos semillas de papaya </p>-->
+    <%= social_share_button_tag("My Site") %>
+
+    <p><strong><%# dream.user.email if dream.user %> </strong></p>
+
+    <% if solution.user == current_user %>
+    <div class="actions">
+      <%= link_to edit_solution_path(solution) do %><!-- mira del ( ) si es content -->
+      <span class="glyphicon glyphicon-edit"></span>
+      Editar
+      <% end %>
+      <%= link_to solution, method: :delete, data: { confirm: '¿Estás seguro?' } do %>
+      <span class="glyphicon glyphicon-trash"></span>
+      Borrar
+      <% end %>
+    </div>
     <% end %>
-  </tbody>
-</table>
+  </div>
+  <% end %>
 
-<br>
-
-<%= link_to 'New Solution', new_solution_path %>
+  <br />
