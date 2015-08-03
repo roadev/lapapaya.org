@@ -20,7 +20,7 @@
  @import "bootstrap";
  @import "font-awesome-sprockets";
  @import "font-awesome";
- 
+
  body {
   background: #EAEAEA;
 }
@@ -467,3 +467,8 @@ body{
   -webkit-border-radius:0 !important;
 }
 /* new USER PANEL PAGE */
+.label.label-default.rank-label {
+    background-color: #F93F6F;
+    padding: 5px 10px;
+    border-radius: 27px;
+}

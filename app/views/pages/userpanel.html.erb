@@ -11,7 +11,11 @@
         <% else %>
         <img src="assets/images/missing_avatar.png" />
         <% end %>
+        <div class="rank-label-container">
+          <span class="label label-default rank-label"><%= current_user.points %> Puntos</span>
+        </div>
       </div>
+      <br />
       <% if (current_user.name.nil? || current_user.name.blank?) && (current_user.lastname.nil? || current_user.lastname.blank?) %>
       <div class="card-info"> <span class="card-title"><%= current_user.email %></span></div>
       <% else if (current_user.name.present? && !current_user.name.blank?) && (current_user.lastname.present? && !current_user.lastname.blank?) %>
@@ -46,6 +50,9 @@
     <div class="well">
       <div class="tab-content">
         <div class="tab-pane fade in active" id="tab1">
+          <div class="rank-label-container">
+            <span class="label label-default rank-label"><%= current_user.points %> Puntos</span>
+          </div>
           <h3></h3>
         </div>
         <div class="tab-pane fade in" id="tab2">
