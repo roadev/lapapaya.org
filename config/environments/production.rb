@@ -90,15 +90,11 @@ Lapapayanetwork::Application.configure do
     }
   }
 
-  config.action_mailer.default_url_options = { :host => 'lapapaya.org' }
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    :authentication => :plain,
-    :address => "smtp.mailgun.org",
-    :port => 587,
-    :domain => "lapapaya.org",
-    :user_name => "postmaster@lapapaya.org",
-    :password => "3be68db64815441d4558611c7a1a7560"
-  }
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  config.action_mailer.delivery_method = :mailgun
+  config.action_mailer.mailgun_settings = {
+        api_key: 'key-3401bbf966623d1cd0b9536aa4866b96',
+        domain: 'lapapaya.org'
+}
 
 end
