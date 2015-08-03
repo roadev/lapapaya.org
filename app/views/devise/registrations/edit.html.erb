@@ -32,7 +32,7 @@
         </div>
       </div>
       <div class="well">
-        <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :patch }) do |f| %>
+        <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :patch }) do |f| %>
         <%= devise_error_messages! %>
         <div class="tab-content">
           <div class="tab-pane fade in" id="tab1">
@@ -62,20 +62,11 @@
             <% end %>
             <% end %>
             <% end %>
-            <%# if current_user.username.nil? %>
             <div class="form-group">
               <%= f.label :username, "Username (elige un nombre de usuario) *" %>
               <br />
               <%= f.text_field :username, placeholder: "Elige el nombre de usuario que desees", class: "form-control", autofocus: true, type: "input" %>
             </div>
-            <% #end %>
-            <% if current_user.country.nil? %>
-            <div class="form-group">
-              <%= f.label :country, "País *" %>
-              <br />
-              <%= f.text_field :country, placeholder: "Ingresa tu País de residencia", class: "form-control", autofocus: true, type: "input" %>
-            </div>
-            <% end %>
             <% if current_user.avatar.present? %>
             <div class="form-group">
               <%= f.label "Actualiza tu avatar", class: 'col-sm-2 control-label'  %>
@@ -84,7 +75,6 @@
                 <%= f.file_field :avatar, class: 'photo_upload' %>
               </div>
             <% else %>
-            <br />
             <div class="form-group">
               <%= f.label "Sube tu avatar", class: 'col-sm-2 control-label' %>
             </div>
@@ -93,7 +83,47 @@
               </div>
             <% end %>
             <br />
-            <div class="form-group"><br />
+            <% if current_user.country.nil? || current_user.country.blank? %>
+            <div class="form-group">
+              <%= f.label :country, "País *" %>
+              <br />
+              <%= f.text_field :country, placeholder: "Ingresa tu País de residencia", class: "form-control", autofocus: true, type: "input" %>
+            </div>
+            <% end %>
+            <% if current_user.region.nil? || current_user.region.blank? %>
+            <div class="form-group">
+              <%= f.label :region, "Región " %>
+              <br />
+              <%= f.text_field :region, placeholder: "Ingresa tu Región (Estado, Provincia, Departamento)", class: "form-control", autofocus: true, type: "input" %>
+            </div>
+            <% end %>
+            <% if current_user.city.nil? || current_user.city.blank? %>
+            <div class="form-group">
+              <%= f.label :city, "Ciudad/Población " %>
+              <br />
+              <%= f.text_field :city, placeholder: "Ingresa tu Población (Ciudad/Pueblo/Municipio/Corregimiento)", class: "form-control", autofocus: true, type: "input" %>
+            </div>
+            <% end %>
+            <% if current_user.born_date.nil? || current_user.born_date.blank? %>
+            <div class="form-group">
+              <%= f.label "Fecha de Nacimiento (opcional)", class: 'col-sm-2 control-label'  %>
+              <div class="col-sm-6">
+                <%= f.input :born_date, as: :date_picker, label: false, placeholder: "Da click en el botón de calendario de la derecha" %>
+              </div>
+            </div>
+            <% end %>
+            <br /><br /><br /><br />
+            <div class="form-group">
+              <%= f.label :facebook, "Facebook " %>   <i class="fa fa-facebook"></i>
+              <br />
+             <%=f.text_field :facebook, class: "form-control", placeholder: "Ingresa la url - link de tu perfil de facebook" %>
+            </div>
+            <div class="form-group">
+              <%= f.label :twitter, "Twitter " %>   <i class="fa fa-twitter"></i>
+              <br />
+             <%=f.text_field :twitter, class: "form-control", placeholder: "Ingresa la url - link de tu perfil de twitter" %>
+            </div>
+            <div class="form-group">
               <%= f.label 'Contraseña actual' %> <i>(Necesitamos tu contraseña para confirmar tus cambios)</i>
               <%= f.password_field :current_password, class: "form-control", placeholder: 'Ingresa tu contraseña actual' %>
             </div>
