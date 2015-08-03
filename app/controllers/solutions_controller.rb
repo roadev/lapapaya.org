@@ -1,6 +1,8 @@
 class SolutionsController < ApplicationController
   before_action :set_solution, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
+  before_action :correct_user, only: [:destroy, :edit, :update]
+
 
   # GET /solutions
   # GET /solutions.json
@@ -73,10 +75,10 @@ class SolutionsController < ApplicationController
       params.require(:solution).permit(:micropost_id, :content, :image)
     end
     def correct_user
-      @micropost = current_user.microposts.find_by(id: params[:id])
+      @solution = current_user.solutions.find_by(id: params[:id])
       #render text: ':(' if @micropost.nil?
-      flash[:danger] = "Este contenido sólo puede modificarlo o eliminarlo el propietario." if @micropost.nil?
-      flash[:success] = "La solución ha sido Eliminada." if @micropost.present?
-      redirect_to microposts_url if @micropost.nil?
+      flash[:danger] = "Este contenido sólo puede modificarlo o eliminarlo el propietario." if @solution.nil?
+      flash[:success] = "La solución ha sido Eliminada." if @solution.present?
+      redirect_to microposts_url if @solution.nil?
     end
 end

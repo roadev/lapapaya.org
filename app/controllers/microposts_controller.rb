@@ -30,7 +30,6 @@ class MicropostsController < ApplicationController
 
     respond_to do |format|
       if @micropost.save
-        current_user.track_event('Micropost creado')
         format.html { redirect_to dreams_path, notice: '¡ Reto creado satisfactoriamente !' }
         format.json { render action: 'show', status: :created, location: @micropost }
 
