@@ -124,6 +124,11 @@
              <%=f.text_field :twitter, class: "form-control", placeholder: "Ingresa la url - link de tu perfil de twitter" %>
             </div>
             <div class="form-group">
+              <%= f.label :website, "Sitio Web " %>   <i class="fa fa-external-link"></i>
+              <br />
+              <%= f.text_field :website, class: "form-control", placeholder: "Si tienes sitio web y quieres compartir, pon aquí la url" %>
+            </div>
+            <div class="form-group">
               <%= f.label 'Contraseña actual' %> <i>(Necesitamos tu contraseña para confirmar tus cambios)</i>
               <%= f.password_field :current_password, class: "form-control", placeholder: 'Ingresa tu contraseña actual' %>
             </div>
