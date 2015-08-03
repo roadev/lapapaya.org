@@ -89,12 +89,6 @@ Lapapayanetwork::Application.configure do
       :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
     }
   }
-  config.action_mailer.perform_deliveries = true
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
-  config.action_mailer.delivery_method = :mailgun
-  config.action_mailer.mailgun_settings = {
-        api_key: 'key-3401bbf966623d1cd0b9536aa4866b96',
-        domain: 'lapapaya.org'
-}
 
+  config.action_mailer.default_url_options = { :host => 'lapapaya.org' }
 end

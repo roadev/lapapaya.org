@@ -34,7 +34,4 @@ Lapapayanetwork::Application.configure do
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
 
-  config.action_mailer.default_url_options = { :host => 'lapapaya.org' }
-  config.action_mailer.delivery_method = :mailgun
-  config.action_mailer.mailgun_settings = {domain: 'lapapaya.org'}
 end
