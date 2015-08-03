@@ -56,12 +56,23 @@
           <h3></h3>
         </div>
         <div class="tab-pane fade in" id="tab2">
+          <!-- Progress bar -->
+          <% if current_user.username.nil? || current_user.username.blank? %>
+          <b><center><p>Porcentaje de completación de tu perfil: 10% (¡Elige tu nombre de usuario!)</p></center></b>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
+              <span class="sr-only">10% Complete</span>
+            </div>
+          </div>
+          <% else %>
           <b><center><p>Porcentaje de completación de tu perfil: 45%</p></center></b>
           <div class="progress">
             <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
               <span class="sr-only">45% Complete</span>
             </div>
           </div>
+          <% end %>
+          <!-- Progress bar -->
           <div class="panel panel-primary">
             <div class="panel-heading">
             <center><b class="panel-title">Mis datos</b></center>
