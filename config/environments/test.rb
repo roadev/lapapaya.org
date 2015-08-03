@@ -34,11 +34,12 @@ Lapapayanetwork::Application.configure do
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
 
+  config.action_mailer.default_url_options = { :host => 'lapapaya.org' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     :authentication => :plain,
     :address => "smtp.mailgun.org",
-    :port => 2525,
+    :port => 587,
     :domain => "lapapaya.org",
     :user_name => "postmaster@lapapaya.org",
     :password => "3be68db64815441d4558611c7a1a7560"
