@@ -22,6 +22,8 @@
 //= require moment
 //= require bootstrap-datetimepicker
 //= require pickers
+//= require underscore
+//= require gmaps/google
 
 /* Function for displaying the avatar of lapapaya seed at login form */
 $(function(){
