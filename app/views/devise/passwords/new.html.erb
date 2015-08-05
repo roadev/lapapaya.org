@@ -1,8 +1,9 @@
 
-
+<div class="row">
+<div class="col-md-offset-2 col-md-8">
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h1>Olvidaste tu contraseña?</h1>
+    <div class="panel-title"><h3>¿Olvidaste tu Contraseña?</h3></div>
   </div>
 
   <div class="panel-body">
@@ -11,10 +12,10 @@
 
       <div class="form-group">
         <%= f.label :email %>
-        <%= f.email_field :email, autofocus: true, class: "form-control" %>
+        <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "Ingresa tu email" %>
       </div>
       <div class="form-group">
-        <%= f.submit "Enviame las instrucciones para una nueva contraseña", class: "btn btn-primary" %>
+        <%= f.submit "Envíame las instrucciones para una nueva contraseña", class: "btn btn-primary" %>
       </div>
     <% end %>
   </div>
@@ -22,4 +23,5 @@
   <div class="panel-footer">
     <%= render "devise/shared/links" %>
   </div>
+</div>
 </div>
