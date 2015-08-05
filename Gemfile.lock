@@ -89,6 +89,7 @@ GEM
       multipart-post (>= 1.2, < 3)
     font-awesome-sass (4.3.2.1)
       sass (~> 3.2)
+    geocoder (1.2.9)
     giocopro (0.0.9)
     gmaps4rails (2.1.2)
     hashie (2.1.1)
@@ -253,6 +254,7 @@ DEPENDENCIES
   datetimepicker-rails!
   devise (~> 3.2.4)
   font-awesome-sass
+  geocoder
   giocopro (~> 0.0.8)
   gmaps4rails
   iconv (~> 1.0.3)
