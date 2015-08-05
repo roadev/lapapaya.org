@@ -5,9 +5,13 @@ class ApplicationController < ActionController::Base
 
   before_filter :configure_permitted_parameters, if: :devise_controller?
   @hash = Gmaps4rails.build_markers(@users) do |current_user, marker|
-    marker.lat user.latitude
-    marker.lng user.longitude
+    marker.lat current_user.latitude
+    marker.lng current_user.longitude
     marker.json({:title => current_user.name })
+  end
+
+  def action
+    @address = cookies[:address].split("|")
   end
   protected
 
