@@ -104,3 +104,12 @@ $(document).ready(function() {
     $(this).removeClass("btn-default").addClass("btn-primary");
   });
 });
+
+function getGeoLocation() {
+  navigator.geolocation.getCurrentPosition(setGeoCookie);
+}
+
+function setGeoCookie(position) {
+  var cookie_val = position.coords.latitude + "|" + position.coords.longitude;
+  document.cookie = "address=" + escape(cookie_val);
+}

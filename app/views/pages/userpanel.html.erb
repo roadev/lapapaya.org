@@ -102,40 +102,21 @@
               <br />
               <%= link_to current_user.website do %><i class="fa fa-external-link"></i>
               <% end %>
-              <b><p>Aquí se encuentran tú y tu sueño: </p></b>
+              <b><p>Aquí se encuentran tú y tus sueños: </p></b>
 
-              <div style='width: 800px;'>
-                <div id="geolocation" style='width: 800px; height: 400px;'></div>
-
-              <script type="text/javascript">
-              var handler = Gmaps.build('Google');
-              handler.buildMap({ internal: {id: 'geolocation'} }, function(){
-                if(navigator.geolocation)
-                navigator.geolocation.getCurrentPosition(displayOnMap);
-              });
-
-              function displayOnMap(position){
-                var marker = handler.addMarker({
-                  lat: position.coords.latitude,
-                  lng: position.coords.longitude
-                });
-                handler.map.centerOn(marker);
-              };
-              </script>
-            </div>
-
-
+              <center><%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=12&markers=#{current_user.latitude}%2C#{current_user.longitude}" %></center>
+              <br /><br />
               <%= link_to edit_user_registration_path, class: 'btn btn-primary' do %>
               <span class="glyphicon glyphicon-edit"></span> Completar perfil
               <% end %>
               <h3></h3>
             </div>
-
+            </div>
+            </div>
             <div class="tab-pane fade in" id="tab3">
               <h4>Mis sueños:</h4>
               <p>Actualmente tienes:  sueños</p>
-            </div>
-          </div>
+
         </div>
       </div>
     </div>
