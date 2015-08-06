@@ -91,28 +91,21 @@
               <span class="sr-only">65% Complete</span>
             </div>
           </div>
-          <% else if (current_user.region.nil? || current_user.region.blank?) && (current_user.facebook.nil? || current_user.facebook.blank?) 
-          && (current_user.twitter.nil? || current_user.twitter.blank?) %>
+          <% else if (current_user.region.nil? || current_user.region.blank?) && (current_user.facebook.nil? || current_user.facebook.blank?) && (current_user.twitter.nil? || current_user.twitter.blank?) %>
           <b><center><p>Porcentaje de completación de tu perfil: 75%</p></center></b>
           <div class="progress">
             <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
               <span class="sr-only">75% Complete</span>
             </div>
           </div>
-          <% else if (current_user.website.nil? || current_user.website.blank?) && (current_user.facebook.nil? || current_user.facebook.blank?) 
-          && (current_user.twitter.nil? || current_user.twitter.blank?) %>
+          <% else if (current_user.website.nil? || current_user.website.blank?) && (current_user.facebook.nil? || current_user.facebook.blank?) && (current_user.twitter.nil? || current_user.twitter.blank?) %>
           <b><center><p>Porcentaje de completación de tu perfil: 80%</p></center></b>
           <div class="progress">
             <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
               <span class="sr-only">80% Complete</span>
             </div>
           </div>
-          <% else if (current_user.name.present? && !current_user.name.blank? && current_user.lastname.present? && !current_user.lastname.blank? 
-          && current_user.avatar.present? && current_user.username.present? && !current_user.username.blank? 
-          && current_user.facebook.present? && !current_user.facebook.blank? && current_user.twitter.present? && !current_user.twitter.blank? 
-          && current_user.country.present? && !current_user.country.blank? && current_user.region.present? && !current_user.region.blank? 
-          && current_user.city.present? && !current_user.city.blank?  && current_user.born_date.present? && !current_user.born_date.blank?) 
-          && current_user.website.present? && !current_user.website.blank?%>
+          <% else if (current_user.name.present? && !current_user.name.blank? && current_user.lastname.present? && !current_user.lastname.blank? && current_user.avatar.present? && current_user.username.present? && !current_user.username.blank? && current_user.facebook.present? && !current_user.facebook.blank? && current_user.twitter.present? && !current_user.twitter.blank? && current_user.country.present? && !current_user.country.blank? && current_user.region.present? && !current_user.region.blank? && current_user.city.present? && !current_user.city.blank?  && current_user.born_date.present? && !current_user.born_date.blank?) && current_user.website.present? && !current_user.website.blank?%>
           <b><center><p>Porcentaje de completación de tu perfil: 100%</p></center></b>
           <p>¡Felicidades! Tu perfil está completo :)</p>
           <div class="progress">
@@ -127,7 +120,7 @@
           <% end %>
           <% end %>
           <% end %>
-          
+
           <!-- Progress bar -->
           <div class="panel panel-primary">
             <div class="panel-heading">
