@@ -3,9 +3,10 @@ class User < ActiveRecord::Base
   has_many :dreams
   has_many :microposts
   has_many :solutions
-  geocoded_by :current_sign_in_ip
+  geocoded_by :address
   #geocoded_by :address
   after_validation :geocode
+  after_update :geocode
   #before_save :concatenate_address
   #before_save :save_cookies
 

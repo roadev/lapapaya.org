@@ -10,8 +10,8 @@ class ApplicationController < ActionController::Base
     marker.json({:title => user.name })
   end
 
-  def save_cookies
-    @address = cookies[:address].split("|")
+  def request_location
+    @address = request.location
   end
   protected
 
