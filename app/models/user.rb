@@ -3,15 +3,17 @@ class User < ActiveRecord::Base
   has_many :dreams
   has_many :microposts
   has_many :solutions
-  geocoded_by :address
+  geocoded_by :last_sign_in_ip
+  #geocoded_by :address
   after_validation :geocode
-  before_save :concatenate_address
+  #before_save :concatenate_address
   #before_save :save_cookies
 
-  def concatenate_address
-    self.address = "#{city}, #{country}"
-    #address = city.concat(country).save! #[:city, :country].join(", ")
-  end
+  # def concatenate_address
+  #   self.address = "#{city}, #{country}"
+  #   #address = city.concat(country).save! #[:city, :country].join(", ")
+  # end
+
   has_attached_file :avatar, styles: { :medium => "100x100#", :thumb => "100x100#" }, :default_url => "/images/:style/missing.png"
   validates_attachment_content_type :avatar, content_type: %w(image/jpeg image/jpg image/png image/gif), message: 'Ingresa tu avatar en extensión jpg o png'
   validates_uniqueness_of :username, message: ": Este nombre de usuario ya se encuentra registrado"
