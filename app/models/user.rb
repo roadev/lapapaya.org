@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   geocoded_by :current_sign_in_ip
   #geocoded_by :address
   after_validation :geocode
-  after_update :geocode
+  before_update :geocode
   #before_save :concatenate_address
   #before_save :save_cookies
 
