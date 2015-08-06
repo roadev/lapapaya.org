@@ -288,6 +288,3 @@ DEPENDENCIES
   will_paginate (~> 3.0.5)
   will_paginate-bootstrap
   youtube_it (~> 2.4.0)
-
-BUNDLED WITH
-   1.10.5
