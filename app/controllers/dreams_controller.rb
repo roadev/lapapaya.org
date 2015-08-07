@@ -5,6 +5,7 @@ class DreamsController < ApplicationController
 
 
   def index
+    Dream.paginate(:page => params[:page], :per_page => 30)
     if params[:tag]
       @dreams = Dream.tagged_with(params[:tag])
   else
