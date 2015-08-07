@@ -46,7 +46,8 @@ Lapapayanetwork::Application.routes.draw do
   get 'dreams/:id', to: 'dreams#show', as: 'dream_show'
   resources :activities
 
-  devise_for :users
+  # devise_for :users
+  devise_for :users, controllers: {registrations: "registrations"}
   root "dreams#index"
   get "about" => "pages#about"
   get "userpanel" => "pages#userpanel"
