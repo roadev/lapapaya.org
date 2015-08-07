@@ -22,7 +22,7 @@ module Lapapayanetwork
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
     # Required for heroku
-    config.assets.initialize_on_precompile = false
+    config.assets.initialize_on_precompile = true
     ActionMailer::Base.smtp_settings = {
         :port =>           '587',
         :address =>        'smtp.mandrillapp.com',
