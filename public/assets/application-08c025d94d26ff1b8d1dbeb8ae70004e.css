@@ -10514,18 +10514,18 @@ button.close {
   content: "\f23a";
 }
 
-/* line 25, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 25, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 body {
   background: #EAEAEA;
 }
 
-/* line 28, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 28, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 .user-details {
   position: relative;
   padding: 0;
 }
 
-/* line 33, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 33, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 .user-details .user-image {
   position: relative;
   z-index: 1;
@@ -10533,14 +10533,14 @@ body {
   text-align: center;
 }
 
-/* line 40, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 40, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 .user-image img {
   clear: both;
   margin: auto;
   position: relative;
 }
 
-/* line 46, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 46, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 .user-details .user-info-block {
   width: 100%;
   position: absolute;
@@ -10550,14 +10550,14 @@ body {
   padding-top: 35px;
 }
 
-/* line 55, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 55, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 .user-info-block .user-heading {
   width: 100%;
   text-align: center;
   margin: 10px 0 0;
 }
 
-/* line 61, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 61, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 .user-info-block .navigation {
   float: left;
   width: 100%;
@@ -10568,39 +10568,33 @@ body {
   border-top: 1px solid #428BCA;
 }
 
-/* line 72, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 72, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 .navigation li {
   float: left;
   margin: 0;
   padding: 0;
 }
 
-/* line 76, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 76, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 .navigation li a {
   padding: 20px 30px;
   float: left;
 }
 
-/* line 80, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 80, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 .navigation li.active a {
   background: #5ED0F2;
   color: #fff;
 }
 
-/* line 81, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 81, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 .user-info-block .user-body {
   float: left;
   padding: 5%;
   width: 90%;
 }
 
-/* line 82, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
-.user-body .tab-content > div {
-  float: left;
-  width: 100%;
-}
-
-/* line 83, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 83, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 .user-body .tab-content h4 {
   width: 100%;
   margin: 10px 0;
@@ -10609,7 +10603,7 @@ body {
 
 /* CSS Style for userpanel */
 /* For point numbers... */
-/* line 89, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 89, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 span.red {
   background: red;
   border-radius: 0.8em;
@@ -10624,7 +10618,7 @@ span.red {
   width: 1.6em;
 }
 
-/* line 103, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 103, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 span.grey {
   background: #cccccc;
   border-radius: 0.8em;
@@ -10639,7 +10633,7 @@ span.grey {
   width: 1.6em;
 }
 
-/* line 117, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 117, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 span.green {
   background: #5EA226;
   border-radius: 0.8em;
@@ -10654,7 +10648,7 @@ span.green {
   width: 1.6em;
 }
 
-/* line 131, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 131, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 span.blue {
   background: #5178D0;
   border-radius: 0.8em;
@@ -10669,7 +10663,7 @@ span.blue {
   width: 1.6em;
 }
 
-/* line 145, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 145, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 span.pink {
   background: #EF0BD8;
   border-radius: 0.8em;
@@ -10685,14 +10679,14 @@ span.pink {
 }
 
 /* For point numbers... */
-/* line 159, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 159, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 .im-centered {
   margin: auto;
   margin-left: 500px;
   margin-right: auto;
 }
 
-/* line 165, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 165, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 .im-centered-2 {
   margin: auto;
   margin-left: 24%;
@@ -10700,18 +10694,18 @@ span.pink {
 }
 
 /* For login snippet */
-/* line 173, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 173, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 body {
   background: #eeeeee;
 }
 
-/* line 175, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 175, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 html, body {
   position: relative;
   height: 100%;
 }
 
-/* line 180, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 180, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 .login-container {
   position: relative;
   width: 300px;
@@ -10722,7 +10716,7 @@ html, body {
   border: 1px solid #ccc;
 }
 
-/* line 190, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 190, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 #output {
   position: absolute;
   width: 300px;
@@ -10731,17 +10725,17 @@ html, body {
   color: #fff;
 }
 
-/* line 198, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 198, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 #output.alert-success {
   background: #19cc19;
 }
 
-/* line 202, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 202, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 #output.alert-danger {
   background: #e46969;
 }
 
-/* line 206, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 206, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 .login-container::before, .login-container::after {
   content: "";
   position: absolute;
@@ -10754,13 +10748,13 @@ html, body {
   border: 1px solid #ccc;
 }
 
-/* line 216, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 216, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 .login-container::after {
   top: 5px;
   z-index: -2;
 }
 
-/* line 221, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 221, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 .avatar {
   width: 100px;
   height: 100px;
@@ -10770,7 +10764,7 @@ html, body {
   background-size: cover;
 }
 
-/* line 229, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 229, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 .form-box input {
   width: 100%;
   padding: 10px;
@@ -10781,31 +10775,31 @@ html, body {
   transition: 0.2s ease-in-out;
 }
 
-/* line 239, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 239, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 .form-box input:focus {
   outline: 0;
   background: #eee;
 }
 
-/* line 244, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 244, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 .form-box input[type="text"] {
   border-radius: 5px 5px 0 0;
   text-transform: lowercase;
 }
 
-/* line 249, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 249, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 .form-box input[type="password"] {
   border-radius: 0 0 5px 5px;
   border-top: 0;
 }
 
-/* line 254, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 254, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 .form-box button.login {
   margin-top: 15px;
   padding: 10px 20px;
 }
 
-/* line 259, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 259, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
@@ -10814,14 +10808,14 @@ html, body {
 }
 
 @-webkit-keyframes fadeInUp {
-  /* line 267, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+  /* line 267, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
   0% {
     opacity: 0;
     -webkit-transform: translateY(20px);
     transform: translateY(20px);
   }
 
-  /* line 273, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+  /* line 273, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
   100% {
     opacity: 1;
     -webkit-transform: translateY(0);
@@ -10830,7 +10824,7 @@ html, body {
 }
 
 @keyframes fadeInUp {
-  /* line 281, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+  /* line 281, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
   0% {
     opacity: 0;
     -webkit-transform: translateY(20px);
@@ -10838,7 +10832,7 @@ html, body {
     transform: translateY(20px);
   }
 
-  /* line 288, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+  /* line 288, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
   100% {
     opacity: 1;
     -webkit-transform: translateY(0);
@@ -10847,7 +10841,7 @@ html, body {
   }
 }
 
-/* line 296, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 296, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 .fadeInUp {
   -webkit-animation-name: fadeInUp;
   animation-name: fadeInUp;
@@ -10855,35 +10849,35 @@ html, body {
 
 /* For login snippet */
 /* Code for registration snippet */
-/* line 305, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 305, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 body {
   margin-top: 40px;
 }
 
-/* line 309, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 309, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 .stepwizard-step p {
   margin-top: 10px;
 }
 
-/* line 313, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 313, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 .stepwizard-row {
   display: table-row;
 }
 
-/* line 317, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 317, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 .stepwizard {
   display: table;
   width: 100%;
   position: relative;
 }
 
-/* line 323, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 323, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 .stepwizard-step button[disabled] {
   opacity: 1 !important;
   filter: alpha(opacity=100) !important;
 }
 
-/* line 328, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 328, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 .stepwizard-row:before {
   top: 14px;
   bottom: 0;
@@ -10895,14 +10889,14 @@ body {
   z-order: 0;
 }
 
-/* line 340, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 340, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 .stepwizard-step {
   display: table-cell;
   text-align: center;
   position: relative;
 }
 
-/* line 346, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 346, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 .btn-circle {
   width: 30px;
   height: 30px;
@@ -10915,7 +10909,7 @@ body {
 
 /* Code for registration snippet */
 /*flash*/
-/* line 359, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 359, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 .alert-error {
   background-color: #f2dede;
   border-color: #eed3d7;
@@ -10923,7 +10917,7 @@ body {
   text-align: left;
 }
 
-/* line 366, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 366, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 .alert-alert {
   background-color: #f2dede;
   border-color: #eed3d7;
@@ -10931,7 +10925,7 @@ body {
   text-align: left;
 }
 
-/* line 373, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 373, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 .alert-success {
   background-color: #dff0d8;
   border-color: #d6e9c6;
@@ -10939,7 +10933,7 @@ body {
   text-align: left;
 }
 
-/* line 380, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 380, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 .alert-notice {
   background-color: #dff0d8;
   border-color: #d6e9c6;
@@ -10949,7 +10943,7 @@ body {
 
 /*flash*/
 /* new USER PANEL PAGE */
-/* line 389, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 389, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 .card {
   margin-top: 20px;
   padding: 30px;
@@ -10965,7 +10959,7 @@ body {
   box-sizing: border-box;
 }
 
-/* line 403, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 403, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 .card.hovercard {
   position: relative;
   padding-top: 0;
@@ -10975,12 +10969,12 @@ body {
   background-color: white;
 }
 
-/* line 411, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 411, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 .card.hovercard .card-background {
   height: 130px;
 }
 
-/* line 414, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 414, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 .card-background img {
   -webkit-filter: blur(25px);
   -moz-filter: blur(25px);
@@ -10992,7 +10986,7 @@ body {
   min-width: 130%;
 }
 
-/* line 424, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 424, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 .card.hovercard .useravatar {
   position: absolute;
   top: 15px;
@@ -11000,7 +10994,7 @@ body {
   right: 0;
 }
 
-/* line 430, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 430, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 .card.hovercard .useravatar img {
   width: 100px;
   height: 100px;
@@ -11012,7 +11006,7 @@ body {
   border: 5px solid rgba(255, 255, 255, 0.5);
 }
 
-/* line 440, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 440, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 .card.hovercard .card-info {
   position: absolute;
   bottom: 14px;
@@ -11020,7 +11014,7 @@ body {
   right: 0;
 }
 
-/* line 446, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 446, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 .card.hovercard .card-info .card-title {
   padding: 0 5px;
   font-size: 20px;
@@ -11032,7 +11026,7 @@ body {
   border-radius: 4px;
 }
 
-/* line 456, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 456, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 .card.hovercard .card-info {
   overflow: hidden;
   font-size: 12px;
@@ -11041,24 +11035,54 @@ body {
   text-overflow: ellipsis;
 }
 
-/* line 463, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 463, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 .card.hovercard .bottom {
   padding: 0 20px;
   margin-bottom: 17px;
 }
 
-/* line 467, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* line 467, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 .btn-pref .btn {
   -webkit-border-radius: 0 !important;
 }
 
 /* new USER PANEL PAGE */
-/* line 471, /home/jroa/Documents/lapapaya/backup/merit2/app/assets/stylesheets/application.css.scss */
+/* Points label */
+/* line 473, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
 .label.label-default.rank-label {
   background-color: #F93F6F;
   padding: 5px 10px;
   border-radius: 27px;
 }
+
+/* Points label */
+/* Progress bar */
+/* line 481, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
+.progress-bar.active, .progress.active .progress-bar {
+  animation: 2s linear 0s normal none infinite running progress-bar-stripes;
+}
+
+/* line 484, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
+.progress-bar-striped, .progress-striped .progress-bar {
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-size: 40px 40px;
+}
+
+/* line 488, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/application.css.scss */
+.progress-bar {
+  float: left;
+  width: 0px;
+  height: 100%;
+  font-size: 12px;
+  line-height: 20px;
+  color: #FFF;
+  text-align: center;
+  background-color: #337AB7;
+  box-shadow: 0px -1px 0px rgba(0, 0, 0, 0.15) inset;
+  transition: width 0.6s ease 0s;
+}
+
+/* Progress bar */
 /**** Transitions ****/
 
 
@@ -11100,7 +11124,7 @@ body {
 @import url(http://fonts.googleapis.com/css?family=Maven+Pro);
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans);
 @import url(http://weloveiconfonts.com/api/?family=fontawesome);
-/* line 6, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/bootstrap_and_customization.css.scss */
+/* line 6, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/bootstrap_and_customization.css.scss */
 body {
   background: url(/assets/WorldMap.png) no-repeat;
   background-size: 1300px 800px;
@@ -18705,67 +18729,67 @@ button.close {
     display: none !important;
   }
 }
-/* line 26, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/bootstrap_and_customization.css.scss */
+/* line 26, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/bootstrap_and_customization.css.scss */
 .center {
   text-align: center;
 }
 
-/* line 30, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/bootstrap_and_customization.css.scss */
+/* line 30, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/bootstrap_and_customization.css.scss */
 .navbar-brand {
   font-weight: bold;
   margin: 5px;
   padding: 2px;
 }
 
-/* line 35, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/bootstrap_and_customization.css.scss */
+/* line 35, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/bootstrap_and_customization.css.scss */
 .slogan {
   font-weight: bold;
   margin-top: 100px;
 }
 
-/* line 39, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/bootstrap_and_customization.css.scss */
+/* line 39, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/bootstrap_and_customization.css.scss */
 .mc-field-group {
   background-color: #ffffff;
   padding: 0px;
 }
 
-/* line 44, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/bootstrap_and_customization.css.scss */
+/* line 44, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/bootstrap_and_customization.css.scss */
 #mce-email {
   float: left;
   margin: 10px;
 }
 
-/* line 49, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/bootstrap_and_customization.css.scss */
+/* line 49, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/bootstrap_and_customization.css.scss */
 #mce-FNAME {
   margin: 10px;
 }
 
-/* line 53, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/bootstrap_and_customization.css.scss */
+/* line 53, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/bootstrap_and_customization.css.scss */
 #mce-EMAIL, #mce-FNAME {
   float: left;
   margin-right: 15px !important;
 }
 
-/* line 57, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/bootstrap_and_customization.css.scss */
+/* line 57, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/bootstrap_and_customization.css.scss */
 #mc-embedded-subscribe {
   margin: 0;
 }
 
-/* line 59, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/bootstrap_and_customization.css.scss */
+/* line 59, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/bootstrap_and_customization.css.scss */
 .box {
   padding: 20px;
   margin: 10px;
   width: 240px;
 }
 
-/* line 65, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/bootstrap_and_customization.css.scss */
+/* line 65, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/bootstrap_and_customization.css.scss */
 .btn-group {
   background-color: #ffffff;
   position: relative;
   left: 0px;
 }
 
-/* line 71, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/bootstrap_and_customization.css.scss */
+/* line 71, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/bootstrap_and_customization.css.scss */
 h1, h2, h3, h4 {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
@@ -18773,24 +18797,24 @@ h1, h2, h3, h4 {
   text-align: center;
 }
 
-/* line 78, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/bootstrap_and_customization.css.scss */
+/* line 78, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/bootstrap_and_customization.css.scss */
 a {
   color: #FF0040;
 }
 
-/* line 82, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/bootstrap_and_customization.css.scss */
+/* line 82, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/bootstrap_and_customization.css.scss */
 #ID {
   position: absolute;
   bottom: 0;
 }
 
 /* fontawesome */
-/* line 90, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/bootstrap_and_customization.css.scss */
+/* line 90, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/bootstrap_and_customization.css.scss */
 [class*="fontawesome-"]:before {
   font-family: 'FontAwesome', sans-serif;
 }
 
-/* line 93, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/bootstrap_and_customization.css.scss */
+/* line 93, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/bootstrap_and_customization.css.scss */
 * {
   margin: 0;
   padding: 0;
@@ -18804,36 +18828,36 @@ a {
 }
 
 /*------ utiltity classes -----*/
-/* line 105, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/bootstrap_and_customization.css.scss */
+/* line 105, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/bootstrap_and_customization.css.scss */
 .fl {
   float: left;
 }
 
-/* line 106, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/bootstrap_and_customization.css.scss */
+/* line 106, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/bootstrap_and_customization.css.scss */
 .fr {
   float: right;
 }
 
 /*its also known as clearfix*/
-/* line 109, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/bootstrap_and_customization.css.scss */
+/* line 109, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/bootstrap_and_customization.css.scss */
 .group:before,
 .group:after {
   content: "";
   display: table;
 }
 
-/* line 113, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/bootstrap_and_customization.css.scss */
+/* line 113, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/bootstrap_and_customization.css.scss */
 .group:after {
   clear: both;
 }
 
-/* line 116, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/bootstrap_and_customization.css.scss */
+/* line 116, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/bootstrap_and_customization.css.scss */
 .group {
   zoom: 1;
   /*For IE 6/7 (trigger hasLayout) */
 }
 
-/* line 123, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/bootstrap_and_customization.css.scss */
+/* line 123, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/bootstrap_and_customization.css.scss */
 .pricing-table {
   width: 80%;
   margin: 50px auto;
@@ -18842,7 +18866,7 @@ a {
   padding-right: 0;
 }
 
-/* line 130, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/bootstrap_and_customization.css.scss */
+/* line 130, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/bootstrap_and_customization.css.scss */
 .pricing-table .heading {
   color: #9C9E9F;
   text-transform: uppercase;
@@ -18850,7 +18874,7 @@ a {
   margin-bottom: 4rem;
 }
 
-/* line 136, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/bootstrap_and_customization.css.scss */
+/* line 136, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/bootstrap_and_customization.css.scss */
 .block {
   width: 30%;
   margin: 0 15px;
@@ -18862,7 +18886,7 @@ a {
 }
 
 /*Shared properties*/
-/* line 146, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/bootstrap_and_customization.css.scss */
+/* line 146, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/bootstrap_and_customization.css.scss */
 .title, .pt-footer {
   color: #FEFEFE;
   text-transform: capitalize;
@@ -18870,7 +18894,7 @@ a {
   position: relative;
 }
 
-/* line 152, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/bootstrap_and_customization.css.scss */
+/* line 152, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/bootstrap_and_customization.css.scss */
 .content {
   position: relative;
   color: #FEFEFE;
@@ -18878,7 +18902,7 @@ a {
 }
 
 /*arrow creation*/
-/* line 158, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/bootstrap_and_customization.css.scss */
+/* line 158, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/bootstrap_and_customization.css.scss */
 .content:after, .content:before, .pt-footer:before, .pt-footer:after {
   top: 100%;
   left: 50%;
@@ -18890,12 +18914,12 @@ a {
   pointer-events: none;
 }
 
-/* line 168, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/bootstrap_and_customization.css.scss */
+/* line 168, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/bootstrap_and_customization.css.scss */
 .pt-footer:after, .pt-footer:before {
   top: 0;
 }
 
-/* line 171, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/bootstrap_and_customization.css.scss */
+/* line 171, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/bootstrap_and_customization.css.scss */
 .content:after, .pt-footer:after {
   border-color: rgba(136, 183, 213, 0);
   border-width: 5px;
@@ -18903,21 +18927,21 @@ a {
 }
 
 /*/arrow creation*/
-/* line 177, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/bootstrap_and_customization.css.scss */
+/* line 177, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/bootstrap_and_customization.css.scss */
 .price {
   position: relative;
   display: inline-block;
   margin-bottom: 0.625rem;
 }
 
-/* line 182, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/bootstrap_and_customization.css.scss */
+/* line 182, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/bootstrap_and_customization.css.scss */
 .price span {
   font-size: 6rem;
   letter-spacing: 8px;
   font-weight: bold;
 }
 
-/* line 187, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/bootstrap_and_customization.css.scss */
+/* line 187, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/bootstrap_and_customization.css.scss */
 .price sup {
   font-size: 1.5rem;
   position: absolute;
@@ -18925,13 +18949,13 @@ a {
   left: -12px;
 }
 
-/* line 193, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/bootstrap_and_customization.css.scss */
+/* line 193, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/bootstrap_and_customization.css.scss */
 .hint {
   font-style: italic;
   font-size: 1.9rem;
 }
 
-/* line 197, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/bootstrap_and_customization.css.scss */
+/* line 197, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/bootstrap_and_customization.css.scss */
 .features {
   list-style-type: none;
   background: #FFFFFF;
@@ -18941,108 +18965,108 @@ a {
   font-size: 1.9rem;
 }
 
-/* line 205, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/bootstrap_and_customization.css.scss */
+/* line 205, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/bootstrap_and_customization.css.scss */
 .features li {
   padding: 15px 0;
   width: 100%;
 }
 
-/* line 209, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/bootstrap_and_customization.css.scss */
+/* line 209, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/bootstrap_and_customization.css.scss */
 .features li span {
   padding-right: 0.4rem;
 }
 
-/* line 212, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/bootstrap_and_customization.css.scss */
+/* line 212, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/bootstrap_and_customization.css.scss */
 .pt-footer {
   font-size: 0.95rem;
   text-transform: capitalize;
 }
 
 /*PERSONAL*/
-/* line 217, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/bootstrap_and_customization.css.scss */
+/* line 217, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/bootstrap_and_customization.css.scss */
 .personal .title {
   background: #78CFBF;
 }
 
-/* line 220, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/bootstrap_and_customization.css.scss */
+/* line 220, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/bootstrap_and_customization.css.scss */
 .personal .content, .personal .pt-footer {
   background: #82DACA;
 }
 
-/* line 223, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/bootstrap_and_customization.css.scss */
+/* line 223, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/bootstrap_and_customization.css.scss */
 .personal .content:after {
   border-top-color: #82DACA;
 }
 
-/* line 226, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/bootstrap_and_customization.css.scss */
+/* line 226, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/bootstrap_and_customization.css.scss */
 .personal .pt-footer:after {
   border-top-color: #FFFFFF;
 }
 
 /*PROFESSIONAL*/
-/* line 230, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/bootstrap_and_customization.css.scss */
+/* line 230, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/bootstrap_and_customization.css.scss */
 .professional .title {
   background: #3EC6E0;
 }
 
-/* line 233, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/bootstrap_and_customization.css.scss */
+/* line 233, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/bootstrap_and_customization.css.scss */
 .professional .content, .professional .pt-footer {
   background: #53CFE9;
 }
 
-/* line 236, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/bootstrap_and_customization.css.scss */
+/* line 236, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/bootstrap_and_customization.css.scss */
 .professional .content:after {
   border-top-color: #53CFE9;
 }
 
-/* line 239, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/bootstrap_and_customization.css.scss */
+/* line 239, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/bootstrap_and_customization.css.scss */
 .professional .pt-footer:after {
   border-top-color: #FFFFFF;
 }
 
 /*BUSINESS*/
-/* line 243, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/bootstrap_and_customization.css.scss */
+/* line 243, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/bootstrap_and_customization.css.scss */
 .business .title {
   background: #E3536C;
 }
 
-/* line 246, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/bootstrap_and_customization.css.scss */
+/* line 246, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/bootstrap_and_customization.css.scss */
 .business .content, .business .pt-footer {
   background: #EB6379;
 }
 
-/* line 249, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/bootstrap_and_customization.css.scss */
+/* line 249, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/bootstrap_and_customization.css.scss */
 .business .content:after {
   border-top-color: #EB6379;
 }
 
-/* line 252, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/bootstrap_and_customization.css.scss */
+/* line 252, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/bootstrap_and_customization.css.scss */
 .business .pt-footer:after {
   border-top-color: #FFFFFF;
 }
-/* line 5, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/dreams.css.scss */
+/* line 5, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/dreams.css.scss */
 #dreams {
   margin: 0 auto;
 }
 
-/* line 9, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/dreams.css.scss */
+/* line 9, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/dreams.css.scss */
 .box {
   margin: 5px;
   width: 180px;
 }
 
-/* line 14, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/dreams.css.scss */
+/* line 14, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/dreams.css.scss */
 .box img {
   width: 100%;
 }
 
-/* line 18, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/dreams.css.scss */
+/* line 18, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/dreams.css.scss */
 #h2 {
   text-align: left;
   font-size: 25px;
 }
 
-/* line 24, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/dreams.css.scss */
+/* line 24, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/dreams.css.scss */
 #masonry-container {
   background: #FFF;
   padding: 5px;
@@ -19054,7 +19078,7 @@ a {
   border-radius: 5px;
 }
 
-/* line 35, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/dreams.css.scss */
+/* line 35, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/dreams.css.scss */
 #tag_cloud {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
@@ -19066,23 +19090,23 @@ a {
   margin-right: auto;
   line-height: 1.6em;
 }
-/* line 45, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/dreams.css.scss */
+/* line 45, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/dreams.css.scss */
 #tag_cloud .s {
   font-size: 1.0em;
   opacity: 0.4;
 }
-/* line 48, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/dreams.css.scss */
+/* line 48, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/dreams.css.scss */
 #tag_cloud .l {
   font-size: 1.6em;
   opacity: 0.8;
 }
-/* line 51, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/dreams.css.scss */
+/* line 51, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/dreams.css.scss */
 #tag_cloud .m {
   font-size: 2.0em;
   opacity: 0.6;
 }
 
-/* line 55, /home/jroa/Documents/lapapaya/merit/app/assets/stylesheets/dreams.css.scss */
+/* line 55, /home/jroa/Documents/lapapaya/p/app/assets/stylesheets/dreams.css.scss */
 #gamification-data {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
