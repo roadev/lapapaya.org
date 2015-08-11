@@ -3,11 +3,11 @@ class DreamsController < ApplicationController
   before_action :correct_user, only: [:edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
 
-  @users = User.all
+  #@users = User.all
   @hash = Gmaps4rails.build_markers(@users) do |user, marker|
   marker.lat user.latitude
   marker.lng user.longitude
-end
+  end
   def index
     Dream.paginate(:page => params[:page], :per_page => 30)
     if params[:tag]
