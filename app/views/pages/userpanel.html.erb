@@ -83,7 +83,7 @@
           <!-- Progress bar -->
           <div class="panel panel-primary">
             <div class="panel-heading">
-            <center><b class="panel-title">Mis datos</b></center>
+              <center><b class="panel-title">Mis datos</b></center>
             </div>
             <div class="panel-body">
               <p><b>Usuario: </b><%= current_user.username %></p>
@@ -108,11 +108,19 @@
         </div>
         <div class="tab-pane fade in" id="tab3">
           <h4>Mis sueños:</h4>
+          <% Dream.where(user_id: current_user.id).each do |dream| %>
+          <li>
+            <%= link_to dream.dream, dream %>
+            <br />
+          </li>
+          <% end %>
+          <br />
           <% if Dream.where(user_id: current_user.id).count == 1 %>
           <strong><p>Actualmente tienes: <%= Dream.where(user_id: current_user.id).count %>  sueño</p></strong>
           <% else %>
           <strong><p>Actualmente tienes: <%= Dream.where(user_id: current_user.id).count %>  sueños</p></strong>
           <% end %>
+
         </div>
       </div>
     </div>
