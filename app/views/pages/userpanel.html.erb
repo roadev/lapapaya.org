@@ -13,8 +13,13 @@
         <% end %>
         <div class="rank-label-container">
           <span class="label label-default rank-label"><%= current_user.points %> Puntos</span>
+          <br />
+          <% if current_user.level == 0 %>
+          <span class="label label-default rank-label">Nuevo Usuario</span>
+          <% end %>
         </div>
       </div>
+      <br />
       <br />
       <% if (current_user.name.nil? || current_user.name.blank?) && (current_user.lastname.nil? || current_user.lastname.blank?) %>
       <div class="card-info"> <span class="card-title"><%= current_user.email %></span></div>
@@ -52,6 +57,10 @@
         <div class="tab-pane fade in active" id="tab1">
           <div class="rank-label-container">
             <span class="label label-default rank-label"><%= current_user.points %> Puntos</span>
+
+            <ul>
+
+            </ul>
           </div>
           <h3></h3>
         </div>

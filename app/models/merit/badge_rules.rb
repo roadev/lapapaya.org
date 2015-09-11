@@ -21,6 +21,10 @@ module Merit
     include Merit::BadgeRulesMethods
 
     def initialize
+      # grant_on 'dreams#create', badge_id: 1, to: :user do |dream|
+      #   Dream.where(user_id: current_user.id).count >= 1
+      #   #dream.user.dreams.count >= 1
+      # end
       # If it creates user, grant badge
       # Should be "current_user" after registration for badge to be granted.
       # Find badge by badge_id, badge_id takes presidence over badge

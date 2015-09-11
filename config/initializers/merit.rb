@@ -1,12 +1,12 @@
 # Use this hook to configure merit parameters
 Merit.setup do |config|
 
-  Merit::Badge.create!(
-  id: 1,
-  name: "Soñador novato",
-  description: "¡Acabas de registrarte!",
-  custom_fields: { difficulty: :silver }
-  )
+  # Merit::Badge.create!(
+  # id: 1,
+  # name: "Aprendiz",
+  # description: "¡Acabas de registrarte y de registrar un sueño!",
+  # custom_fields: { difficulty: :silver }
+  # )
 
   # Check rules on each request or in background
   # config.checks_on_each_request = true

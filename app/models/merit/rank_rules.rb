@@ -15,9 +15,9 @@ module Merit
     include Merit::RankRulesMethods
 
     def initialize
-      # set_rank :level => 1, :to => Commiter.active do |commiter|
-      #   commiter.repositories.count > 1 && commiter.followers >= 10
-      # end
+      set_rank :level => 1, :to => User do |user|
+        Dream.where(user_id: current_user.id).count >= 1
+      end
       #
       # set_rank :level => 2, :to => Commiter.active do |commiter|
       #   commiter.branches.count > 1 && commiter.followers >= 10
