@@ -15,11 +15,14 @@
           <span class="label label-default rank-label"><%= current_user.points %> Puntos</span>
           <br />
           <% if current_user.level == 0 %>
-            <span class="label label-default rank-label">  <i class="fa fa-graduation-cap"></i> Aprendiz</span>
+            <span class="label label-default rank-label">  <i class="fa fa-user"></i> Aprendiz</span>
           <% else if (current_user.level == 1) %>
             <span class="label label-default rank-label">  <i class="fa fa-user"></i> Cómplice</span>
           <% else if (current_user.level == 2) %>
             <span class="label label-default rank-label">  <i class="fa fa-user"></i> Soñador</span>
+          <% else if (current_user.level == 3) %>
+            <span class="label label-default rank-label">  <i class="fa fa-user"></i> Empresario</span>
+          <% end %>
           <% end %>
           <% end %>
           <% end %>
