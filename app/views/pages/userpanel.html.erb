@@ -15,7 +15,13 @@
           <span class="label label-default rank-label"><%= current_user.points %> Puntos</span>
           <br />
           <% if current_user.level == 0 %>
-          <span class="label label-default rank-label">Nuevo Usuario</span>
+            <span class="label label-default rank-label">  <i class="fa fa-graduation-cap"></i> Aprendiz</span>
+          <% else if (current_user.level == 1) %>
+            <span class="label label-default rank-label">  <i class="fa fa-user"></i> Cómplice</span>
+          <% else if (current_user.level == 2) %>
+            <span class="label label-default rank-label">  <i class="fa fa-user"></i> Soñador</span>
+          <% end %>
+          <% end %>
           <% end %>
         </div>
       </div>
