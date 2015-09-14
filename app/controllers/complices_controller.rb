@@ -1,5 +1,6 @@
 class ComplicesController < ApplicationController
   before_action :set_complice, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /complices
   # GET /complices.json
@@ -14,7 +15,7 @@ class ComplicesController < ApplicationController
 
   # GET /complices/new
   def new
-    @complice = Complice.new
+    @complice = current_user.complices.build
   end
 
   # GET /complices/1/edit
@@ -24,7 +25,7 @@ class ComplicesController < ApplicationController
   # POST /complices
   # POST /complices.json
   def create
-    @complice = Complice.new(complice_params)
+    @complice = current_user.complices.build(complice_params)
 
     respond_to do |format|
       if @complice.save
