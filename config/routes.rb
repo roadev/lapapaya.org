@@ -1,4 +1,6 @@
 Lapapayanetwork::Application.routes.draw do
+  resources :complices
+
   resources :solutions
 
   resources :productos

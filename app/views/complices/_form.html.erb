@@ -1,0 +1,51 @@
+<%= form_for Complice.new, html: { multipart: true } do |f| %>
+<% if @complice.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(@complice.errors.count, "error") %> prohibited this micropost from being saved:</h2>
+
+  <ul>
+    <% @complice.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
+  <div class="row">
+    <div class="col-md-offset-2 col-md-8">
+      <div class="panel panel-default">
+        <div class="panel-heading center">
+          <div class="panel-title"><h3>¡ Sé cómplice !</h3></div>
+        </div>
+        <div class="panel-body">
+
+          <div class="form-group">
+            <label>Número del Sueño (si no recuerdas el número del sueño...)</label>
+            <%= f.text_field :dream_id, class: "form-control"  %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label "Palabras Clave" %>
+            <%= f.text_field :tags, class: "form-control" %>
+          </div>
+
+          <div class="form-group">
+            <label>¿Por qué quieres apoyar este sueño?</label>
+            <%= f.text_area :reason, class: "form-control" %>
+          </div>
+
+          <div class="form-group">
+            <label>¿Qué das a cambio?</label>
+            <%= f.text_area :giving, class: "form-control" %>
+          </div>
+
+          <div class="form-group">
+            <center><%= f.submit "Enviar", class: "btn btn-primary btn-lg" %></center>
+            <%= link_to 'Volver', complices_path, class: "btn btn-info" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<% end %>

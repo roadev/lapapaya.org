@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dream_id: 1
+  tags: MyString
+  reason: MyText
+  giving: MyText
+
+two:
+  dream_id: 1
+  tags: MyString
+  reason: MyText
+  giving: MyText
