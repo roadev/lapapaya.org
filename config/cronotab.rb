@@ -1,5 +1,4 @@
-#Crono.perform(CheckMeritRankRulesJob).every 2.minutes #configure time
-
+Crono.perform(CheckMeritRankRulesJob).every 2.minutes
 # cronotab.rb — Crono configuration file
 #
 # Here you can specify periodic jobs and schedule.
