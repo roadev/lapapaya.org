@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150914220027) do
+ActiveRecord::Schema.define(version: 20150918202712) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -116,6 +116,17 @@ ActiveRecord::Schema.define(version: 20150914220027) do
   end
 
   add_index "complices", ["user_id"], name: "index_complices_on_user_id"
+
+  create_table "crono_jobs", force: true do |t|
+    t.string   "job_id",            null: false
+    t.text     "log"
+    t.datetime "last_performed_at"
+    t.boolean  "healthy"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
+
+  add_index "crono_jobs", ["job_id"], name: "index_crono_jobs_on_job_id", unique: true
 
   create_table "dreams", force: true do |t|
     t.text     "dream",              limit: 255
