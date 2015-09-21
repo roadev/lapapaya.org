@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150921203545) do
+ActiveRecord::Schema.define(version: 20150921204233) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -214,8 +214,6 @@ ActiveRecord::Schema.define(version: 20150921203545) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "sash_id"
-    t.integer  "level",                  default: 0
     t.string   "name"
     t.string   "lastname"
     t.string   "avatar_file_name"
