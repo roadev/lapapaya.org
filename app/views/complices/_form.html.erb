@@ -1,13 +1,12 @@
 <%= form_for Complice.new, html: { multipart: true } do |f| %>
 <% if @complice.errors.any? %>
-<div id="error_explanation">
-  <h2><%= pluralize(@complice.errors.count, "error") %> prohibited this micropost from being saved:</h2>
-  <ul>
-    <% @complice.errors.full_messages.each do |msg| %>
-    <li><%= msg %></li>
-    <% end %>
-  </ul>
+<center><div id="error_explanation">
+  <h2>Error</h2>
+  <% @complice.errors.full_messages.each do |msg| %>
+    <p class="alert alert-danger alert-block"><%= msg %></p>
+  <% end %>
 </div>
+</center>
 <% end %>
 <div class="row">
   <div class="col-md-offset-2 col-md-8">
@@ -17,7 +16,7 @@
       </div>
       <div class="panel-body">
         <div class="form-group">
-          <label>Número del Sueño (si no recuerdas el número del sueño...)</label>
+          <label>Número del Sueño (si no recuerdas el número del sueño, has click <%= link_to 'aquí', :back %> para volver a la lista)</label>
           <%= f.text_field :dream_id, class: "form-control"  %>
         </div>
         <div class="form-group">
