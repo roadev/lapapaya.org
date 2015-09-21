@@ -30,7 +30,8 @@ class ComplicesController < ApplicationController
 
     respond_to do |format|
       if @complice.save
-        format.html { redirect_to @complice, notice: 'Complice was successfully created.' }
+        #current_user.level = self.current_user.level + 1
+        format.html { redirect_to @complice, notice: '¡Gracias por apoyar este sueño!' }
         format.json { render action: 'show', status: :created, location: @complice }
       else
         format.html { render action: 'new' }

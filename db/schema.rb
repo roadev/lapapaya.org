@@ -229,7 +229,7 @@ ActiveRecord::Schema.define(version: 20150921204409) do
     t.date     "born_date"
     t.string   "website"
     t.integer  "points"
-    t.integer  "level"
+    t.integer  "level",                  default: 0,  null: false
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
