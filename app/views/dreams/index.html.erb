@@ -48,14 +48,15 @@ else %>
         <div class="panel-body">
         </div>
 
-        <p><strong> Sueño </strong></p>
+        <p><strong> Sueño <%= dream.id %></strong></p>
         <p><%= dream.dream %></p>
         <p><strong> Ofrezco </strong></p>
         <p><%= dream.ofrezco %></p>
         <p> Palabras clave: <%= raw dream.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %> </p>
 
 
-        <%= link_to 'Volverme cómplice', pages_comofunciona_path, class: "btn btn-primary" %>
+        <!-- <%# link_to 'Volverme cómplice', pages_comofunciona_path, class: "btn btn-primary" %> -->
+        <%= link_to 'Volverme cómplice', new_complice_path, class: "btn btn-primary" %>
         <br>
         <br>
 

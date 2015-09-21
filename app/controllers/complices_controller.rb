@@ -5,7 +5,8 @@ class ComplicesController < ApplicationController
   # GET /complices
   # GET /complices.json
   def index
-    @complices = Complice.all
+    #@complices = Complice.all
+    redirect_to root_path
   end
 
   # GET /complices/1
