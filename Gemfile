@@ -42,8 +42,8 @@ gem 'momentjs-rails'
 gem 'datetimepicker-rails', github: 'zpaulovics/datetimepicker-rails', branch: 'master', submodules: true
 gem 'simple_form'
 gem 'rb-readline'
-gem 'crono'
-gem 'activejob'
+#gem 'crono'
+#gem 'activejob'
 
 group :development, :test do
 	gem 'sqlite3'
