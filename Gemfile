@@ -24,7 +24,7 @@ gem 'public_activity'
 gem 'smarter_csv'
 gem 'roo'
 gem "iconv", "~> 1.0.3"
-gem 'giocopro', '~> 0.0.8'
+#gem 'giocopro', '~> 0.0.8'
 gem 'newrelic_rpm'
 gem 'social-share-button', '~> 0.1.6'
 gem 'youtube_it', '~> 2.4.0'
@@ -33,7 +33,7 @@ gem 'will_paginate', '~> 3.0.5'
 gem 'will_paginate-bootstrap'
 gem 'acts-as-taggable-on'
 gem 'mandrill-api'
-gem 'merit'
+#gem 'merit'
 # Use gem font-awesome-sass
 gem 'font-awesome-sass'
 # Use gem momentjs-rails as dependency of datetimepicker-rails gem
