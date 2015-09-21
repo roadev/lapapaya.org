@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  has_merit
+  #has_merit
   has_many :dreams
   has_many :microposts
   has_many :solutions
