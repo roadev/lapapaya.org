@@ -43,7 +43,7 @@ gem 'datetimepicker-rails', github: 'zpaulovics/datetimepicker-rails', branch: '
 gem 'simple_form'
 gem 'rb-readline'
 #gem 'crono'
-#gem 'activejob'
+gem 'activejob'
 
 group :development, :test do
 	gem 'sqlite3'

@@ -40,9 +40,15 @@ GEM
       activesupport (= 4.1.0)
       builder (~> 3.1)
       erubis (~> 2.7.0)
+    activejob (0)
+      activemodel-globalid
+      activesupport (>= 4.1.0)
     activemodel (4.1.0)
       activesupport (= 4.1.0)
       builder (~> 3.1)
+    activemodel-globalid (0.1.1)
+      activemodel (>= 4.1.0)
+      activesupport (>= 4.1.0)
     activerecord (4.1.0)
       activemodel (= 4.1.0)
       activesupport (= 4.1.0)
@@ -247,6 +253,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activejob
   acts-as-taggable-on
   aws-sdk (~> 1.59.0)
   bootstrap-sass

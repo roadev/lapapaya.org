@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150918202712) do
+ActiveRecord::Schema.define(version: 20150921203545) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -30,17 +30,6 @@ ActiveRecord::Schema.define(version: 20150918202712) do
 
   add_index "admins", ["email"], name: "index_admins_on_email", unique: true
   add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
-
-  create_table "badges_sashes", force: true do |t|
-    t.integer  "badge_id"
-    t.integer  "sash_id"
-    t.boolean  "notified_user", default: false
-    t.datetime "created_at"
-  end
-
-  add_index "badges_sashes", ["badge_id", "sash_id"], name: "index_badges_sashes_on_badge_id_and_sash_id"
-  add_index "badges_sashes", ["badge_id"], name: "index_badges_sashes_on_badge_id"
-  add_index "badges_sashes", ["sash_id"], name: "index_badges_sashes_on_sash_id"
 
   create_table "canvas", force: true do |t|
     t.string   "cliente1"
@@ -117,17 +106,6 @@ ActiveRecord::Schema.define(version: 20150918202712) do
 
   add_index "complices", ["user_id"], name: "index_complices_on_user_id"
 
-  create_table "crono_jobs", force: true do |t|
-    t.string   "job_id",            null: false
-    t.text     "log"
-    t.datetime "last_performed_at"
-    t.boolean  "healthy"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
-  end
-
-  add_index "crono_jobs", ["job_id"], name: "index_crono_jobs_on_job_id", unique: true
-
   create_table "dreams", force: true do |t|
     t.text     "dream",              limit: 255
     t.datetime "created_at"
@@ -155,39 +133,6 @@ ActiveRecord::Schema.define(version: 20150918202712) do
     t.integer  "indicador3"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "merit_actions", force: true do |t|
-    t.integer  "user_id"
-    t.string   "action_method"
-    t.integer  "action_value"
-    t.boolean  "had_errors",    default: false
-    t.string   "target_model"
-    t.integer  "target_id"
-    t.text     "target_data"
-    t.boolean  "processed",     default: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "merit_activity_logs", force: true do |t|
-    t.integer  "action_id"
-    t.string   "related_change_type"
-    t.integer  "related_change_id"
-    t.string   "description"
-    t.datetime "created_at"
-  end
-
-  create_table "merit_score_points", force: true do |t|
-    t.integer  "score_id"
-    t.integer  "num_points", default: 0
-    t.string   "log"
-    t.datetime "created_at"
-  end
-
-  create_table "merit_scores", force: true do |t|
-    t.integer "sash_id"
-    t.string  "category", default: "default"
   end
 
   create_table "microposts", force: true do |t|
@@ -218,11 +163,6 @@ ActiveRecord::Schema.define(version: 20150918202712) do
   create_table "productos", force: true do |t|
     t.string   "Producto"
     t.integer  "Unidades"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "sashes", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -290,6 +230,7 @@ ActiveRecord::Schema.define(version: 20150918202712) do
     t.string   "city"
     t.date     "born_date"
     t.string   "website"
+    t.integer  "points"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
