@@ -228,7 +228,7 @@ ActiveRecord::Schema.define(version: 20150921204409) do
     t.string   "city"
     t.date     "born_date"
     t.string   "website"
-    t.integer  "points"
+    t.integer  "points",                 default: 0,  null: false
     t.integer  "level",                  default: 0,  null: false
   end
 

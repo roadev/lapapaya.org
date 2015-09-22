@@ -7,16 +7,14 @@ class User < ActiveRecord::Base
   has_attached_file :avatar, styles: { :medium => "100x100#", :thumb => "100x100#" }, :default_url => "/images/:style/missing.png"
   validates_attachment_content_type :avatar, content_type: %w(image/jpeg image/jpg image/png image/gif), message: 'Ingresa tu avatar en extensión jpg o png'
   validates_uniqueness_of :username, message: ": Este nombre de usuario ya se encuentra registrado"
-  # before_create :init_gamification
-  # def init_gamification
-  #   self.level = 0
-  #   self.points = 0
-  # end
-
-
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-
+  before_update :pointsa
+ def pointsa
+    if Complice.where(user_id: :user_id).count == 0
+      self.level = 1
+    end
+  end
 end
