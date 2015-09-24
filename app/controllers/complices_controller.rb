@@ -23,6 +23,15 @@ class ComplicesController < ApplicationController
   def edit
   end
 
+  # def set_level
+  #   if Complice.where(user_id: :user_id).count == 0
+  #     current_user.update_attribute(:level, 0)
+  #   else if (Complice.where(user_id: :user_id).count >= 5) && (Complice.where(user_id: :user_id).count <= 15)
+  #     current_user.update_attribute(:level, current_user.level + 1)
+  #   end
+  #   end
+  # end
+
   # POST /complices
   # POST /complices.json
   def create

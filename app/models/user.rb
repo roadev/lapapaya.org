@@ -11,7 +11,15 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-  after_validation :pointsa
+  # after_validation :set_level
+  # def set_level
+  #   if Complice.where(user_id: :user_id).count == 0
+  #     current_user.update_attribute(:level, current_user.level + 0)
+  #   else if (Complice.where(user_id: :user_id).count >= 5) && (Complice.where(user_id: :user_id).count <= 15)
+  #     current_user.update_attribute(:level, current_user.level + 1)
+  #   end
+  #   end
+  # end
  # def pointsa
  #   if Complice.where(user_id: :user_id).count == 0
  #     user_id = user_id+1
