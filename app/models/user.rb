@@ -11,10 +11,10 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-  before_update :pointsa
- def pointsa
-    if Complice.where(user_id: :user_id).count == 0
-      self.level = 1
-    end
-  end
+  after_validation :pointsa
+ # def pointsa
+ #   if Complice.where(user_id: :user_id).count == 0
+ #     user_id = user_id+1
+ #   end
+ #  end
 end
