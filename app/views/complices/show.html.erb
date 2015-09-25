@@ -1,24 +1,20 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Dream:</strong>
-  <%= @complice.dream_id %>
-</p>
-
-<p>
-  <strong>Tags:</strong>
-  <%= @complice.tags %>
-</p>
-
-<p>
-  <strong>Reason:</strong>
-  <%= @complice.reason %>
-</p>
-
-<p>
-  <strong>Giving:</strong>
-  <%= @complice.giving %>
-</p>
-
-<%= link_to 'Edit', edit_complice_path(@complice) %> |
-<%= link_to 'Back', complices_path %>
+<div class="im-centered">
+  <div class ="row">
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <div class="capion">
+          <h3>Eres cómplice del sueño <%= @complice.dream_id %></h3>
+          <br />
+          <p align="justify"><strong>Razón:</strong> <%= @complice.reason %></p>
+          <p align="justify"><strong>Das a cambio: </strong><%= @complice.giving %></p>
+          <p align="justify"><strong>Palabras clave: </strong><%= @complice.tags %></p>
+          <br />
+          <br />
+          <center><%= link_to 'Volver', dreams_path, class: "btn btn-info" %></center>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
