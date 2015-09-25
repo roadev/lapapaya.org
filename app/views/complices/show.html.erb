@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Dream:</strong>
+  <%= @complice.dream_id %>
+</p>
+
+<p>
+  <strong>Tags:</strong>
+  <%= @complice.tags %>
+</p>
+
+<p>
+  <strong>Reason:</strong>
+  <%= @complice.reason %>
+</p>
+
+<p>
+  <strong>Giving:</strong>
+  <%= @complice.giving %>
+</p>
+
+<%= link_to 'Edit', edit_complice_path(@complice) %> |
+<%= link_to 'Back', complices_path %>

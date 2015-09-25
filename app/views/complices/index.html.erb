@@ -1,0 +1,33 @@
+<h1>Listing complices</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dream</th>
+      <th>Tags</th>
+      <th>Reason</th>
+      <th>Giving</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @complices.each do |complice| %>
+      <tr>
+        <td><%= complice.dream_id %></td>
+        <td><%= complice.tags %></td>
+        <td><%= complice.reason %></td>
+        <td><%= complice.giving %></td>
+        <td><%= link_to 'Show', complice %></td>
+        <td><%= link_to 'Edit', edit_complice_path(complice) %></td>
+        <td><%= link_to 'Destroy', complice, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Complice', new_complice_path %>
