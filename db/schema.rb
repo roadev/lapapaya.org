@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150925160636) do
+ActiveRecord::Schema.define(version: 20150925232222) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -112,7 +112,10 @@ ActiveRecord::Schema.define(version: 20150925160636) do
     t.text     "giving"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
+
+  add_index "complices", ["user_id"], name: "index_complices_on_user_id"
 
   create_table "dreams", force: true do |t|
     t.text     "dream",              limit: 255
