@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150801232239) do
+ActiveRecord::Schema.define(version: 20150925160636) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -101,6 +101,15 @@ ActiveRecord::Schema.define(version: 20150801232239) do
     t.string   "recurso_clave1"
     t.string   "recurso_clave2"
     t.string   "recurso_clave3"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "complices", force: true do |t|
+    t.integer  "dream_id"
+    t.string   "tags"
+    t.text     "reason"
+    t.text     "giving"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
