@@ -16,14 +16,18 @@ module Merit
 
     def initialize
       set_rank level: 0, :to => User do |user|
-        Dream.where(user_id: user.id).count == 0
+        Complice.where(user_id: user.id).count == 0
       end
       set_rank level: 1, :to => User do |user|
-        (Dream.where(user_id: user.id).count >= 5) && (Dream.where(user_id: user.id).count < 15)
+        (Complice.where(user_id: user.id).count >= 1) && (Complice.where(user_id: user.id).count < 3)
       end
       set_rank level: 2, :to => User do |user|
-        (Dream.where(user_id: user.id).count >= 15) && (Dream.where(user_id: user.id).count < 30)
+        (Complice.where(user_id: user.id).count >= 3) && (Complice.where(user_id: user.id).count < 5)
       end
+      set_rank level: 3, :to => User do |user|
+        Complice.where(user_id: user.id).count >= 5
+      end
+
       # set_rank :level => 1, :to => Commiter.active do |commiter|
       #   commiter.repositories.count > 1 && commiter.followers >= 10
       # end

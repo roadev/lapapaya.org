@@ -159,13 +159,32 @@
           <h3></h3>
         </div>
         <div class="tab-pane fade in" id="tab3">
-          <h4>Mis sueños:</h4>
-          <% Dream.where(user_id: current_user.id).each do |dream| %>
-          <li>
-            <%= link_to dream.dream, dream %>
-            <br />
-          </li>
-          <% end %>
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <center><b class="panel-title">Mi Contenido</b></center>
+            </div>
+            <div class="panel-body">
+              <p><b>Mis sueños: </b></p>
+              <% Dream.where(user_id: current_user.id).each do |dream| %>
+              <li>
+                <%= link_to dream.dream, dream %>
+                <br />
+                <br />
+              </li>
+              <% end %>
+              <p><b>Soy cómplice de: </b></p>
+              <% Complice.where(user_id: current_user.id).each do |complice| %>
+              <li>
+                <%= link_to complice.giving, complice %>
+                <% #link_to (Complice.where(dream_id: (Dream.where(user_id: :user_id)))), complice %>
+                <br />
+                <br />
+              </li>
+              <% end %>
+
+            </div>
+          </div>
+
           <br />
           <% if Dream.where(user_id: current_user.id).count == 1 %>
           <strong><p>Actualmente tienes: <%= Dream.where(user_id: current_user.id).count %>  sueño</p></strong>
