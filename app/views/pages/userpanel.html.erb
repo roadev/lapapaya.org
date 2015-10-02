@@ -81,9 +81,9 @@
           <div class="rank-label-container">
             <span class="label label-default rank-label"><%= current_user.points %> Puntos</span>
 
-            <ul>
+              <ul>
 
-            </ul>
+              </ul>
           </div>
           <h3></h3>
         </div>
@@ -205,7 +205,6 @@
           <% else %>
           <strong><p>Actualmente tienes: <%= Dream.where(user_id: current_user.id).count %>  sueños</p></strong>
           <% end %>
-
         </div>
       </div>
     </div>
