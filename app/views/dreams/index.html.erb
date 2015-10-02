@@ -1,21 +1,27 @@
 <% if user_signed_in? %>
 <% else %>
-<div class="panel panel-default">
-  <h1>Educacion en emprendimiento</h1>
-  <h3> Somos una red social donde puedes poner un sueño capaz de cambiar el mundo,
-    a cambio debes ofrecer tiempo para servir a otros proyectos, entre más ayudas ganas puntos,
-    que hacen que el resto de la red te pueda ayudar.
-  <br /><br />
-  </h3>
-  <h3>Conectamos, visibilizamos y fortalecemos emprendimientos con Impacto Global</h3>
-    <!--<iframe src='http://lenscap.co/s/9p' id='autosize' seamless style='border:none' width='100%' height='675' scrolling='yes'></iframe><script src='http://lenscap.co/embed/v1/stream/js/autosize.js'></script>-->
-  <br />
-</div>
+<section>
+  <article class="">
+    <div class="panel panel-default">
+      <header>
+        <h1>Educacion en emprendimiento</h1>
+      </header>
+      <h3> Somos una red social donde puedes poner un sueño capaz de cambiar el mundo,
+        a cambio debes ofrecer tiempo para servir a otros proyectos, entre más ayudas ganas puntos,
+        que hacen que el resto de la red te pueda ayudar.
+        <br /><br />
+      </h3>
+      <h3>Conectamos, visibilizamos y fortalecemos emprendimientos con Impacto Global</h3>
+      <!--<iframe src='http://lenscap.co/s/9p' id='autosize' seamless style='border:none' width='100%' height='675' scrolling='yes'></iframe><script src='http://lenscap.co/embed/v1/stream/js/autosize.js'></script>-->
+      <br />
+    </div>
+  </article>
+</section>
 <% end %>
-    <!-- Change the width and height values to suit you best -->
-    <!-- <div class="typeform-widget" data-url="https://felipe10.typeform.com/to/UEONYG" data-text="Lapapaya.org" style="width:100%;height:500px;"></div>
-    <script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'widget.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}})()</script>
-    <div style="font-family: Sans-Serif;font-size: 12px;color: #999;opacity: 0.5; padding-top: 5px;">Powered by <a href="http://www.typeform.com/?utm_campaign=typeform_UEONYG&amp;utm_source=website&amp;utm_medium=typeform&amp;utm_content=typeform-embedded&amp;utm_term=Español" style="color: #999" target="_blank">Typeform</a></div>-->
+<!-- Change the width and height values to suit you best -->
+<!-- <div class="typeform-widget" data-url="https://felipe10.typeform.com/to/UEONYG" data-text="Lapapaya.org" style="width:100%;height:500px;"></div>
+<script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'widget.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}})()</script>
+<div style="font-family: Sans-Serif;font-size: 12px;color: #999;opacity: 0.5; padding-top: 5px;">Powered by <a href="http://www.typeform.com/?utm_campaign=typeform_UEONYG&amp;utm_source=website&amp;utm_medium=typeform&amp;utm_content=typeform-embedded&amp;utm_term=Español" style="color: #999" target="_blank">Typeform</a></div>-->
 <div class="panel panel-default">
   <div id="tag_cloud" align="center" >
     <h3> Puedes dar click en cualquiera de estas palabras y filtrar los sueños propuestos</h3>
@@ -28,34 +34,34 @@
 </div>
 <div id="dreams" class="transitions-enabled">
   <% @dreams.each do |dream| %>
-    <div class="box panel panel-default">
-      <%= link_to image_tag(dream.image.url(:medium)), dream %>
-      <p><strong> Sueño <%= dream.id %></strong></p>
-      <p><%= dream.dream %></p>
-      <p><strong> Ofrezco </strong></p>
-      <p><%= dream.ofrezco %></p>
-      <p> Palabras clave: <%= raw dream.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %> </p>
-      <!-- <%# link_to 'Volverme cómplice', pages_comofunciona_path, class: "btn btn-primary" %> -->
-      <%= link_to 'Volverme cómplice', new_complice_path, class: "btn btn-primary" %>
-      <br />
-      <br />
-      <p> >> Reguemos semillas de papaya </p>
-      <aside>
-        <%= social_share_button_tag("My Site") %>
-      </aside>
-      <% if dream.user == current_user %>
-        <div class="actions">
-          <%= link_to edit_dream_path(dream) do %>
-        <span class="glyphicon glyphicon-edit"></span>
-          Editar
+  <div class="box panel panel-default">
+    <%= link_to image_tag(dream.image.url(:medium)), dream %>
+    <p><strong> Sueño <%= dream.id %></strong></p>
+    <p><%= dream.dream %></p>
+    <p><strong> Ofrezco </strong></p>
+    <p><%= dream.ofrezco %></p>
+    <p> Palabras clave: <%= raw dream.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %> </p>
+    <!-- <%# link_to 'Volverme cómplice', pages_comofunciona_path, class: "btn btn-primary" %> -->
+    <%= link_to 'Volverme cómplice', new_complice_path, class: "btn btn-primary" %>
+    <br />
+    <br />
+    <p> >> Reguemos semillas de papaya </p>
+    <aside>
+      <%= social_share_button_tag("My Site") %>
+    </aside>
+    <% if dream.user == current_user %>
+    <div class="actions">
+      <%= link_to edit_dream_path(dream) do %>
+      <span class="glyphicon glyphicon-edit"></span>
+      Editar
       <% end %>
       <%= link_to dream, method: :delete, data: { confirm: '¿Estás seguro?' } do %>
-        <span class="glyphicon glyphicon-trash"></span>
-          Borrar
-      <% end %>
-        </div>
+      <span class="glyphicon glyphicon-trash"></span>
+      Borrar
       <% end %>
     </div>
+    <% end %>
+  </div>
   <% end %>
 </div>
 <footer>
@@ -67,4 +73,4 @@
       </p>
     </div>
   </div>
-<footer>
+</footer>
