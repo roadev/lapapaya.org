@@ -6,11 +6,7 @@
 				<%= image_tag @dream.image.url(:medium) %>
 			</div>
 			<div class="panel-body">
-
-				<!--<h2><span class="red"><%# current_user.points %></span><br>Puntos</br></h2>-->
-
 				<br>
-
 				<% if user_signed_in? %>
 				<p> El modelo CANVAS+ es un formato que te permitirá primero definir cuales son tus metas a corto, mediano y largo plazo, que van a permitir alcanzar tu sueño en tan solo cinco años. Una vez hayas definido tus metas deberás identificar quienes son tus clientes, que problema solucionas, que productos vas a vender, tu propuesta de valor, tus costos e ingresos. Este formato te va a permitir tener una guia de como emplearlo. <P>
 					<br>
@@ -19,16 +15,13 @@
 					<% else %>
 					<% end %>
 					<hr>
-
-					<p style="
-					text-align:left;
-					font-size: 25px;">
-					<strong> Sueño: </strong></p>
+					<p style="text-align:left;font-size: 25px;">
+					<strong> Sueño <%= @dream.id %>: </strong></p>
 					<p> Definición de proyecto de vida y etapas de mi sueño </p>
 					<h1><%= @dream.dream %></h1>
 					<p style="
 					text-align:right;
-					font-size: 15px;"> Si quieres apoyar este sueño, puedes dar click <%= link_to 'Aquí', pages_comofunciona_path, class: "btn btn-primary" %>  </P>
+					font-size: 15px;"> Si quieres apoyar este sueño, puedes dar click <%= link_to 'Aquí', new_complice_path, class: "btn btn-primary" %>  </P>
 
 					<% if user_signed_in? %>
 
