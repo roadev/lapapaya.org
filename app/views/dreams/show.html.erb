@@ -81,7 +81,7 @@
 				<% else %>
 				<% end %>
 				<hr>
-				<p style="text-align:left;font-size: 25px;"><strong> Palabras clave: </strong></p>
+				<p class="strong text-right"> Palabras clave: </p>
 				<p> Que sectores productivos definen mi sueño y con quienes me debo conectar </p>
 				<h1><%= raw @dream.tag_list.map { |t| link_to t, tag_path(t)}.join(', ') %></h1>
 				<br><br><br><br>
