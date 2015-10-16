@@ -30,14 +30,22 @@
       </div>
       <br />
       <br />
-      <% if (current_user.name.nil? || current_user.name.blank?) && (current_user.lastname.nil? || current_user.lastname.blank?) %>
-      <div class="card-info"> <span class="card-title"><%= current_user.email %></span></div>
-      <% else if (current_user.name.present? && !current_user.name.blank?) && (current_user.lastname.present? && !current_user.lastname.blank?) %>
-      <div class="card-info"> <span class="card-title"><%= current_user.name %> <%= current_user.lastname %> </span></div>
-      <% else if current_user.name.present? && !current_user.name.blank? %>
-      <div class="card-info"> <span class="card-title"><%= current_user.name %></span></div>
-      <% else if current_user.lastname.present? && !current_user.lastname.blank? %>
-      <div class="card-info"> <span class="card-title"><%= current_user.lastname %> </span></div>
+      <header>
+        <% if (current_user.name.nil? || current_user.name.blank?) && (current_user.lastname.nil? || current_user.lastname.blank?) %>
+        <div class="card-info"> <span class="card-title"><%= current_user.email %></span></div>
+      </header>
+      <header>
+        <% else if (current_user.name.present? && !current_user.name.blank?) && (current_user.lastname.present? && !current_user.lastname.blank?) %>
+        <div class="card-info"> <span class="card-title"><%= current_user.name %> <%= current_user.lastname %> </span></div>
+      </header>
+      <header>
+        <% else if current_user.name.present? && !current_user.name.blank? %>
+        <div class="card-info"> <span class="card-title"><%= current_user.name %></span></div>
+      </header>
+      <header>
+        <% else if current_user.lastname.present? && !current_user.lastname.blank? %>
+        <div class="card-info"> <span class="card-title"><%= current_user.lastname %> </span></div>
+      </header>
       <% end %>
       <% end %>
       <% end %>
@@ -45,19 +53,25 @@
     </div>
     <div class="btn-pref btn-group btn-group-justified btn-group-lg" role="group" aria-label="...">
       <div class="btn-group" role="group">
-        <button type="button" id="stars" class="btn btn-primary" href="#tab1" data-toggle="tab"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-          <div class="hidden-xs">Puntos y Medallas <span class="badge"><%= current_user.points %></span></div>
-        </button>
+        <header>
+          <button type="button" id="stars" class="btn btn-primary" href="#tab1" data-toggle="tab"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            <div class="hidden-xs">Puntos y Medallas <span class="badge"><%= current_user.points %></span></div>
+          </button>
+        </header>
       </div>
       <div class="btn-group" role="group">
-        <button type="button" id="following" class="btn btn-default" href="#tab2" data-toggle="tab"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-          <div class="hidden-xs">Mi Perfil</div>
-        </button>
+        <header>
+          <button type="button" id="following" class="btn btn-default" href="#tab2" data-toggle="tab"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+            <div class="hidden-xs">Mi Perfil</div>
+          </button>
+        </header>
       </div>
       <div class="btn-group" role="group">
-        <button type="button" id="favorites" class="btn btn-default" href="#tab3" data-toggle="tab"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
-          <div class="hidden-xs">Mis Sueños y Retos <span class="badge"><%= Dream.where(user_id: current_user.id).count %></span></div>
-        </button>
+        <header>
+          <button type="button" id="favorites" class="btn btn-default" href="#tab3" data-toggle="tab"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+            <div class="hidden-xs">Mis Sueños y Retos <span class="badge"><%= Dream.where(user_id: current_user.id).count %></span></div>
+          </button>
+        </header>
       </div>
     </div>
 
@@ -67,9 +81,9 @@
           <div class="rank-label-container">
             <span class="label label-default rank-label"><%= current_user.points %> Puntos</span>
 
-            <ul>
+              <ul>
 
-            </ul>
+              </ul>
           </div>
           <h3></h3>
         </div>
@@ -161,7 +175,9 @@
         <div class="tab-pane fade in" id="tab3">
           <div class="panel panel-primary">
             <div class="panel-heading">
-              <center><b class="panel-title">Mi Contenido</b></center>
+              <header>
+                <center><b class="panel-title">Mi Contenido</b></center>
+              </header>
             </div>
             <div class="panel-body">
               <p><b>Mis sueños: </b></p>
@@ -176,22 +192,20 @@
               <% Complice.where(user_id: current_user.id).each do |complice| %>
               <li>
                 <%= link_to complice.giving, complice %>
-                <% #link_to (Complice.where(dream_id: (Dream.where(user_id: :user_id)))), complice %>
                 <br />
                 <br />
               </li>
               <% end %>
-
             </div>
           </div>
-
           <br />
-          <% if Dream.where(user_id: current_user.id).count == 1 %>
-          <strong><p>Actualmente tienes: <%= Dream.where(user_id: current_user.id).count %>  sueño</p></strong>
-          <% else %>
-          <strong><p>Actualmente tienes: <%= Dream.where(user_id: current_user.id).count %>  sueños</p></strong>
-          <% end %>
-
+          <footer>
+            <% if Dream.where(user_id: current_user.id).count == 1 %>
+            <strong><p>Actualmente tienes: <%= Dream.where(user_id: current_user.id).count %>  sueño</p></strong>
+            <% else %>
+            <strong><p>Actualmente tienes: <%= Dream.where(user_id: current_user.id).count %>  sueños</p></strong>
+            <% end %>
+          <footer>
         </div>
       </div>
     </div>

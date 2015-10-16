@@ -497,3 +497,12 @@ body{
     transition: width 0.6s ease 0s;
 }
 /* Progress bar */
+.strong{
+  font-weight: bold;
+}
+  .strong__bigger{
+    font-size: 25px;
+  }
+.text-right{
+  text-align:right;
+}

@@ -6,136 +6,101 @@
 				<%= image_tag @dream.image.url(:medium) %>
 			</div>
 			<div class="panel-body">
-
-				<!--<h2><span class="red"><%# current_user.points %></span><br>Puntos</br></h2>-->
-
 				<br>
-
 				<% if user_signed_in? %>
-				<p> El modelo CANVAS+ es un formato que te permitirá primero definir cuales son tus metas a corto, mediano y largo plazo, que van a permitir alcanzar tu sueño en tan solo cinco años. Una vez hayas definido tus metas deberás identificar quienes son tus clientes, que problema solucionas, que productos vas a vender, tu propuesta de valor, tus costos e ingresos. Este formato te va a permitir tener una guia de como emplearlo. <P>
-					<br>
-
-					<%= link_to 'Descargar CANVAS+', 'https://docs.google.com/spreadsheets/d/1DKezRtgYlvGPyBvX1n7XcX1g_wWkXph8yf9JJ4U-xXA/pubhtml', class: "btn btn-primary", :target => "_blank" %>
-					<% else %>
-					<% end %>
-					<hr>
-
-					<p style="
-					text-align:left;
-					font-size: 25px;">
-					<strong> Sueño: </strong></p>
-					<p> Definición de proyecto de vida y etapas de mi sueño </p>
+						<p>
+							El modelo CANVAS+ es un formato que te permitirá primero definir cuales son tus metas a corto, mediano y largo plazo, que van a permitir alcanzar tu sueño en tan solo cinco años. Una vez hayas definido tus metas deberás identificar quienes son tus clientes, que problema solucionas, que productos vas a vender, tu propuesta de valor, tus costos e ingresos. Este formato te va a permitir tener una guia de como emplearlo.
+						<p>
+					<br />
+						<%= link_to 'Descargar CANVAS+', 'https://docs.google.com/spreadsheets/d/1DKezRtgYlvGPyBvX1n7XcX1g_wWkXph8yf9JJ4U-xXA/pubhtml', class: "btn btn-primary", :target => "_blank" %>
+				<% else %>
+				<% end %>
+				<hr>
+				<p class="strong strong__bigger"> Sueño <%= @dream.id %>: </p>
+				<p> Definición de proyecto de vida y etapas de mi sueño </p>
+				<header>
 					<h1><%= @dream.dream %></h1>
-					<p style="
-					text-align:right;
-					font-size: 15px;"> Si quieres apoyar este sueño, puedes dar click <%= link_to 'Aquí', pages_comofunciona_path, class: "btn btn-primary" %>  </P>
-
-					<% if user_signed_in? %>
-
-					<li><%= link_to "Definir etapas", new_etapa_path, class: "btn btn-primary" %></li>
-					<% else %>
-					<% end %>
+				</header>
+				<p class="text-right"> Si quieres apoyar este sueño, puedes dar click <%= link_to 'Aquí', new_complice_path, class: "btn btn-primary" %>  </p>
+				<% if user_signed_in? %>
+					<li>
+						<%= link_to "Definir etapas", new_etapa_path, class: "btn btn-primary" %>
+					</li>
+				<% else %>
+				<% end %>
+				<br>
+				<p> Los sueños no se cumplen de la noche a la mañana, necesitan esfuerzo, dedicación y compromiso. Define las etapas de tu sueño para tener claro el siguiente paso. </p>
+				<hr>
+				<p style="text-align:left;font-size: 25px;">
+				<strong> Quiero: </strong></p>
+				<p> Metas a corto plazo </p>
+				<h1><%= @dream.quiero %></h1>
+				<% if user_signed_in? %>
+					<li>
+						<%= link_to "Lo que me entra", new_canvas_financiero_ingreso_path, class: "btn btn-primary"  %>
+					</li>
+				<% else %>
+				<% end %>
+				<hr>
+				<p style="text-align:left;font-size: 25px;">
+				<strong> Ofrezco: </strong></p>
+				<p> Desarrollo de producto </p>
+				<h1><%= @dream.ofrezco %></h1>
+				<br>
+				<% if user_signed_in? %>
+					<li>
+						<%= link_to "¿Quienes son mis clientes?", new_canva_path, class: "btn btn-primary"  %>
+					</li>
 					<br>
-					<P> Los sueños no se cumplen de la noche a la mañana, necesitan esfuerzo, dedicación y compromiso. Define las etapas de tu sueño para tener claro el siguiente paso. </p>
-
-						<hr>
-
-						<p style="
-						text-align:left;
-						font-size: 25px;">
-						<strong> Quiero: </strong></p>
-						<p> Metas a corto plazo </p>
-						<h1><%= @dream.quiero %></h1>
-
-						<% if user_signed_in? %>
-						<li><%= link_to "Lo que me entra", new_canvas_financiero_ingreso_path, class: "btn btn-primary"  %></li>
-						<% else %>
-						<% end %>
-
-						<hr>
-
-						<p style="
-						text-align:left;
-						font-size: 25px;">
-						<strong> Ofrezco: </strong></p>
-						<p> Desarrollo de producto </p>
-						<h1><%= @dream.ofrezco %></h1>
-
-						<br>
-
-						<% if user_signed_in? %>
-						<li><%= link_to "¿Quienes son mis clientes?", new_canva_path, class: "btn btn-primary"  %></li>
-						<br>
-						<li><%= link_to "CANVAS+ Lado izquierdo", new_canvas_lado_izquierdo_path, class: "btn btn-primary"  %></li>
-						<br>
-						<li><%= link_to "CANVAS+ Lado derecho", new_canvas_lado_derecho_path, class: "btn btn-primary"  %></li>
-
-						<% else %>
-						<% end %>
-						<br>
-						<br>
-
-						<p> Aquí te puedes descargar el catálogo de productos de la finca. </p>
-
-						<%= link_to 'Catálogo de productos', "https://www.dropbox.com/s/0x9vjl9ji351dzl/CLIENTES%20%281%29.xlsx?dl=0", class: "btn btn-primary", :target => "_blank" %>
-						<br>
-						<p> Te abrirá primero una ventana de dropbox, la puedes cerrar y descargar el catálogo o abrirlo directamente desde dropbox y editarlo. Si tienes dudas, nos puedes escribir a admin@lapapaya.org desde allí te vamos a contestar y brindar el soporte que necesites. </p>
-
-						<hr>
-
-						<br>
-						<br>
-						<p style="
-						text-align:left;
-						font-size: 25px;">
-						<strong> Necesito: </strong></p>
-						<p> Necesidades financieras, recursos clave </p>
-						<h1><%= @dream.necesito %></h1>
-						<p style="
-						text-align:left;
-						font-size: 25px;">
-
-						<% if user_signed_in? %>
-						<li><%= link_to "Lo que me cuesta", new_canvas_financiero_costo_path, class: "btn btn-primary"  %></li>
-						<% else %>
-						<% end %>
-						<hr>
-
-						<p style="
-						text-align:left;
-						font-size: 25px;"><strong> Palabras clave: </strong></p>
-						<P> Que sectores productivos definen mi sueño y con quienes me debo conectar </p>
-							<h1><%= raw @dream.tag_list.map { |t| link_to t, tag_path(t)}.join(', ') %></h1>
-							<!-- <p><strong> Tags related </strong></p> -->
-
-							<br>
-							<br>
-
-
-							<br>
-							<br>
-							<hr>
-
-							<!-- <%= image_tag ( "cajadesuenos.png")  %> -->
-
-							<br>
-
-							<p> Compártelo</p>
-							<%= social_share_button_tag("My Site") %>
-							<hr>
-
-							<% if @dream.user == current_user %>
-							<%= link_to 'Editar', edit_dream_path(@dream), class: 'btn btn-info' %> |
-
-							<!--
-							<p><strong><%= @dream.user.email if @dream.user %></strong></p>-->
-							<br>
-							<!-- <% if @dream.tag_list = %w("gente, amor, compasión, entrega") %>
-							<iframe width="700" height="500" src="//www.youtube.com/embed/i1Le5GYkBT8" frameborder="0" allowfullscreen></iframe>
-							<% else %>
-							<% end %> -->
-							<% end %>
-						</div>
-					</div>
-				</div>
+					<li>
+						<%= link_to "CANVAS+ Lado izquierdo", new_canvas_lado_izquierdo_path, class: "btn btn-primary"  %>
+					</li>
+					<br>
+					<li>
+						<%= link_to "CANVAS+ Lado derecho", new_canvas_lado_derecho_path, class: "btn btn-primary"  %>
+					</li>
+				<% else %>
+				<% end %>
+				<br>
+				<br>
+				<p> Aquí te puedes descargar el catálogo de productos de la finca. </p>
+				<%= link_to 'Catálogo de productos', "https://www.dropbox.com/s/0x9vjl9ji351dzl/CLIENTES%20%281%29.xlsx?dl=0", class: "btn btn-primary", :target => "_blank" %>
+				<br>
+				<p> Te abrirá primero una ventana de dropbox, la puedes cerrar y descargar el catálogo o abrirlo directamente desde dropbox y editarlo. Si tienes dudas, nos puedes escribir a admin@lapapaya.org desde allí te vamos a contestar y brindar el soporte que necesites. </p>
+				<hr>
+				<br><br>
+				<p style="text-align:left;font-size: 25px;">
+				<strong> Necesito: </strong></p>
+				<p> Necesidades financieras, recursos clave </p>
+				<h1><%= @dream.necesito %></h1>
+				<p style="text-align:left;font-size: 25px;">
+				<% if user_signed_in? %>
+					<li>
+						<%= link_to "Lo que me cuesta", new_canvas_financiero_costo_path, class: "btn btn-primary"  %>
+					</li>
+				<% else %>
+				<% end %>
+				<hr>
+				<p class="strong text-right"> Palabras clave: </p>
+				<p> Que sectores productivos definen mi sueño y con quienes me debo conectar </p>
+				<h1><%= raw @dream.tag_list.map { |t| link_to t, tag_path(t)}.join(', ') %></h1>
+				<br><br><br><br>
+				<hr>
+				<br>
+				<p> Compártelo</p>
+				<%= social_share_button_tag("My Site") %>
+				<hr>
+				<% if @dream.user == current_user %>
+					<%= link_to 'Editar', edit_dream_path(@dream), class: 'btn btn-info' %> |
+					<!--
+					<p><strong><%= @dream.user.email if @dream.user %></strong></p>-->
+					<br>
+					<!-- <% if @dream.tag_list = %w("gente, amor, compasión, entrega") %>
+					<iframe width="700" height="500" src="//www.youtube.com/embed/i1Le5GYkBT8" frameborder="0" allowfullscreen></iframe>
+					<% else %>
+					<% end %> -->
+				<% end %>
 			</div>
+		</div>
+	</div>
+</div>

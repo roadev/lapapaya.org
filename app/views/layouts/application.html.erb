@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
   <title>Lapapaya + Red Social Colaborativa por una Educación en Emprendimiento</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
@@ -7,42 +7,18 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
   <%= render 'layouts/header' %>
   <div class="container">
     <% flash.each do |name, msg| %>
     <%= content_tag(:div, msg, class: "alert alert-info") %>
     <% end %>
-
-
-
-
-
-
-
-
-
-
   </div>
-
+<main>
   <%= yield %>
-</div>
+</main>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<div id="box">
-
-  <!--   <address>
-  <strong>Lapapaya.org</strong><br>
-  Carrera 35 # 3-27 Barrio San Fernando Antiguo<br>
-  Cali Colombia, CA 94107<br>
-  <abbr title="Phone">P:</abbr> 3207217643
-</address>
-
-<address>
-<strong>Full Name</strong><br>
-<a href="mailto:#">admin@lapapaya.org</a>
-</address>
-</div>
-
-</body>
-</html>  -->
+<footer>
+  <%= render 'layouts/footer' %>
+</footer>
