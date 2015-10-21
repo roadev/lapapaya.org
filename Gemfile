@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-#ruby '2.0.0'
+ruby '2.0.0'
 
 gem 'rails', '4.0.4'
 
@@ -45,6 +45,7 @@ gem 'rb-readline'
 
 group :development, :test do
 	gem 'sqlite3'
+	gem 'railroady'
 end
 
 group :production do
