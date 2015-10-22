@@ -6,6 +6,11 @@ class Dream < ActiveRecord::Base
 	acts_as_taggable
 	acts_as_taggable_on :tag_list
 	paginates_per 15
+	enum select_type: {
+    'Desarrollo Personal' => 'personal_development',
+    'Trabajo Social' => 'social_work',
+    'Desarrollo sostenible' => 'sustainable_development',
+  }
 end
 
 
