@@ -29,8 +29,8 @@ gem 'newrelic_rpm'
 gem 'social-share-button', '~> 0.1.6'
 gem 'youtube_it', '~> 2.4.0'
 gem 'pg'
-gem 'will_paginate', '~> 3.0.5'
-gem 'will_paginate-bootstrap'
+#gem 'will_paginate'
+#gem 'will_paginate-bootstrap'
 gem 'acts-as-taggable-on'
 gem 'mandrill-api'
 gem 'merit'
@@ -42,6 +42,7 @@ gem 'momentjs-rails'
 gem 'datetimepicker-rails', github: 'zpaulovics/datetimepicker-rails', branch: 'master', submodules: true
 gem 'simple_form'
 gem 'rb-readline'
+gem 'kaminari'
 
 group :development, :test do
 	gem 'sqlite3'
