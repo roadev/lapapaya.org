@@ -5,10 +5,14 @@ class DreamsController < ApplicationController
 
 
   def index
+    @dreams = Dream.paginate(page: params[:page], per_page: 5)
+
     if params[:tag]
       @dreams = Dream.tagged_with(params[:tag])
-  else
-    @dreams = Dream.all
+      else
+      @dreams = Dream.paginate(page: params[:page], per_page: 5)
+      #@dreams = Dream.all
+    end
   end
 
 
@@ -58,7 +62,7 @@ class DreamsController < ApplicationController
     def set_dream
       @dream = Dream.find(params[:id])
     end
-  end
+
 
   def correct_user
     @dream = current_user.dreams.find_by(id: params[:id])
