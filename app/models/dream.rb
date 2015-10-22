@@ -5,6 +5,7 @@ class Dream < ActiveRecord::Base
 	validates_attachment_content_type :image, content_type: %w(image/jpeg image/jpg image/png)
 	acts_as_taggable
 	acts_as_taggable_on :tag_list
+	paginates_per 20
 end
 
 

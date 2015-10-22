@@ -71,5 +71,6 @@
     <% end %>
   </div>
 </main>
-<%= will_paginate @dreams, class: 'center' %>
-<!-- Footer for index -->
+<section class="center bigger">
+  <%= paginate @dreams %>
+</section>
