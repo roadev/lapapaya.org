@@ -10,7 +10,7 @@ class DreamsController < ApplicationController
     if params[:tag]
       @dreams = Dream.tagged_with(params[:tag])
       else
-      @dreams = Dream.order(:id).page params[:page]
+      @dreams = Dream.order(id: :desc).page params[:page]
       #@dreams = Dream.all
     end
   end
