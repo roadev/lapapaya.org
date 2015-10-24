@@ -16,10 +16,10 @@
 /*
  *= require social-share-button
  */
-
- @import "bootstrap";
- @import "font-awesome-sprockets";
- @import "font-awesome";
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
  body {
   background: #EAEAEA;
@@ -504,7 +504,7 @@ body{
     font-size: 25px;
   }
 .bigger{
-  font-size: 20px;     
+  font-size: 20px;
 }
 .text-right{
   text-align:right;
