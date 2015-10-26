@@ -99,7 +99,7 @@
             </div>
           </div>
           <% elsif (current_user.region.nil? || current_user.region.blank?) && (current_user.facebook.nil? || current_user.facebook.blank?) && (current_user.twitter.nil? || current_user.twitter.blank?) %>
-          <b><center><p>Porcentaje de completación de tu perfil: 75%</p></center></b>
+          <center><p class="strong">Porcentaje de completación de tu perfil: 75%</p></center>
           <div class="progress">
             <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%">
               <span class="sr-only">75% Complete</span>
@@ -124,14 +124,14 @@
           <!-- Progress bar -->
           <div class="panel panel-primary">
             <div class="panel-heading">
-              <center><b class="panel-title">Mis datos</b></center>
+              <span class="panel-title center">Mis datos</span>
             </div>
             <div class="panel-body">
-              <p><b>Usuario: </b><%= current_user.username %></p>
-              <p><b>País: </b><%= current_user.country %></p>
-              <p><b>Región: </b><%= current_user.region %></p>
-              <p><b>Ciudad: </b><%= current_user.city %></p>
-              <p><b>Cumpleaños: </b><%= current_user.born_date %></p>
+              <p><span class="strong">Usuario:</span> <%= current_user.username %></p>
+              <p><span class="strong">País: </span> <%= current_user.country %></p>
+              <p><span class="strong">Región: </span> <%= current_user.region %></p>
+              <p><span class="strong">Ciudad: </span> <%= current_user.city %></p>
+              <p><span class="strong">Cumpleaños: </span> <%= current_user.born_date %></p>
               <%= link_to current_user.facebook do %><i class="fa fa-facebook"></i>
               <% end %>
               <br />
@@ -155,7 +155,7 @@
               </header>
             </div>
             <div class="panel-body">
-              <p><b>Mis sueños: </b></p>
+              <p class="strong">Mis sueños: </p>
               <% Dream.where(user_id: current_user.id).each do |dream| %>
               <li>
                 <%= link_to dream.dream, dream %>
@@ -163,7 +163,7 @@
                 <br />
               </li>
               <% end %>
-              <p><b>Soy cómplice de: </b></p>
+              <p class="strong">Soy cómplice de: </p>
               <% Complice.where(user_id: current_user.id).each do |complice| %>
               <li>
                 <%= link_to complice.giving, complice %>
@@ -174,13 +174,13 @@
             </div>
           </div>
           <br />
-          <footer>
+          <article>
             <% if Dream.where(user_id: current_user.id).count == 1 %>
-            <strong><p>Actualmente tienes: <%= Dream.where(user_id: current_user.id).count %>  sueño</p></strong>
+              <p class="strong">Actualmente tienes: <%= Dream.where(user_id: current_user.id).count %>  sueño</p>
             <% else %>
-            <strong><p>Actualmente tienes: <%= Dream.where(user_id: current_user.id).count %>  sueños</p></strong>
+              <p class="strong">Actualmente tienes: <%= Dream.where(user_id: current_user.id).count %>  sueños</p>
             <% end %>
-          <footer>
+          </article>
         </div>
       </div>
     </div>
