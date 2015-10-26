@@ -1,6 +1,5 @@
 <% if user_signed_in? %>
-<div class="im-centered-2">
-  <div class="col-lg-6 col-sm-6">
+<section class="user-panel">
     <div class="card hovercard">
       <div class="card-background">
         <img class="card-bkimg" alt="" src="https://www.quiltednorthern.com/~/media/CPG/QNComFL/qncomfl/bg_blue">
@@ -188,8 +187,7 @@
         </div>
       </div>
     </div>
-  </div>
-</div>
+</section>
 <% else %>
 <% #Script for redirect to sign_up form if user is not authenticated %>
 <script type="text/javascript">
