@@ -19,4 +19,18 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  def fullname_present?
+    name.present? &&
+    !name.blank? &&
+    lastname.present? &&
+    !lastname.blank?
+  end
+
+  def half_name_present?
+    name.present? &&
+    !name.blank? ||
+    lastname.present? &&
+    !lastname.blank?
+  end
+
 end
