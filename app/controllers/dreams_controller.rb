@@ -6,9 +6,9 @@ class DreamsController < ApplicationController
 
   def index
     #@dreams = Dream.paginate(page: params[:page], per_page: 5)
-
+    #@dreams = Dream.order(id: :desc).page params[:page]
     if params[:tag]
-      @dreams = Dream.tagged_with(params[:tag])
+      @dreams = Dream.tagged_with(params[:tag]).order(id: :desc).page params[:page]
       else
       @dreams = Dream.order(id: :desc).page params[:page]
       #@dreams = Dream.all
