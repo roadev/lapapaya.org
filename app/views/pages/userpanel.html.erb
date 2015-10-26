@@ -7,9 +7,9 @@
       </div>
       <div class="useravatar">
         <% if current_user.avatar.present? %>
-        <%= image_tag(current_user.avatar.url(:thumb)) %>
+          <%= image_tag(current_user.avatar.url(:thumb)) %>
         <% else %>
-        <img src="assets/images/missing_avatar.png" />
+          <img src="assets/images/missing_avatar.png" />
         <% end %>
         <div class="rank-label-container">
           <span class="label label-default rank-label"><%= current_user.points %> Puntos</span>
@@ -65,61 +65,64 @@
       <div class="tab-content">
         <div class="tab-pane fade in active" id="tab1">
           <div class="rank-label-container">
-            <span class="label label-default rank-label"><%= current_user.points %> Puntos</span>
+            <span class="label label-default rank-label">
+              <%= current_user.points %>
+              Puntos
+            </span>
           </div>
         </div>
         <div class="tab-pane fade in" id="tab2">
           <!-- Progress bar -->
           <% if (current_user.username.nil? || current_user.username.blank?) && (current_user.name.nil? || current_user.name.blank? || current_user.lastname.nil? || current_user.lastname.blank?)   %>
-          <b><center><p>Porcentaje de completación de tu perfil: 10% (¡Elige tu nombre de usuario y dinos tu nombre!)</p></center></b>
-          <div class="progress">
-            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 10%">
-              <span class="sr-only">10% Complete</span>
+            <p class="center strong">Porcentaje de completación de tu perfil: 10% (¡Elige tu nombre de usuario y dinos tu nombre!)</p>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 10%">
+                <span class="sr-only">10% Complete</span>
+              </div>
             </div>
-          </div>
           <% elsif (current_user.country.nil? || current_user.country.blank?) && (current_user.city.nil? || current_user.city.blank?) %>
-          <b><center><p>Porcentaje de completación de tu perfil: 35%</p></center></b>
-          <div class="progress">
-            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" style="width: 35%">
-              <span class="sr-only">35% Complete</span>
+            <p class="center strong">Porcentaje de completación de tu perfil: 35%</p>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" style="width: 35%">
+                <span class="sr-only">35% Complete</span>
+              </div>
             </div>
-          </div>
           <% elsif (current_user.country.nil? || current_user.country.blank?) && (current_user.city.nil? || current_user.city.blank?) %>
-          <b><center><p>Porcentaje de completación de tu perfil: 50%</p></center></b>
-          <div class="progress">
-            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
-              <span class="sr-only">50% Complete</span>
+            <p class="center strong">Porcentaje de completación de tu perfil: 50%</p>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+                <span class="sr-only">50% Complete</span>
+              </div>
             </div>
-          </div>
           <% elsif (current_user.region.nil? || current_user.region.blank?)  %>
-          <b><center><p>Porcentaje de completación de tu perfil: 65%</p></center></b>
-          <div class="progress">
-            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width: 65%">
-              <span class="sr-only">65% Complete</span>
+            <p class="center strong">Porcentaje de completación de tu perfil: 65%</p>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width: 65%">
+                <span class="sr-only">65% Complete</span>
+              </div>
             </div>
-          </div>
           <% elsif (current_user.region.nil? || current_user.region.blank?) && (current_user.facebook.nil? || current_user.facebook.blank?) && (current_user.twitter.nil? || current_user.twitter.blank?) %>
-          <center><p class="strong">Porcentaje de completación de tu perfil: 75%</p></center>
-          <div class="progress">
-            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%">
-              <span class="sr-only">75% Complete</span>
+            <p class="center strong">Porcentaje de completación de tu perfil: 75%</p>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%">
+                <span class="sr-only">75% Complete</span>
+              </div>
             </div>
-          </div>
           <% elsif (current_user.website.nil? || current_user.website.blank?) && (current_user.facebook.nil? || current_user.facebook.blank?) && (current_user.twitter.nil? || current_user.twitter.blank?) %>
-          <b><center><p>Porcentaje de completación de tu perfil: 80%</p></center></b>
-          <div class="progress">
-            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-              <span class="sr-only">80% Complete</span>
+            <p class="center strong">Porcentaje de completación de tu perfil: 80%</p>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                <span class="sr-only">80% Complete</span>
+              </div>
             </div>
-          </div>
           <% elsif (current_user.name.present? && !current_user.name.blank? && current_user.lastname.present? && !current_user.lastname.blank? && current_user.avatar.present? && current_user.username.present? && !current_user.username.blank? && current_user.facebook.present? && !current_user.facebook.blank? && current_user.twitter.present? && !current_user.twitter.blank? && current_user.country.present? && !current_user.country.blank? && current_user.region.present? && !current_user.region.blank? && current_user.city.present? && !current_user.city.blank?  && current_user.born_date.present? && !current_user.born_date.blank?) && current_user.website.present? && !current_user.website.blank?%>
-          <b><center><p>Porcentaje de completación de tu perfil: 100%</p></center></b>
-          <p>¡Felicidades! Tu perfil está completo :)</p>
-          <div class="progress">
-            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-              <span class="sr-only">100% Complete</span>
+            <p class="center strong">Porcentaje de completación de tu perfil: 100%</p>
+            <p>¡Felicidades! Tu perfil está completo :)</p>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                <span class="sr-only">100% Complete</span>
+              </div>
             </div>
-          </div>
           <% end %>
           <!-- Progress bar -->
           <div class="panel panel-primary">
@@ -132,44 +135,45 @@
               <p><span class="strong">Región: </span> <%= current_user.region %></p>
               <p><span class="strong">Ciudad: </span> <%= current_user.city %></p>
               <p><span class="strong">Cumpleaños: </span> <%= current_user.born_date %></p>
-              <%= link_to current_user.facebook do %><i class="fa fa-facebook"></i>
+              <%= link_to current_user.facebook do %>
+                <i class="fa fa-facebook"></i>
               <% end %>
               <br />
-              <%= link_to current_user.twitter do %><i class="fa fa-twitter"></i>
+              <%= link_to current_user.twitter do %>
+                <i class="fa fa-twitter"></i>
               <% end %>
               <br />
-              <%= link_to current_user.website do %><i class="fa fa-external-link"></i>
+              <%= link_to current_user.website do %>
+                <i class="fa fa-external-link"></i>
               <% end %>
             </div>
           </div>
           <%= link_to edit_user_registration_path, class: 'btn btn-primary' do %>
-          <span class="glyphicon glyphicon-edit"></span> Completar perfil
+            <span class="glyphicon glyphicon-edit"></span> Completar perfil
           <% end %>
-          <h3></h3>
         </div>
         <div class="tab-pane fade in" id="tab3">
           <div class="panel panel-primary">
             <div class="panel-heading">
-              <header>
-                <center><b class="panel-title">Mi Contenido</b></center>
+              <header class="center">
+                <span class="strong">Mi Contenido</span>
               </header>
             </div>
             <div class="panel-body">
               <p class="strong">Mis sueños: </p>
               <% Dream.where(user_id: current_user.id).each do |dream| %>
-              <li>
-                <%= link_to dream.dream, dream %>
-                <br />
-                <br />
-              </li>
+                <li>
+                  <%= link_to dream.dream, dream %>
+                  <br /><br />
+                </li>
               <% end %>
               <p class="strong">Soy cómplice de: </p>
               <% Complice.where(user_id: current_user.id).each do |complice| %>
-              <li>
-                <%= link_to complice.giving, complice %>
-                <br />
-                <br />
-              </li>
+                <li>
+                  <%= link_to complice.giving, complice %>
+                  <br />
+                  <br />
+                </li>
               <% end %>
             </div>
           </div>
@@ -185,7 +189,6 @@
       </div>
     </div>
   </div>
-</div>
 </div>
 <% else %>
 <% #Script for redirect to sign_up form if user is not authenticated %>
