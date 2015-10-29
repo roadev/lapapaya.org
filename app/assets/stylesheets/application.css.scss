@@ -161,10 +161,12 @@ span.pink {
   margin-right: auto;
 }
 
-.im-centered-2{
-  margin: auto;
-  margin-left: 24%;
-  margin-right: -30%;
+.user-panel{
+  //margin-left: 15%;
+  width: 50%;
+  // margin: auto;
+  margin-left: 28%;
+
 }
 
 /* For login snippet */
@@ -516,4 +518,7 @@ footer{
   color: #777;
   position: static;
   padding: 0% 0% 1.5% 0%;
+}
+.center{
+  text-align: center;
 }
