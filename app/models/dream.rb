@@ -1,11 +1,16 @@
 class Dream < ActiveRecord::Base
 	#has_merit
 	belongs_to :user
+	validates :dream, presence: { message: ": ¡Por favor ingresa tu sueño!" }
+	validates :quiero, presence: { message: ": ¡Dinos por dónde quieres arrancar para lograr tu sueño!" }
+	validates :ofrezco, presence: { message: ": ¡Cuéntanos qué ofreces a cambio!" }
 	has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
 	validates_attachment_content_type :image, content_type: %w(image/jpeg image/jpg image/png)
 	acts_as_taggable
 	acts_as_taggable_on :tag_list
 	paginates_per 15
+
+
 	enum select_type: {
     'Desarrollo Personal' => 'personal_development',
     'Trabajo Social' => 'social_work',

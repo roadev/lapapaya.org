@@ -1,5 +1,13 @@
 <%= simple_form_for Dream.new, html: { multipart: true } do |f| %>
-
+<% if @dream.errors.any? %>
+<center><div id="error_explanation">
+  <h2>Error</h2>
+  <% @dream.errors.full_messages.each do |msg| %>
+    <p class="alert alert-danger alert-block"><%= msg %></p>
+<% end %>
+</div>
+</center>
+<% end %>
 <div class="row">
   <div class="col-md-offset-2 col-md-8">
     <div class="panel panel-default">
@@ -13,14 +21,15 @@
             <li> Desarollo personal o empresarial </li>
             <li> Trabajo Social o trabajos grupales</li>
             <li> Desarrollo Sostenible o Medio Ambiente</li>
+          </ul>
             <br>
             <div class="form-group">
               <% #f.label "Status", class: 'form-control' %>
               <div class="form-group">
                 <%= f.input :select_type, label: 'Área de Interés',
-                input_html: { class: 'form-control' },
-                prompt: 'Eliga el área de interés',
-                collection: Dream::select_types %>
+                            input_html: { class: 'form-control' },
+                            prompt: 'Eliga el área de interés',
+                            collection: Dream::select_types %>
               </div>
             </div>
           </div>

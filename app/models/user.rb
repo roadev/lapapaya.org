@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   validates_attachment_content_type :avatar, content_type: %w(image/jpeg image/jpg image/png image/gif), message: 'Ingresa tu avatar en extensión jpg o png'
   validates_uniqueness_of :username, message: ": Este nombre de usuario ya se encuentra registrado"
   #validates :country, presence: { message: ": Por favor ingresa el país en donde vives" }
-  #validates :username, presence: { message: ": Por favor ingresa un nombre de usuario" }
+  validates :username, presence: { message: ": Por favor ingresa un nombre de usuario" }
 
   #def mydreams
   #  Dream.where(user_id: 7).count
