@@ -1,0 +1,12 @@
+<% if current_user.admin? %>
+  <% User.all.each do |user| %>
+  <ul>
+    <li>Nombre: <%= user.name %></li>
+    <li>Email: <%= user.email %></li>
+  </ul>
+  <% end %>
+<% else %>
+  <script type="text/javascript">
+    window.location.href="/users/sign_up"  // put your correct path in a string here
+  </script>
+<% end %>
