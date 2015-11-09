@@ -1,5 +1,5 @@
 <% if current_user.admin? %>
-  <% User.all.each do |user| %>
+  <% User.all.order(id: :desc).each do |user| %>
   <ul>
     <li>Nombre: <%= user.name %></li>
     <li>Email: <%= user.email %></li>
