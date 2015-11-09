@@ -52,4 +52,5 @@ Lapapayanetwork::Application.routes.draw do
   root "dreams#index"
   get "about" => "pages#about"
   get "userpanel" => "pages#userpanel"
+  get "adminpanel" => "pages#adminpanel"
 end
