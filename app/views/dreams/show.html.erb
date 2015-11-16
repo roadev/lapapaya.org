@@ -115,15 +115,19 @@
 				<br><br><br><br>
 				<hr>
 				<br>
-				<script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: es_ES</script>
-<script type="IN/Share" data-url="http://lapapaya.org" data-counter="top"></script>
 
-<div class="fb-share-button" data-href="<%= request.original_url %>" data-layout="box_count" data-show-faces= "true" og:title= "title"></div>
+				<p> Comparte y ayudanos a transformar el mundo! :) </p>
+
+<a href="https://twitter.com/share" class="twitter-share-button" data-via="la_papaya" data-lang="es" data-related="felipevelasquez">Twittear</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+<div class="fb-share-button" data-href="<%= request.original_url %>" data-layout="button_count" data-show-faces= "true" og:title= "title"></div>
+
+<script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: es_ES</script>
+<script type="IN/Share" data-url="http://lapapaya.org" data-counter="right"></script>
 
 
-
-				<!<p> Compártelo</p>
-				<%= social_share_button_tag("http://lapapaya.org") %>
+				<!--<%= social_share_button_tag("http://lapapaya.org") %> -->
 				<hr>
 				<% if @dream.user == current_user %>
 					<%= link_to 'Editar', edit_dream_path(@dream), class: 'btn btn-info' %> |

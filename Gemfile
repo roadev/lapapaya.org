@@ -43,6 +43,7 @@ gem 'datetimepicker-rails', github: 'zpaulovics/datetimepicker-rails', branch: '
 gem 'simple_form'
 gem 'rb-readline'
 gem 'kaminari'
+gem 'shareable'
 
 group :development, :test do
 	gem 'sqlite3'

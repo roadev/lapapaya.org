@@ -205,6 +205,9 @@ GEM
     sdoc (0.4.0)
       json (~> 1.8)
       rdoc (~> 4.0, < 5.0)
+    shareable (1.1.4)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
     simple_form (3.1.0)
       actionpack (~> 4.0)
       activemodel (~> 4.0)
@@ -285,6 +288,7 @@ DEPENDENCIES
   rspec (~> 2.14.1)
   sass-rails
   sdoc
+  shareable
   simple_form
   smarter_csv
   social-share-button (~> 0.1.6)
