@@ -1,7 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <title>Lapapaya + Red Social Colaborativa por una Educación en Emprendimiento</title>
+
+  <head>
+    <title>Lapapaya.org Educación que dá frutos</title>
+    <!-- You can use Open Graph tags to customize link previews.
+    Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
+    <meta property="og:url"           content= "<%= request.original_url %>"/>
+    <meta property="og:type"          content="article" />
+    <meta property="og:title"         content="<%= @dream.dream %>" />
+    <meta property="og:description"   content="<%= @dream.dream %>" />
+    <meta property="og:image"         content="http://s3.amazonaws.com/lapapaya/dreams/images/000/000/463/medium/Presentación1.jpg?1447435993" />
+ 
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
