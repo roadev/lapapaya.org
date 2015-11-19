@@ -14,7 +14,7 @@ module Merit
 
     def initialize
 
-      #score 5, :on => 'solutions#create'
+      score 5, :on => 'solutions#create'
       score 5, :on => 'complices#create'
       #
       # score 15, :on => 'reviews#create', :to => [:reviewer, :reviewed]
