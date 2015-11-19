@@ -1,3 +1,7 @@
+
+
+
+
 <%= link_to 'Atrás', dreams_path, class: 'btn btn-info' %>
 <div class="row">
 	<div class="col-md-offset-2 col-md-8">
@@ -5,7 +9,31 @@
 			<div class="panel-heading center">
 				<%= image_tag @dream.image.url(:medium) %>
 			</div>
+
+<head>
+    <title>Lapapaya.org Educación que dá frutos</title>
+    <!-- You can use Open Graph tags to customize link previews.
+    Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
+    <meta property="og:url"           content= "<%= request.original_url %>"/>
+    <meta property="og:type"          content="article" />
+    <meta property="og:title"         content="<%= @dream.dream %>" />
+    <meta property="og:description"   content="<%= @dream.dream %>" />
+    <meta property="og:image"         content="http://s3.amazonaws.com/lapapaya/dreams/images/000/000/463/medium/Presentación1.jpg?1447435993" />
+</head>
+
 			<div class="panel-body">
+
+				<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.5&appId=257377860960738";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
 				<br>
 				<% if user_signed_in? %>
 						<p>
@@ -21,15 +49,25 @@
 				<header>
 					<h1><%= @dream.dream %></h1>
 				</header>
-				<p class="text-right"> Si quieres apoyar este sueño, puedes dar click <%= link_to 'Aquí', new_complice_path, class: "btn btn-primary" %>  </p>
+				<p class="text-right">  <%= link_to 'Si quieres apoyar este sueño, puedes dar click Aquí', new_complice_path, class: "btn btn-primary btn-lg" %> </p>
 				<% if user_signed_in? %>
 					<li>
 						<%= link_to "Definir etapas", new_etapa_path, class: "btn btn-primary" %>
 					</li>
 				<% else %>
 				<% end %>
-				<br>
-				<p> Los sueños no se cumplen de la noche a la mañana, necesitan esfuerzo, dedicación y compromiso. Define las etapas de tu sueño para tener claro el siguiente paso. </p>
+
+<p> Y compartelo en tus redes! </p>
+<a href="https://twitter.com/share" class="twitter-share-button" data-via="la_papaya" data-lang="es" data-related="felipevelasquez">Twittear</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+<div class="fb-share-button" data-href="<%= request.original_url %>" data-layout="button_count" data-show-faces= "true" og:title= "title"></div>
+
+<script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: es_ES</script>
+<script type="IN/Share" data-url="http://lapapaya.org" data-counter="right"></script>
+
+				
+				
 				<hr>
 				<p style="text-align:left;font-size: 25px;">
 				<strong> Quiero: </strong></p>
@@ -63,10 +101,6 @@
 				<% end %>
 				<br>
 				<br>
-				<p> Aquí te puedes descargar el catálogo de productos de la finca. </p>
-				<%= link_to 'Catálogo de productos', "https://www.dropbox.com/s/0x9vjl9ji351dzl/CLIENTES%20%281%29.xlsx?dl=0", class: "btn btn-primary", :target => "_blank" %>
-				<br>
-				<p> Te abrirá primero una ventana de dropbox, la puedes cerrar y descargar el catálogo o abrirlo directamente desde dropbox y editarlo. Si tienes dudas, nos puedes escribir a admin@lapapaya.org desde allí te vamos a contestar y brindar el soporte que necesites. </p>
 				<hr>
 				<br><br>
 				<p style="text-align:left;font-size: 25px;">
@@ -85,10 +119,10 @@
 				<p> Que sectores productivos definen mi sueño y con quienes me debo conectar </p>
 				<h1><%= raw @dream.tag_list.map { |t| link_to t, tag_path(t)}.join(', ') %></h1>
 				<br><br><br><br>
-				<hr>
 				<br>
-				<p> Compártelo</p>
-				<%= social_share_button_tag("My Site") %>
+
+
+				<!--<%= social_share_button_tag("http://lapapaya.org") %> -->
 				<hr>
 				<% if @dream.user == current_user %>
 					<%= link_to 'Editar', edit_dream_path(@dream), class: 'btn btn-info' %> |
@@ -104,3 +138,5 @@
 		</div>
 	</div>
 </div>
+
+
