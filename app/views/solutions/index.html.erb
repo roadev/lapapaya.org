@@ -13,10 +13,11 @@
     </div>
 
     <p><strong>Solución del Reto <%= solution.micropost_id %></strong></p>
+    <p>Hecho por: </p>
+    <strong><%= solution.user.name %> <%= solution.user.name %></strong>
+    <%= solution.user.email %>
+    <br><br>
     <p><%= solution.content %></p>
-    <p></p>
-    <p></p>
-    <br>
     <br>
     <!--<p> >> Reguemos semillas de papaya </p>-->
     <%= social_share_button_tag("My Site") %>
