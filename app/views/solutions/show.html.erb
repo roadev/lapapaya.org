@@ -5,12 +5,17 @@
     <div class="col-sm-6 col-md-4">
       <div class="thumbnail">
         <%= image_tag @solution.image.url(:medium) %>
-        <br />
         <div class="capion">
           <h3>Solución del Reto <%= @solution.micropost_id %></h3>
+          <p>Hecho por: </p>
+          <strong>
+            <%= @solution.user.name %> <%= @solution.user.name %>
+          </strong>
+          <br>
+          <%= @solution.user.email %>
+          <br />
           <br />
           <p align="justify"><%= @solution.content %></p>
-          <br />
           <br />
           <!--<%= link_to 'Edit', edit_solution_path(@solution), class: "btn btn-primary" %>-->
           <center><%= link_to 'Volver', microposts_path, class: "btn btn-info" %></center>
