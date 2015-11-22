@@ -11,127 +11,166 @@
         <img src="assets/images/missing_avatar.png" />
         <% end %>
       </div>
-      <% if (current_user.name.nil? || current_user.name.blank?) && (current_user.lastname.nil? || current_user.lastname.blank?) %>
-      <div class="card-info"> <span class="card-title"><%= current_user.email %></span></div>
-      <% elsif (current_user.name.present? && !current_user.name.blank?) && (current_user.lastname.present? && !current_user.lastname.blank?) %>
-      <div class="card-info"> <span class="card-title"><%= current_user.name %> <%= current_user.lastname %> </span></div>
+      <% if (current_user.name.nil? || current_user.name.blank?) &&
+            (current_user.lastname.nil? || current_user.lastname.blank?)
+            %>
+        <div class="card-info"> <span class="card-title"><%= current_user.email %></span></div>
+      <% elsif (current_user.name.present? && !current_user.name.blank?) &&
+              (current_user.lastname.present? && !current_user.lastname.blank?)
+              %>
+        <div class="card-info">
+          <span class="card-title">
+            <%= current_user.name %> <%= current_user.lastname %>
+          </span>
+        </div>
       <% elsif current_user.name.present? && !current_user.name.blank? %>
-      <div class="card-info"> <span class="card-title"><%= current_user.name %></span></div>
+        <div class="card-info"> <span class="card-title"><%= current_user.name %></span></div>
       <% elsif current_user.lastname.present? && !current_user.lastname.blank? %>
-      <div class="card-info"> <span class="card-title"><%= current_user.name %> </span></div>
+        <div class="card-info"> <span class="card-title"><%= current_user.name %> </span></div>
       <% end %>
     </div>
     <div class="btn-pref btn-group btn-group-justified btn-group-lg" role="group" aria-label="...">
       <div class="btn-group" role="group">
-        <button type="button" id="following" class="btn btn-default" href="#tab1" data-toggle="tab"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+        <button type="button" id="following" class="btn btn-default" href="#tab1" data-toggle="tab">
+          <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
           <div class="hidden-xs" onmousemove="Hola" >Editar Perfil
           </button>
         </div>
       </div>
       <div class="well">
-        <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :patch }) do |f| %>
+        <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name),
+                                      :html => { :method => :patch }) do |f|
+                                      %>
         <%= devise_error_messages! %>
         <div class="tab-content">
           <div class="tab-pane fade in" id="tab1">
-            <% if (current_user.name.nil? || current_user.name.blank?) && (current_user.lastname.nil? || current_user.lastname.blank?) %>
-            <div class="form-group">
-              <%= f.label :name, "Nombre" %>
-              <br />
-              <%= f.text_field :name, placeholder: "Pon aquí tu Nombre", class: "form-control", autofocus: true, type: "input" %>
-            </div>
-            <div class="form-group">
-              <%= f.label :lastname, "Apellido" %>
-              <br />
-              <%= f.text_field :lastname, placeholder: "Pon aquí tu Apellido", class: "form-control", autofocus: true, type: "input" %>
-            </div>
-            <% else if current_user.name.nil? || current_user.name.blank? %>
-            <div class="form-group">
-              <%= f.label :name, "Nombre" %>
-              <br />
-              <%= f.text_field :name, placeholder: "Pon aquí tu Nombre", class: "form-control", autofocus: true, type: "input" %>
-            </div>
-            <% else if current_user.lastname.nil? || current_user.lastname.blank? %>
-            <div class="form-group">
-              <%= f.label :lastname, "Apellido" %>
-              <br />
-              <%= f.text_field :lastname, placeholder: "Pon aquí tu Apellido", class: "form-control", autofocus: true, type: "input" %>
-            </div>
-            <% end %>
-            <% end %>
-            <% end %>
-            <div class="form-group">
-              <%= f.label :username, "Username (elige un nombre de usuario) *" %>
-              <br />
-              <%= f.text_field :username, placeholder: "Elige el nombre de usuario que desees", class: "form-control", autofocus: true, type: "input" %>
-            </div>
-            <% if current_user.avatar.present? %>
-            <div class="form-group">
-              <%= f.label "Actualiza tu avatar", class: 'col-sm-2 control-label'  %>
-            </div>
+            <% if (current_user.name.nil? || current_user.name.blank?) &&
+                  (current_user.lastname.nil? || current_user.lastname.blank?)
+                  %>
               <div class="form-group">
-                <%= f.file_field :avatar, class: 'photo_upload' %>
+                <%= f.label :name, "Nombre" %>
+                <br />
+                <%= f.text_field :name, placeholder: "Pon aquí tu Nombre",
+                                  class: "form-control", autofocus: true, type: "input"
+                                  %>
               </div>
+              <div class="form-group">
+                <%= f.label :lastname, "Apellido" %>
+                <br />
+                <%= f.text_field :lastname, placeholder: "Pon aquí tu Apellido",
+                                  class: "form-control", autofocus: true, type: "input"
+                                  %>
+              </div>
+            <% elsif current_user.name.nil? || current_user.name.blank? %>
+              <div class="form-group">
+                <%= f.label :name, "Nombre" %>
+                <br />
+                <%= f.text_field :name, placeholder: "Pon aquí tu Nombre",
+                                  class: "form-control", autofocus: true, type: "input"
+                                  %>
+              </div>
+            <% elsif current_user.lastname.nil? || current_user.lastname.blank? %>
+              <div class="form-group">
+                <%= f.label :lastname, "Apellido" %>
+                <br />
+                <%= f.text_field :lastname, placeholder: "Pon aquí tu Apellido",
+                                  class: "form-control", autofocus: true, type: "input"
+                                  %>
+              </div>
+            <% end %>
+              <div class="form-group">
+                <%= f.label :username, "Username (elige un nombre de usuario) *" %>
+                <br />
+                <%= f.text_field :username, placeholder: "Elige el nombre de usuario que desees",
+                                  class: "form-control", autofocus: true, type: "input"
+                                  %>
+              </div>
+            <% if current_user.avatar.present? %>
+              <div class="form-group">
+                <%= f.label "Actualiza tu avatar", class: 'col-sm-2 control-label'  %>
+              </div>
+                <div class="form-group">
+                  <%= f.file_field :avatar, class: 'photo_upload' %>
+                </div>
             <% else %>
-            <div class="form-group">
-              <%= f.label "Sube tu avatar", class: 'col-sm-2 control-label' %>
-            </div>
+              <div class="form-group">
+                <%= f.label "Sube tu avatar", class: 'col-sm-2 control-label' %>
+              </div>
               <div class="form-group">
                 <%= f.file_field :avatar, class: 'photo_upload' %>
               </div>
             <% end %>
             <br />
             <% if current_user.country.nil? || current_user.country.blank? %>
-            <div class="form-group">
-              <%= f.label :country, "País *" %>
-              <br />
-              <%= f.text_field :country, placeholder: "Ingresa tu País de residencia", class: "form-control", autofocus: true, type: "input" %>
-            </div>
+              <div class="form-group">
+                <%= f.label :country, "País *" %>
+                <br />
+                <%= f.text_field :country, placeholder: "Ingresa tu País de residencia",
+                                  class: "form-control", autofocus: true, type: "input"
+                                  %>
+              </div>
             <% end %>
             <% if current_user.region.nil? || current_user.region.blank? %>
-            <div class="form-group">
-              <%= f.label :region, "Región " %>
-              <br />
-              <%= f.text_field :region, placeholder: "Ingresa tu Región (Estado, Provincia, Departamento)", class: "form-control", autofocus: true, type: "input" %>
-            </div>
+              <div class="form-group">
+                <%= f.label :region, "Región " %>
+                <br />
+                <%= f.text_field :region, placeholder: "Ingresa tu Región (Estado, Provincia, Departamento)",
+                                  class: "form-control", autofocus: true, type: "input"
+                                  %>
+              </div>
             <% end %>
             <% if current_user.city.nil? || current_user.city.blank? %>
-            <div class="form-group">
-              <%= f.label :city, "Ciudad/Población " %>
-              <br />
-              <%= f.text_field :city, placeholder: "Ingresa tu Población (Ciudad/Pueblo/Municipio/Corregimiento)", class: "form-control", autofocus: true, type: "input" %>
-            </div>
+              <div class="form-group">
+                <%= f.label :city, "Ciudad/Población " %>
+                <br />
+                <%= f.text_field :city, placeholder: "Ingresa tu Población (Ciudad/Pueblo/Municipio/Corregimiento)",
+                                  class: "form-control", autofocus: true, type: "input"
+                                  %>
+              </div>
             <% end %>
             <% if current_user.born_date.nil? || current_user.born_date.blank? %>
-            <div class="form-group">
-              <%= f.label "Fecha de Nacimiento (opcional)", class: 'col-sm-2 control-label'  %>
-              <div class="col-sm-6">
-                <%= f.input :born_date, as: :date_picker, label: false, placeholder: "Da click en el botón de calendario de la derecha" %>
+              <div class="form-group">
+                <%= f.label "Fecha de Nacimiento (opcional)", class: 'col-sm-2 control-label'  %>
+                <div class="col-sm-6">
+                  <%= f.input :born_date, as: :date_picker, label: false,
+                              placeholder: "Da click en el botón de calendario de la derecha"
+                              %>
+                </div>
               </div>
-            </div>
             <% end %>
             <br /><br /><br /><br />
             <div class="form-group">
               <%= f.label :facebook, "Facebook " %>   <i class="fa fa-facebook"></i>
               <br />
-             <%=f.text_field :facebook, class: "form-control", placeholder: "Ingresa la url - link de tu perfil de facebook" %>
+             <%=f.text_field :facebook, class: "form-control",
+                             placeholder: "Ingresa la url - link de tu perfil de facebook"
+                             %>
             </div>
             <div class="form-group">
               <%= f.label :twitter, "Twitter " %>   <i class="fa fa-twitter"></i>
               <br />
-             <%=f.text_field :twitter, class: "form-control", placeholder: "Ingresa la url - link de tu perfil de twitter" %>
+             <%=f.text_field :twitter, class: "form-control",
+                             placeholder: "Ingresa la url - link de tu perfil de twitter"
+                             %>
             </div>
             <div class="form-group">
               <%= f.label :website, "Sitio Web " %>   <i class="fa fa-external-link"></i>
               <br />
-              <%= f.text_field :website, class: "form-control", placeholder: "Si tienes sitio web y quieres compartir, pon aquí la url" %>
+              <%= f.text_field :website, class: "form-control",
+                                placeholder: "Si tienes sitio web y quieres compartir, pon aquí la url"
+                                %>
             </div>
             <div class="form-group">
               <%= f.label 'Contraseña actual' %> <i>(Necesitamos tu contraseña para confirmar tus cambios)</i>
-              <%= f.password_field :current_password, class: "form-control", placeholder: 'Ingresa tu contraseña actual' %>
+              <%= f.password_field :current_password, class: "form-control",
+                                    placeholder: 'Ingresa tu contraseña actual'
+                                    %>
             </div>
             <div class="form-group">
               <%= f.label 'Nueva Contraseña' %> <i>(Déjalo en blanco si no quieres cambiarlo)</i>
-              <%= f.password_field :password, class: "form-control", :autocomplete => "off", placeholder: 'Ingresa tu nueva contraseña' %>
+              <%= f.password_field :password, class: "form-control",
+                                    :autocomplete => "off", placeholder: 'Ingresa tu nueva contraseña'
+                                    %>
             </div>
             <div class="form-group">
               <%= f.submit "Actualizar", class: "btn btn-primary" %>
