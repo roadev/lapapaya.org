@@ -1,7 +1,4 @@
 
-
-
-
 <%= link_to 'Atrás', dreams_path, class: 'btn btn-info' %>
 <div class="row">
 	<div class="col-md-offset-2 col-md-8">
@@ -10,38 +7,35 @@
 				<%= image_tag @dream.image.url(:medium) %>
 			</div>
 
-<head>
-    <title>Lapapaya.org Educación que dá frutos</title>
-    <!-- You can use Open Graph tags to customize link previews.
-    Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
-    <meta property="og:url"           content= "<%= request.original_url %>"/>
-    <meta property="og:type"          content="article" />
-    <meta property="og:title"         content="<%= @dream.dream %>" />
-    <meta property="og:description"   content="<%= @dream.dream %>" />
-    <meta property="og:image"         content="http://s3.amazonaws.com/lapapaya/dreams/images/000/000/463/medium/Presentación1.jpg?1447435993" />
-</head>
+			<head>
+				<title>Lapapaya.org Educación que dá frutos</title>
+				<!-- You can use Open Graph tags to customize link previews.
+				Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
+				<meta property="og:url"           content= "<%= request.original_url %>"/>
+				<meta property="og:type"          content="article" />
+				<meta property="og:title"         content="<%= @dream.dream %>" />
+				<meta property="og:description"   content="<%= @dream.dream %>" />
+				<meta property="og:image"         content="http://s3.amazonaws.com/lapapaya/dreams/images/000/000/463/medium/Presentación1.jpg?1447435993" />
+			</head>
 
 			<div class="panel-body">
 
 				<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.5&appId=257377860960738";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-
+				<script>(function(d, s, id) {
+					var js, fjs = d.getElementsByTagName(s)[0];
+					if (d.getElementById(id)) return;
+					js = d.createElement(s); js.id = id;
+					js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.5&appId=257377860960738";
+					fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));</script>
 
 				<br>
 				<% if user_signed_in? %>
-						<p>
-							El modelo CANVAS+ es un formato que te permitirá primero definir cuales son tus metas a corto, mediano y largo plazo, que van a permitir alcanzar tu sueño en tan solo cinco años. Una vez hayas definido tus metas deberás identificar quienes son tus clientes, que problema solucionas, que productos vas a vender, tu propuesta de valor, tus costos e ingresos. Este formato te va a permitir tener una guia de como emplearlo.
-						<p>
-					<br />
-						<%= link_to 'Descargar CANVAS+', 'https://docs.google.com/spreadsheets/d/1DKezRtgYlvGPyBvX1n7XcX1g_wWkXph8yf9JJ4U-xXA/pubhtml', class: "btn btn-primary", :target => "_blank" %>
-				<% else %>
+				<p>
+					El modelo CANVAS+ es un formato que te permitirá primero definir cuales son tus metas a corto, mediano y largo plazo, que van a permitir alcanzar tu sueño en tan solo cinco años. Una vez hayas definido tus metas deberás identificar quienes son tus clientes, que problema solucionas, que productos vas a vender, tu propuesta de valor, tus costos e ingresos. Este formato te va a permitir tener una guia de como emplearlo.
+				<p>
+				<br />
+				<%= link_to 'Descargar CANVAS+', 'https://docs.google.com/spreadsheets/d/1DKezRtgYlvGPyBvX1n7XcX1g_wWkXph8yf9JJ4U-xXA/pubhtml', class: "btn btn-primary", :target => "_blank" %>
 				<% end %>
 				<hr>
 				<p class="strong strong__bigger"> Sueño <%= @dream.id %>: </p>
@@ -51,26 +45,24 @@
 				</header>
 				<p class="text-right">  <%= link_to 'Si quieres apoyar este sueño, puedes dar click Aquí', new_complice_path, class: "btn btn-primary btn-lg" %> </p>
 				<% if user_signed_in? %>
-					<li>
-						<%= link_to "Definir etapas", new_etapa_path, class: "btn btn-primary" %>
-					</li>
-				<% else %>
+				<li>
+					<%= link_to "Definir etapas", new_etapa_path, class: "btn btn-primary" %>
+				</li>
 				<% end %>
 
-<p> Y compartelo en tus redes! </p>
-<a href="https://twitter.com/share" class="twitter-share-button" data-via="la_papaya" data-lang="es" data-related="felipevelasquez">Twittear</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+				<p> Y compartelo en tus redes! </p>
+				<a href="https://twitter.com/share" class="twitter-share-button" data-via="la_papaya" data-lang="es" data-related="felipevelasquez">Twittear</a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
-<div class="fb-share-button" data-href="<%= request.original_url %>" data-layout="button_count" data-show-faces= "true" og:title= "title"></div>
+				<div class="fb-share-button" data-href="<%= request.original_url %>" data-layout="button_count" data-show-faces= "true" og:title= "title"></div>
 
-<script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: es_ES</script>
-<script type="IN/Share" data-url="http://lapapaya.org" data-counter="right"></script>
+				<script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: es_ES</script>
+				<script type="IN/Share" data-url="http://lapapaya.org" data-counter="right"></script>
 
-				
-				
 				<hr>
 				<p style="text-align:left;font-size: 25px;">
-				<strong> Quiero: </strong></p>
+					<strong> Quiero: </strong>
+				</p>
 				<p> Metas a corto plazo </p>
 				<h1><%= @dream.quiero %></h1>
 				<% if user_signed_in? %>
@@ -81,7 +73,8 @@
 				<% end %>
 				<hr>
 				<p style="text-align:left;font-size: 25px;">
-				<strong> Ofrezco: </strong></p>
+					<strong> Ofrezco: </strong>
+				</p>
 				<p> Desarrollo de producto </p>
 				<h1><%= @dream.ofrezco %></h1>
 				<br>
@@ -97,14 +90,14 @@
 					<li>
 						<%= link_to "CANVAS+ Lado derecho", new_canvas_lado_derecho_path, class: "btn btn-primary"  %>
 					</li>
-				<% else %>
 				<% end %>
 				<br>
 				<br>
 				<hr>
 				<br><br>
 				<p style="text-align:left;font-size: 25px;">
-				<strong> Necesito: </strong></p>
+					<strong> Necesito: </strong>
+				</p>
 				<p> Necesidades financieras, recursos clave </p>
 				<h1><%= @dream.necesito %></h1>
 				<p style="text-align:left;font-size: 25px;">
@@ -112,31 +105,27 @@
 					<li>
 						<%= link_to "Lo que me cuesta", new_canvas_financiero_costo_path, class: "btn btn-primary"  %>
 					</li>
-				<% else %>
 				<% end %>
 				<hr>
 				<p class="strong text-right"> Palabras clave: </p>
 				<p> Que sectores productivos definen mi sueño y con quienes me debo conectar </p>
-				<h1><%= raw @dream.tag_list.map { |t| link_to t, tag_path(t)}.join(', ') %></h1>
-				<br><br><br><br>
-				<br>
-
-
+				<h1>
+					<%= raw @dream.tag_list.map { |t| link_to t, tag_path(t)}.join(', ') %>
+				</h1>
+				<br><br><br><br><br>
 				<!--<%= social_share_button_tag("http://lapapaya.org") %> -->
 				<hr>
 				<% if @dream.user == current_user %>
 					<%= link_to 'Editar', edit_dream_path(@dream), class: 'btn btn-info' %> |
-					<!--
+				<!--
 					<p><strong><%= @dream.user.email if @dream.user %></strong></p>-->
-					<br>
-					<!-- <% if @dream.tag_list = %w("gente, amor, compasión, entrega") %>
-					<iframe width="700" height="500" src="//www.youtube.com/embed/i1Le5GYkBT8" frameborder="0" allowfullscreen></iframe>
-					<% else %>
-					<% end %> -->
+				<br>
+				<!-- <% if @dream.tag_list = %w("gente, amor, compasión, entrega") %>
+				<iframe width="700" height="500" src="//www.youtube.com/embed/i1Le5GYkBT8" frameborder="0" allowfullscreen></iframe>
+				<% else %>
+				<% end %> -->
 				<% end %>
 			</div>
 		</div>
 	</div>
 </div>
-
-
