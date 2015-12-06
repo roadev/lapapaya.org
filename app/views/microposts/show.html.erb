@@ -15,10 +15,10 @@
 
           <center>
             <p>
-              <button id="some_id" class="btn btn-success">Show div</button>
+              <button id="some_id" class="btn btn-info">Crear solución</button>
               <%= simple_form_for([@micropost, @solution], html: { class: "hola"}) do |f| %>
                 <%= f.input :content, label: "Solución" %>
-                <%= f.button :submit, 'Hola!', class: 'btn btn-success' %>
+                <%= f.button :submit, 'Enviar solución', class: 'btn btn-primary' %>
               <% end %>
               <script type="text/javascript">
                 var theButton = document.getElementById('some_id');

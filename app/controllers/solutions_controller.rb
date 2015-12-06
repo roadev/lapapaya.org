@@ -33,9 +33,11 @@ class SolutionsController < ApplicationController
 
     respond_to do |format|
       if @solution.save
-        redirect_to @solution, notice: '¡ La solución ha sido enviada !' 
+        format.html { redirect_to @solution, notice: '¡ La solución ha sido enviada !' }
+        format.json { render action: 'show', status: :created, location: @solution }
       else
-        render action: 'new'
+        format.html { render action: 'new' }
+        format.json { render json: @solution.errors, status: :unprocessable_entity }
       end
     end
   end

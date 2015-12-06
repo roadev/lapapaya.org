@@ -32,6 +32,7 @@ Lapapayanetwork::Application.routes.draw do
   get "pages/dedondenacio"
   get "pages/comofunciona"
   get "page/challenges"
+  resources :solutions
   resources :microposts do
     resources :solutions
   end
