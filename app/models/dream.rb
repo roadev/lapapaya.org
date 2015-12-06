@@ -1,5 +1,4 @@
 class Dream < ActiveRecord::Base
-	#has_merit
 	belongs_to :user
 	validates :dream, presence: { message: ": ¡Por favor ingresa tu sueño!" }
 	validates :quiero, presence: { message: ": ¡Dinos por dónde quieres arrancar para lograr tu sueño!" }
@@ -9,7 +8,6 @@ class Dream < ActiveRecord::Base
 	acts_as_taggable
 	acts_as_taggable_on :tag_list
 	paginates_per 15
-
 
 	enum select_type: {
     'Desarrollo Personal' => 'personal_development',

@@ -17,7 +17,7 @@ class SolutionsController < ApplicationController
 
   # GET /solutions/new
   def new
-    @solution = current_user.solutions.build
+    @solution = Solution.new
   end
 
   # GET /solutions/1/edit
@@ -28,14 +28,14 @@ class SolutionsController < ApplicationController
   # POST /solutions.json
   def create
     @solution = current_user.solutions.build(solution_params)
+    @micropost = Micropost.find(params[:micropost_id])
+    @solution.micropost = @micropost
 
     respond_to do |format|
       if @solution.save
-        format.html { redirect_to @solution, notice: '¡ La solución ha sido enviada !' }
-        format.json { render action: 'show', status: :created, location: @solution }
+        redirect_to @solution, notice: '¡ La solución ha sido enviada !' 
       else
-        format.html { render action: 'new' }
-        format.json { render json: @solution.errors, status: :unprocessable_entity }
+        render action: 'new'
       end
     end
   end

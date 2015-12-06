@@ -1,8 +1,6 @@
 Lapapayanetwork::Application.routes.draw do
   resources :complices
 
-  resources :solutions
-
   resources :productos
 
   resources :pedidos
@@ -34,7 +32,9 @@ Lapapayanetwork::Application.routes.draw do
   get "pages/dedondenacio"
   get "pages/comofunciona"
   get "page/challenges"
-  resources :microposts
+  resources :microposts do
+    resources :solutions
+  end
 
   get "pages/enqmebeneficio"
   get "pages/quienesson"
