@@ -3,28 +3,20 @@ class PedidosController < ApplicationController
   before_action :set_pedido, only: [:show, :edit, :update, :destroy]
   before_action :correct_user, only: [:edit, :update, :destroy]
 
-  # GET /pedidos
-  # GET /pedidos.json
   def index
     @pedidos = Pedido.all
   end
 
-  # GET /pedidos/1
-  # GET /pedidos/1.json
   def show
   end
 
-  # GET /pedidos/new
   def new
     @pedido = Pedido.new
   end
 
-  # GET /pedidos/1/edit
   def edit
   end
 
-  # POST /pedidos
-  # POST /pedidos.json
   def create
     @pedido = Pedido.new(pedido_params)
 
@@ -39,8 +31,6 @@ class PedidosController < ApplicationController
     end
   end
 
-  # PATCH/PUT /pedidos/1
-  # PATCH/PUT /pedidos/1.json
   def update
     respond_to do |format|
       if @pedido.update(pedido_params)
@@ -53,8 +43,6 @@ class PedidosController < ApplicationController
     end
   end
 
-  # DELETE /pedidos/1
-  # DELETE /pedidos/1.json
   def destroy
     @pedido.destroy
     respond_to do |format|
@@ -64,12 +52,10 @@ class PedidosController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_pedido
       @pedido = Pedido.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def pedido_params
       params.require(:pedido).permit(:Nombre, :Razon_social, :Nit, :Direccion, :Telefono, :Nombre_representante, :Persona_contacto, :Pedido)
     end

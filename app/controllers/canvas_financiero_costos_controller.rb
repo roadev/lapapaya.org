@@ -1,28 +1,20 @@
 class CanvasFinancieroCostosController < ApplicationController
   before_action :set_canvas_financiero_costo, only: [:show, :edit, :update, :destroy]
 
-  # GET /canvas_financiero_costos
-  # GET /canvas_financiero_costos.json
   def index
     @canvas_financiero_costos = CanvasFinancieroCosto.all
   end
 
-  # GET /canvas_financiero_costos/1
-  # GET /canvas_financiero_costos/1.json
   def show
   end
 
-  # GET /canvas_financiero_costos/new
   def new
     @canvas_financiero_costo = CanvasFinancieroCosto.new
   end
 
-  # GET /canvas_financiero_costos/1/edit
   def edit
   end
 
-  # POST /canvas_financiero_costos
-  # POST /canvas_financiero_costos.json
   def create
     @canvas_financiero_costo = CanvasFinancieroCosto.new(canvas_financiero_costo_params)
 
@@ -37,8 +29,6 @@ class CanvasFinancieroCostosController < ApplicationController
     end
   end
 
-  # PATCH/PUT /canvas_financiero_costos/1
-  # PATCH/PUT /canvas_financiero_costos/1.json
   def update
     respond_to do |format|
       if @canvas_financiero_costo.update(canvas_financiero_costo_params)
@@ -51,8 +41,6 @@ class CanvasFinancieroCostosController < ApplicationController
     end
   end
 
-  # DELETE /canvas_financiero_costos/1
-  # DELETE /canvas_financiero_costos/1.json
   def destroy
     @canvas_financiero_costo.destroy
     respond_to do |format|
@@ -62,13 +50,11 @@ class CanvasFinancieroCostosController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_canvas_financiero_costo
-      @canvas_financiero_costo = CanvasFinancieroCosto.find(params[:id])
-    end
+  def set_canvas_financiero_costo
+    @canvas_financiero_costo = CanvasFinancieroCosto.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def canvas_financiero_costo_params
-      params.require(:canvas_financiero_costo).permit(:personal, :alquiler, :costo_produccion, :costo_comercializacion)
-    end
+  def canvas_financiero_costo_params
+    params.require(:canvas_financiero_costo).permit(:personal, :alquiler, :costo_produccion, :costo_comercializacion)
+  end
 end
