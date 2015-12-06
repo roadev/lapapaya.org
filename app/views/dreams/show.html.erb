@@ -56,7 +56,11 @@
 				<header>
 					<h1><%= @dream.dream %></h1>
 				</header>
+				<!-- This button shows the hidden nested form -->
 				<p class="text-right"> <button id="some_id2" class="btn btn-info">Si quieres apoyar este sueño, puedes dar click Aquí</button> </p>
+				<!-- This button shows the hidden nested form -->
+
+				<!-- This is the nested form for complice in dream -->
 				<%= simple_form_for([@dream, @complice], html: { class: "hola"}) do |f| %>
 				<div class="form-group">
 					<%= f.label "Palabras Clave" %>
@@ -72,13 +76,16 @@
 				</div>
 					<center><%= f.button :submit, '¡Ser cómplice!', class: 'btn btn-primary' %></center>
 				<% end %>
+				<!-- This is the nested form for complice in dream -->
 
+				<!-- This script shows the form shown before (adds the feature to the button with id=some_id2) -->
 				<script type="text/javascript">
 					var theButton = document.getElementById('some_id2');
 					theButton.onclick = function() {
 						document.getElementById('new_complice').style.visibility='visible';
 					}
 				</script>
+				<!-- This script shows the form shown before (adds the feature to the button with id=some_id2) -->
 				<br><br>
 				<% if user_signed_in? %>
 				<li>
