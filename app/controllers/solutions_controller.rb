@@ -17,7 +17,7 @@ class SolutionsController < ApplicationController
 
   # GET /solutions/new
   def new
-    @solution = current_user.solutions.build
+    @solution = Solution.new
   end
 
   # GET /solutions/1/edit
@@ -28,6 +28,8 @@ class SolutionsController < ApplicationController
   # POST /solutions.json
   def create
     @solution = current_user.solutions.build(solution_params)
+    @micropost = Micropost.find(params[:micropost_id])
+    @solution.micropost = @micropost
 
     respond_to do |format|
       if @solution.save

@@ -1,8 +1,6 @@
 Lapapayanetwork::Application.routes.draw do
   resources :complices
 
-  resources :solutions
-
   resources :productos
 
   resources :pedidos
@@ -34,7 +32,10 @@ Lapapayanetwork::Application.routes.draw do
   get "pages/dedondenacio"
   get "pages/comofunciona"
   get "page/challenges"
-  resources :microposts
+  resources :solutions
+  resources :microposts do
+    resources :solutions
+  end
 
   get "pages/enqmebeneficio"
   get "pages/quienesson"
@@ -44,6 +45,7 @@ Lapapayanetwork::Application.routes.draw do
   get "user/sign_up"
   resources :dreams do
     collection { post :import }
+    resources :complices
   end
   get 'dreams/:id', to: 'dreams#show', as: 'dream_show'
   resources :activities

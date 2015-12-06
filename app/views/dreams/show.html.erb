@@ -56,7 +56,30 @@
 				<header>
 					<h1><%= @dream.dream %></h1>
 				</header>
-				<p class="text-right">  <%= link_to 'Si quieres apoyar este sueño, puedes dar click Aquí', new_complice_path, class: "btn btn-primary btn-lg" %> </p>
+				<p class="text-right"> <button id="some_id2" class="btn btn-info">Si quieres apoyar este sueño, puedes dar click Aquí</button> </p>
+				<%= simple_form_for([@dream, @complice], html: { class: "hola"}) do |f| %>
+				<div class="form-group">
+					<%= f.label "Palabras Clave" %>
+					<%= f.text_field :tags, class: "form-control" %>
+				</div>
+				<div class="form-group">
+					<label>¿Por qué quieres apoyar este sueño?</label>
+					<%= f.text_area :reason, class: "form-control" %>
+				</div>
+				<div class="form-group">
+					<label>¿Qué das a cambio?</label>
+					<%= f.text_area :giving, class: "form-control" %>
+				</div>
+					<center><%= f.button :submit, '¡Ser cómplice!', class: 'btn btn-primary' %></center>
+				<% end %>
+
+				<script type="text/javascript">
+					var theButton = document.getElementById('some_id2');
+					theButton.onclick = function() {
+						document.getElementById('new_complice').style.visibility='visible';
+					}
+				</script>
+				<br><br>
 				<% if user_signed_in? %>
 				<li>
 					<%= link_to "Definir etapas", new_etapa_path, class: "btn btn-primary" %>
