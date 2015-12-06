@@ -15,6 +15,9 @@ class DreamsController < ApplicationController
     end
   end
 
+  def show
+    @complice = Complice.new
+  end
 
   def new
     @dream = current_user.dreams.build

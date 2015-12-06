@@ -1,5 +1,6 @@
 class Dream < ActiveRecord::Base
 	belongs_to :user
+	has_many :complices
 	validates :dream, presence: { message: ": ¡Por favor ingresa tu sueño!" }
 	validates :quiero, presence: { message: ": ¡Dinos por dónde quieres arrancar para lograr tu sueño!" }
 	validates :ofrezco, presence: { message: ": ¡Cuéntanos qué ofreces a cambio!" }

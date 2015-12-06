@@ -3,16 +3,14 @@ class ComplicesController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    #@complices = Complice.all
     redirect_to root_path
   end
 
   def show
   end
 
-  # GET /complices/new
   def new
-    @complice = current_user.complices.build
+    @complice = Complice.new
   end
 
   def edit
@@ -20,6 +18,8 @@ class ComplicesController < ApplicationController
 
   def create
     @complice = current_user.complices.build(complice_params)
+    @dream = Dream.find(params[:dream_id])
+    @complice.dream = @dream
 
     respond_to do |format|
       if @complice.save

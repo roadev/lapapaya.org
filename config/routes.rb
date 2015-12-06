@@ -45,6 +45,7 @@ Lapapayanetwork::Application.routes.draw do
   get "user/sign_up"
   resources :dreams do
     collection { post :import }
+    resources :complices
   end
   get 'dreams/:id', to: 'dreams#show', as: 'dream_show'
   resources :activities
