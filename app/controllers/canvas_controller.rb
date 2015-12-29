@@ -1,28 +1,20 @@
 class CanvasController < ApplicationController
   before_action :set_canva, only: [:show, :edit, :update, :destroy]
 
-  # GET /canvas
-  # GET /canvas.json
   def index
     @canvas = Canva.all
   end
 
-  # GET /canvas/1
-  # GET /canvas/1.json
   def show
   end
 
-  # GET /canvas/new
   def new
     @canva = Canva.new
   end
 
-  # GET /canvas/1/edit
   def edit
   end
 
-  # POST /canvas
-  # POST /canvas.json
   def create
     @canva = Canva.new(canva_params)
 
@@ -37,8 +29,6 @@ class CanvasController < ApplicationController
     end
   end
 
-  # PATCH/PUT /canvas/1
-  # PATCH/PUT /canvas/1.json
   def update
     respond_to do |format|
       if @canva.update(canva_params)
@@ -51,8 +41,6 @@ class CanvasController < ApplicationController
     end
   end
 
-  # DELETE /canvas/1
-  # DELETE /canvas/1.json
   def destroy
     @canva.destroy
     respond_to do |format|
@@ -62,13 +50,11 @@ class CanvasController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_canva
-      @canva = Canva.find(params[:id])
-    end
+  def set_canva
+    @canva = Canva.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def canva_params
-      params.require(:canva).permit(:cliente1, :canal1, :problema1, :cliente2, :canal2, :problema2, :cliente3, :canal3, :problema3)
-    end
+  def canva_params
+    params.require(:canva).permit(:cliente1, :canal1, :problema1, :cliente2, :canal2, :problema2, :cliente3, :canal3, :problema3)
+  end
 end

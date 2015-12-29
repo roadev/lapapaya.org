@@ -31,7 +31,6 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:account_update) << :website
     devise_parameter_sanitizer.for(:account_update) << :facebook
     devise_parameter_sanitizer.for(:account_update) << :twitter
-    #devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:name, :lastname, :avatar) }
   end
 
   def last_dream

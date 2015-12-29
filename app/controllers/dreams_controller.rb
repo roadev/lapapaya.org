@@ -5,16 +5,16 @@ class DreamsController < ApplicationController
 
 
   def index
-    #@dreams = Dream.paginate(page: params[:page], per_page: 5)
-    #@dreams = Dream.order(id: :desc).page params[:page]
     if params[:tag]
       @dreams = Dream.tagged_with(params[:tag]).order(id: :desc).page params[:page]
-      else
+    else
       @dreams = Dream.order(id: :desc).page params[:page]
-      #@dreams = Dream.all
     end
   end
 
+  def show
+    @complice = Complice.new
+  end
 
   def new
     @dream = current_user.dreams.build
@@ -24,18 +24,18 @@ class DreamsController < ApplicationController
   end
 
   def import
-  	Dream.import(params[:file])
-	  redirect_to root, notice: "Dreams imported."
-	end
+    Dream.import(params[:file])
+    redirect_to root, notice: "Dreams imported."
+  end
 
   def create
-		@dream = current_user.dreams.build(dream_params)
-		  if @dream.save
-		    redirect_to @dream, notice: 'Ya creaste un sueño, ahora cúmplelo!'
-		  else
-		    render action: 'new'
-		  end
-	end
+    @dream = current_user.dreams.build(dream_params)
+    if @dream.save
+      redirect_to @dream, notice: 'Ya creaste un sueño, ahora cúmplelo!'
+    else
+      render action: 'new'
+    end
+  end
 
   def update
     respond_to do |format|
@@ -52,16 +52,16 @@ class DreamsController < ApplicationController
 
   def destroy
     @dream.destroy
-     redirect_to dreams_url
+    redirect_to dreams_url
   end
 
-   def micropost
+  def micropost
     @micropost = Micropost.first
   end
 
-    def set_dream
-      @dream = Dream.find(params[:id])
-    end
+  def set_dream
+    @dream = Dream.find(params[:id])
+  end
 
 
   def correct_user
@@ -70,11 +70,11 @@ class DreamsController < ApplicationController
   end
 
 
-	def dream_params
-		params.require(:dream).permit(:dream, :image, :quiero, :ofrezco, :necesito, :tag_list, :select_type)
-	end
+  def dream_params
+    params.require(:dream).permit(:dream, :image, :quiero, :ofrezco, :necesito, :tag_list, :select_type)
+  end
 
   def content
     @micropost = Micropost.content
   end
-  end
+end

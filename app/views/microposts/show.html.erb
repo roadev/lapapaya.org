@@ -12,7 +12,25 @@
           <center><%= @micropost.content %></center>
           <br />
           <br />
-          <center><p><%= link_to 'Crear Solución', new_solution_path, class: "btn btn-primary" %></p></center>
+
+          <center>
+            <p>
+              <button id="some_id" class="btn btn-info">Crear solución</button>
+              <%= simple_form_for([@micropost, @solution], html: { class: "hola"}) do |f| %>
+                <%= f.input :content, label: "Solución" %>
+                <%= f.button :submit, 'Enviar solución', class: 'btn btn-primary' %>
+              <% end %>
+              <script type="text/javascript">
+                var theButton = document.getElementById('some_id');
+                theButton.onclick = function() {
+                  document.getElementById('new_solution').style.visibility='visible';
+                }
+              </script>
+
+              <%# link_to 'Crear Solución', new_solution_path, class: "btn btn-primary" %>
+            </p>
+          </center>
+
         </div>
       </div>
     </div>

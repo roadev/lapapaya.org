@@ -1,28 +1,20 @@
 class EtapasController < ApplicationController
   before_action :set_etapa, only: [:show, :edit, :update, :destroy]
 
-  # GET /etapas
-  # GET /etapas.json
   def index
     @etapas = Etapa.all
   end
 
-  # GET /etapas/1
-  # GET /etapas/1.json
   def show
   end
 
-  # GET /etapas/new
   def new
     @etapa = Etapa.new
   end
 
-  # GET /etapas/1/edit
   def edit
   end
 
-  # POST /etapas
-  # POST /etapas.json
   def create
     @etapa = Etapa.new(etapa_params)
 
@@ -37,8 +29,6 @@ class EtapasController < ApplicationController
     end
   end
 
-  # PATCH/PUT /etapas/1
-  # PATCH/PUT /etapas/1.json
   def update
     respond_to do |format|
       if @etapa.update(etapa_params)
@@ -51,8 +41,6 @@ class EtapasController < ApplicationController
     end
   end
 
-  # DELETE /etapas/1
-  # DELETE /etapas/1.json
   def destroy
     @etapa.destroy
     respond_to do |format|
@@ -62,13 +50,11 @@ class EtapasController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_etapa
-      @etapa = Etapa.find(params[:id])
-    end
+  def set_etapa
+    @etapa = Etapa.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def etapa_params
-      params.require(:etapa).permit(:etapa1, :indicador1, :etapa2, :indicador2, :etapa3, :indicador3)
-    end
+  def etapa_params
+    params.require(:etapa).permit(:etapa1, :indicador1, :etapa2, :indicador2, :etapa3, :indicador3)
+  end
 end
