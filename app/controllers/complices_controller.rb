@@ -53,11 +53,11 @@ class ComplicesController < ApplicationController
   end
 
   private
-    def set_complice
-      @complice = Complice.find(params[:id])
-    end
+  def set_complice
+    @complice = Complice.find(params[:id])
+  end
 
-    def complice_params
-      params.require(:complice).permit(:dream_id, :tags, :reason, :giving)
-    end
+  def complice_params
+    params.require(:complice).permit(:dream_id, :tags, :reason, :giving)
+  end
 end

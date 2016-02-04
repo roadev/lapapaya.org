@@ -15,17 +15,25 @@
 
           <center>
             <p>
+              <!-- This button shows the hidden nested form -->
               <button id="some_id" class="btn btn-info">Crear solución</button>
+              <!-- This button shows the hidden nested form -->
+              
+              <!-- This is the nested form for solution in micropost -->
               <%= simple_form_for([@micropost, @solution], html: { class: "hola"}) do |f| %>
                 <%= f.input :content, label: "Solución" %>
                 <%= f.button :submit, 'Enviar solución', class: 'btn btn-primary' %>
               <% end %>
+              <!-- This is the nested form for complice in dream -->
+
+              <!-- This script shows the form shown before (adds the feature to the button with id=some_id) -->
               <script type="text/javascript">
                 var theButton = document.getElementById('some_id');
                 theButton.onclick = function() {
                   document.getElementById('new_solution').style.visibility='visible';
                 }
               </script>
+              <!-- This script shows the form shown before (adds the feature to the button with id=some_id) -->
 
               <%# link_to 'Crear Solución', new_solution_path, class: "btn btn-primary" %>
             </p>
