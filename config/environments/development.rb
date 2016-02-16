@@ -29,7 +29,7 @@ Lapapayanetwork::Application.configure do
   #config.action_mailer.perform_deliveries = true
   config.assets.debug = true
 
-  config.action_mailer.default_url_options = { :host => 'lapapaya.org' }
+  config.action_mailer.default_url_options = { host: 'lapapaya.org' }
 
 
 
