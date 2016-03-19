@@ -51,6 +51,15 @@
 				</div>
 
 				<hr>
+
+				<!-- DATOS SOÑADOR -->
+				<p> <button id="view_dreamer_data" class="btn btn-info">Ver Datos del soñador</button> </p>
+				<section id="dreamer_data" class="hidden_form">
+					<p><span class="strong">Email:</span> <%= @dream.user.email %></p>
+				</section>
+
+				<h3></h3>
+
 				<p class="strong strong__bigger"> Sueño <%= @dream.id %>: </p>
 				<p> Definición de proyecto de vida y etapas de mi sueño </p>
 				<header>
@@ -61,7 +70,7 @@
 				<!-- This button shows the hidden nested form -->
 
 				<!-- This is the nested form for complice in dream -->
-				<%= simple_form_for([@dream, @complice], html: { class: "hola"}) do |f| %>
+				<%= simple_form_for([@dream, @complice], html: { class: "hidden_form"}) do |f| %>
 				<div class="form-group">
 					<%= f.label "Palabras Clave" %>
 					<%= f.text_field :tags, class: "form-control" %>
@@ -83,6 +92,12 @@
 					var theButton = document.getElementById('some_id2');
 					theButton.onclick = function() {
 						document.getElementById('new_complice').style.visibility='visible';
+					}
+				</script>
+				<script type="text/javascript">
+					var theButton = document.getElementById('view_dreamer_data');
+					theButton.onclick = function() {
+						document.getElementById('dreamer_data').style.visibility='visible';
 					}
 				</script>
 				<!-- This script shows the form shown before (adds the feature to the button with id=some_id2) -->
