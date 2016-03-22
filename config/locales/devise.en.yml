@@ -20,9 +20,9 @@ en:
       confirmation_instructions:
         subject: "¡Activa tu cuenta en LaPapaya.org!"
       reset_password_instructions:
-        subject: "Reset password instructions"
+        subject: "Restablece tu contraseña"
       unlock_instructions:
-        subject: "Unlock Instructions"
+        subject: "Instrucciones de desbloqueo"
     omniauth_callbacks:
       failure: "Could not authenticate you from %{kind} because \"%{reason}\"."
       success: "Successfully authenticated from %{kind} account."
