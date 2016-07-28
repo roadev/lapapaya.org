@@ -34,7 +34,7 @@
       <% tag_cloud Dream.tag_counts, %w[s m l] do |tag, css_class| %>
       <%= link_to tag.name, tag_path(tag.name), class: css_class %>
       <% end %>
-      <%= ActsAsTaggableOn::Tag.most_used %>
+     
       <h3> En este <%= link_to "Link", "http://meetrico.com/coworking_spaces/104" %>, puedes consultar nuestra agenda de actividades y productos </h3>
       <!-- <h3> Nuestra metodología básica consiste en las Cadenas de Favores, donde cada emprendedor que asiste tiene 6 Minutos para contarnos su sueño, el producto que ofrece y los clientes que necesita. Durante este tiempo todos los asistentes lo retroalimentamos con contactos y sugerencias. En 10 Sesiónes hemos intercambiado 310 contactos que han arrancado a movilizar un capital de alrededor de $300'000.000 de pesos en oportunidades para nuestros emprendedores. En este <%= link_to "Link", "http://meetrico.com/coworking_spaces/104" %>, puedes consultar algunos de los resultados de nuestras Cadenas de Favores </h3> -->
     </div>
