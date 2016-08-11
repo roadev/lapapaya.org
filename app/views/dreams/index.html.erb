@@ -4,14 +4,21 @@
   <article class="">
     <div class="panel panel-default">
       <header>
-        <h1>Educacion en emprendimiento</h1>
+         <div class="row">
+        <div class="col-6">
+        <%= link_to (image_tag "banner.jpg", class: "new-width"), "https://www.youtube.com/channel/UCNz12GRBgMi2E6V8jWAu1VQ"%>
+        </div>
+
+
+        
+     </div>
       </header>
       <h3> Somos una red social donde puedes poner un sueño capaz de cambiar el mundo,
         a cambio debes ofrecer tiempo para servir a otros proyectos, entre más ayudas ganas puntos,
         que hacen que el resto de la red te pueda ayudar.
         <br /><br />
 
-<iframe src="//www.slideshare.net/slideshow/embed_code/key/y68gxsM9Gue9R9" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/FelipeVelasquez9/los-viajes-de-polka-56534133" title="Los viajes de polka" target="_blank">Los viajes de polka</a> </strong> from <strong><a href="//www.slideshare.net/FelipeVelasquez9" target="_blank">Felipe Velasquez</a></strong> </div>
+
 
       </h3>
       <h3>Conectamos, visibilizamos y fortalecemos emprendimientos con Impacto Global</h3>
@@ -34,6 +41,7 @@
       <% tag_cloud Dream.tag_counts, %w[s m l] do |tag, css_class| %>
       <%= link_to tag.name, tag_path(tag.name), class: css_class %>
       <% end %>
+
       <h3> En este <%= link_to "Link", "http://meetrico.com/coworking_spaces/104" %>, puedes consultar nuestra agenda de actividades y productos </h3>
       <!-- <h3> Nuestra metodología básica consiste en las Cadenas de Favores, donde cada emprendedor que asiste tiene 6 Minutos para contarnos su sueño, el producto que ofrece y los clientes que necesita. Durante este tiempo todos los asistentes lo retroalimentamos con contactos y sugerencias. En 10 Sesiónes hemos intercambiado 310 contactos que han arrancado a movilizar un capital de alrededor de $300'000.000 de pesos en oportunidades para nuestros emprendedores. En este <%= link_to "Link", "http://meetrico.com/coworking_spaces/104" %>, puedes consultar algunos de los resultados de nuestras Cadenas de Favores </h3> -->
     </div>

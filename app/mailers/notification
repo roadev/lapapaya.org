@@ -1,0 +1,20 @@
+
+class CompliceCreation < ActionMailer::Base
+     default from: "admin@lapapaya.org"
+     layout "mailer"
+
+   def group_email(user, complice)
+    #@complice = complice
+    @group=UserTag.email
+    @lastname_user=User.find(user).lastname
+    @dream_number = Complice.find(complice).dream_id
+
+    A cada usuario le enviaría un e_mail donde podrá encontrar contactos relacionados con su sueño. 
+
+
+
+    mail(to: "#{user.name} <#{user.email}>", subject: "¡Has apoyado un sueño!")
+   end
+ end
+
+ Al final enviaría tutoriales relacionados con la palabra clave de su sueño. 
