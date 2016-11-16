@@ -56,4 +56,5 @@ Lapapayanetwork::Application.routes.draw do
   get "userpanel" => "pages#userpanel"
   get "adminpanel" => "pages#adminpanel"
   get "encuesta" => "encuesta#show", :as => :encuesta
+  get "videos" => "videos#show", :as => :videos
 end
