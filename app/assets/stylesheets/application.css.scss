@@ -21,7 +21,7 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
- body {
+body {
   background: #EAEAEA;
 }
 .user-details {
@@ -511,28 +511,29 @@ body{
 .strong{
   font-weight: bold;
 }
-  .strong__bigger{
+  .strong__bigger {
     font-size: 25px;
   }
-.bigger{
+.bigger {
   font-size: 20px;
 }
-.text-right{
+.text-right {
   text-align:right;
 }
 
-footer{
+footer {
   background-color: #FFF;
   width: 100%;
   color: #777;
   position: static;
-  padding: 0 0 1.5% 0%;
+  padding: 15px;
+  margin-right: 0;
 }
-.center{
+.center {
   text-align: center;
 }
 
-.hidden_form{
+.hidden_form {
   visibility: hidden;
 }
 
