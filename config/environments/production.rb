@@ -100,5 +100,5 @@ Lapapayanetwork::Application.configure do
       authentication: :plain
   }
 
-  config.action_mailer.default_url_options = { host: 'lapapaya.org' }
+  config.action_mailer.default_url_options = { host: 'www.lapapaya.org' }
 end
