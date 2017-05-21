@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.4.0'
+ruby '2.3.3'
 
 gem 'rails', '4.1.0'
 
@@ -12,7 +12,7 @@ gem 'turbolinks'
 gem 'jquery-turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'bootstrap-sass'
-gem 'devise', '~> 3.2.4'
+gem 'devise', '~> 4.3.0'
 gem 'omniauth'
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 gem 'aws-sdk', '~> 1.59.0'
