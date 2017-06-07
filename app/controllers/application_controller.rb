@@ -7,31 +7,11 @@ class ApplicationController < ActionController::Base
 
   protected
 
-  def configure_permitted_parameters
-    devise_parameter_sanitizer.for(:sign_up) << :username
-    devise_parameter_sanitizer.for(:sign_up) << :country
-    devise_parameter_sanitizer.for(:sign_up) << :region
-    devise_parameter_sanitizer.for(:sign_up) << :city
-    devise_parameter_sanitizer.for(:sign_up) << :born_date
-    devise_parameter_sanitizer.for(:sign_up) << :website
-    devise_parameter_sanitizer.for(:sign_up) << :facebook
-    devise_parameter_sanitizer.for(:sign_up) << :twitter
-    devise_parameter_sanitizer.for(:sign_up) << :name
-    devise_parameter_sanitizer.for(:sign_up) << :lastname
-    devise_parameter_sanitizer.for(:sign_up) << :avatar
-    #devise_parameter_sanitizer.for(:sign_up) << :select_type
-    devise_parameter_sanitizer.for(:account_update) << :name
-    devise_parameter_sanitizer.for(:account_update) << :lastname
-    devise_parameter_sanitizer.for(:account_update) << :avatar
-    devise_parameter_sanitizer.for(:account_update) << :username
-    devise_parameter_sanitizer.for(:account_update) << :country
-    devise_parameter_sanitizer.for(:account_update) << :region
-    devise_parameter_sanitizer.for(:account_update) << :city
-    devise_parameter_sanitizer.for(:account_update) << :born_date
-    devise_parameter_sanitizer.for(:account_update) << :website
-    devise_parameter_sanitizer.for(:account_update) << :facebook
-    devise_parameter_sanitizer.for(:account_update) << :twitter
+def configure_permitted_parameters
+  devise_parameter_sanitizer.permit(:sign_in) do |user_params|
+    user_params.permit(:username, :email)
   end
+end
 
   def last_dream
     Dream.where( user_id: current_user.id ).last

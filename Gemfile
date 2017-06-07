@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.2.2'
+ruby '2.3.3'
 
 gem 'rails', '4.1.0'
 
@@ -12,7 +12,7 @@ gem 'turbolinks'
 gem 'jquery-turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'bootstrap-sass'
-gem 'devise', '~> 3.2.4'
+gem 'devise', '~> 4.3.0'
 gem 'omniauth'
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 gem 'aws-sdk', '~> 1.59.0'
@@ -29,6 +29,7 @@ gem 'newrelic_rpm'
 gem 'social-share-button', '~> 0.1.6'
 gem 'youtube_it', '~> 2.4.0'
 gem 'pg'
+gem 'json', github: 'flori/json', branch: 'v1.8'
 #gem 'will_paginate'
 #gem 'will_paginate-bootstrap'
 gem 'acts-as-taggable-on'
