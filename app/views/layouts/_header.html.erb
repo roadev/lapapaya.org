@@ -28,19 +28,21 @@
         <!--<li><%= link_to "Wiki", wikis_path %></li> -->
         <!--<li><%= link_to new_pedido_path do %>
           <span class="glyphicon glyphicon-shopping-cart"> Pedidos </span>-->
-          <li><%= link_to microposts_path do %> 
-            <span class="glyphicon glyphicon-ok"> Retos </span>
-            <li><%= link_to new_dream_path do %>
-              <span class="glyphicon glyphicon-heart"> Nuevo sueño </span>
-              <% end %>
-              <% end %>
-              <% end %>
-            </li>
-          </li>
-          <li><%= link_to userpanel_path do %>
-            <span class="glyphicon glyphicon-user"> Panel de Usuario</span>
+          <li>
+            <%= link_to microposts_path do %>
+              <span class="glyphicon glyphicon-ok"> Retos </span>
+              <li><%= link_to new_dream_path do %>
+                <span class="glyphicon glyphicon-heart"> Nuevo sueño </span>
+                <% end %>
+              </li>
             <% end %>
           </li>
+        <% end %>
+
+        <li><%= link_to userpanel_path do %>
+          <span class="glyphicon glyphicon-user"> Panel de Usuario</span>
+          <% end %>
+        </li>
           <!--
           <div class="btn-group">
           <button class="btn">Canvas+</button>
@@ -63,7 +65,7 @@
   </li>
   <%else%>
   <li><%= link_to "Iniciar sesión", new_user_session_path %></li>
-  <!-- <%= link_to 'Regístrate', new_user_registration_path, class: "btn btn-primary" %> -->
+  <%= link_to 'Regístrate', new_user_registration_path, class: "btn btn-primary" %>
 
   <li><%= link_to "Acerca de", about_path %></li>
   <li><%= link_to "+ Facebook", "https://www.facebook.com/groups/lapapaya/?fref=ts", :target => "_blank" %></li>
